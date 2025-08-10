@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Button from "../components/button";
+import Button from "../components/Button";
 import { useUser } from "../../utils/useUser";
 
 export const UserConfig = () => {

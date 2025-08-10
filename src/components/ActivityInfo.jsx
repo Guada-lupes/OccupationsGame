@@ -1,7 +1,7 @@
 import descripcionActividades from "../../data/descripcionActividades";
 import { searchActivity } from "../../utils/searchActivity";
 import { useParams } from "react-router-dom";
-import { Button } from "./button";
+import { Button } from "./Button";
 
 export const ActivityInfo = () => {
   const { id } = useParams();
