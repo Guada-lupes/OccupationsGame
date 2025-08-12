@@ -12,7 +12,7 @@
 //   //path[0].opciones[1].opciones[0]
 
 
-import Button from "./Button";
+import Button from "../components/Button";
 
 export const Questions = ({currentNode, path, handleBack, handleOptionClick}) => {
   

@@ -1,36 +1,60 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-
+import Button from "../components/Button";
+import { useUser } from "../../utils/useUser";
 
 export const WelcomePage = () => {
-  const [input, setInput] = useState("hola");
+  const [password, setPassword] = useState("hola");
   const navigate = useNavigate();
+  const [isAuth, setIsAuth] = useState(false); // <-- nuevo estado
+  const { updateName } = useUser();
+  const [name, setName] = useState("");
 
-  function getInput(e) {
-    setInput(e.target.value);
+  //guardar contraseña
+  function getPassword(e) {
+    setPassword(e.target.value);
   }
-
+  //verificar contraseña
   function checkPassword() {
-    if (input === import.meta.env.VITE_PASSWORD) {
-      console.log("hola"); navigate("/userconfig")
+    let p = import.meta.env.VITE_PASSWORD;
+    if (password === p) {
+setIsAuth(true)
     }
   }
+
+  //obtener nombre
+  function getName(e) {
+    const value = e.target.value;
+    setName(value);
+  }
+  //actualiza el nombre bien
+  useEffect(() => {
+    updateName(name);
+  }, [name]);
+
+  useEffect(() => {
+    if (isAuth) {
+      navigate("/landing");
+    }
+  }, [isAuth, navigate]);
   return (
     <div>
-      <h1>Descubre tu profesión</h1>
-      <h3>
-        Explora actividades económicas, descubre ocupaciones y encuentra tu
-        futuro.
-      </h3>
-      <label htmlFor="password">Introduce contraseña</label>
+      <h1>Explora el planeta de las profesiones</h1>
+      <input
+        type="text"
+        onChange={(e) => getName(e)}
+        value={name}
+        placeholder="Elige un nombre"
+      />
       <input
         type="password"
         name="password"
         id="password"
-        value={input}
-        // onChange={(e) => getInput(e)}
+        placeholder="Introduce contraseña"
+        value={password}
+        onChange={(e) => getPassword(e)}
       />
-      <button onClick={checkPassword}>Enviar</button>
+      <Button onClick={checkPassword} texto={"Comenzar"} />
     </div>
   );
 };
