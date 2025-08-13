@@ -1,15 +1,24 @@
-import React from 'react';
-import { tribus } from '../../data/tribus';
+import React from "react";
+import { tribus } from "../../data/tribus";
+import { Link } from "react-router-dom";
 
 const AllTribusPage = () => {
-//aqui se presenan los iconos de todas las tribus
-    return (
-        <div>
-            {tribus.map((tribu, index)=> (
-                <div key={index}>{tribu.id}</div>
-            ))}
-        </div>
-    );
+  //aqui se presentan los iconos de todas las tribus
+  return (
+    <>
+      {tribus.map((tribu, index) =>
+        // tribu.desbloqueada ? 
+        (
+          <Link to={`/${tribu.id}`}>
+            <div key={index}>{tribu.tribu}</div>
+          </Link>
+        ) 
+        // : (
+        //   <div key={index}>{tribu.tribu}</div>
+        // )
+      )}
+    </>
+  );
 };
 
 export default AllTribusPage;

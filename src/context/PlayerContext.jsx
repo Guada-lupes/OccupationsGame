@@ -1,9 +1,9 @@
 import React from "react";
-import { createContext, useContext, useReducer } from "react";
+import { createContext, useContext, useReducer, useEffect } from "react";
 import { initialState, playerReduce } from "../reduce/PlayerReduce";
 
   // Cargar del localStorage si existe
-  function loadFromStorage(initialState) {
+  function loadFromStorage() {
     const saved = localStorage.getItem("player");
     return saved ? JSON.parse(saved) : initialState;
   }
@@ -11,7 +11,7 @@ import { initialState, playerReduce } from "../reduce/PlayerReduce";
 const PlayerContext = createContext();
 export const PlayerProvider = ({ children }) => {
 
-    const [state, dispatche] = useReducer(playerReduce, initialState, loadFromStorage);
+    const [state, dispatch] = useReducer(playerReduce, initialState, loadFromStorage);
 
 
   // Guardar en localStorage cada vez que cambia
@@ -20,7 +20,7 @@ export const PlayerProvider = ({ children }) => {
   }, [state]);
 
   return (
-<PlayerContext.Provider value={{stat, dispatche}}>
+<PlayerContext.Provider value={{state, dispatch}}>
 {children}
 </PlayerContext.Provider>
   )

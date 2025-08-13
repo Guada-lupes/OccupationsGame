@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import sectores from "../data/sectores"
+import sectores from "../../data/sectores"
 import { useNavigate } from "react-router-dom";
 
 const useTreeLogic = (id) => {

@@ -109,7 +109,7 @@ preguntas: [
 {
   id: "construccion",
 nombre: "Construcción",
-  nombre: "Zapotecas Arquitectos del Horizonte",
+  tribu: "Zapotecas Arquitectos del Horizonte",
   descripcion: "Expertos en levantar, reparar y mantener estructuras, desde cimientos hasta instalaciones eléctricas.",
   imagen: "tribu-mapuches.png",
   desbloqueada: false,

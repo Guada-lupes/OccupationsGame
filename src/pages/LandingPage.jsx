@@ -1,13 +1,13 @@
 import React from "react";
-import { useUser } from "../../utils/useUser";
 import Button from "../components/Button";
+import { usePlayer } from "../context/PlayerContext";
 
 const LandingPage = () => {
-  const { user } = useUser();
+const {state} = usePlayer();
   return (
     <div>
       <h1>
-        Hola {user.name}, te damos la bienvenida al Planeta de las profesiones
+        Hola {state.name}, te damos la bienvenida al Planeta de las profesiones
       </h1>
       <h3>
         En este pais cada tribu pertenece a una profesión. Descubre las 14

@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "../components/Button";
-import { useUser } from "../../utils/useUser";
+import { useUser } from "../trash/useUser";
+import { usePlayer } from "../context/PlayerContext";
+import { checkPassword } from "../../utils/login";
 
 export const WelcomePage = () => {
+  const { state, dispatch } = usePlayer();
   const [password, setPassword] = useState("hola");
+
   const navigate = useNavigate();
-  const [isAuth, setIsAuth] = useState(false); // <-- nuevo estado
   const { updateName } = useUser();
   const [name, setName] = useState("");
 
@@ -15,13 +18,6 @@ export const WelcomePage = () => {
     setPassword(e.target.value);
   }
   //verificar contraseña
-  function checkPassword() {
-    let p = import.meta.env.VITE_PASSWORD;
-    if (password === p) {
-setIsAuth(true)
-    }
-  }
-
   //obtener nombre
   function getName(e) {
     const value = e.target.value;
@@ -29,14 +25,14 @@ setIsAuth(true)
   }
   //actualiza el nombre bien
   useEffect(() => {
-    updateName(name);
+    updateName(name);;
   }, [name]);
 
   useEffect(() => {
-    if (isAuth) {
+    if(state.login){
       navigate("/landing");
     }
-  }, [isAuth, navigate]);
+  }, [state.login]);
   return (
     <div>
       <h1>Explora el planeta de las profesiones</h1>
@@ -54,7 +50,7 @@ setIsAuth(true)
         value={password}
         onChange={(e) => getPassword(e)}
       />
-      <Button onClick={checkPassword} texto={"Comenzar"} />
+      <Button onClick={()=>checkPassword(name, password, dispatch)} texto={"Comenzar"} />
     </div>
   );
 };

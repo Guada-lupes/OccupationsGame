@@ -5,6 +5,7 @@ import WelcomePage from "./pages/WelcomePage";
 import LandingPage from "./pages/LandingPage";
 import AllTribusPage from "./pages/AllTribusPage";
 import { PlayerProvider } from "./context/PlayerContext";
+import TribuCard from "./components/TribuCard";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<WelcomePage />} />
           <Route path="/landing" element={<LandingPage />} />
           <Route path="/all_tribus" element={<AllTribusPage />} />
+          <Route path="/:id" element={<TribuCard/>}/>
         </Routes>
       </PlayerProvider>
     </>
