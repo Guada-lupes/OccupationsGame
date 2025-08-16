@@ -1,10 +1,8 @@
-import React from 'react';
+import React, { useState } from "react";
 import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
-import { useState } from 'react';
 
-
-const OrderAndSecuence = ({reto}) => {
-  const pregunta = reto.preguntas[0]; 
+export default function OrdenarSecuencia({ reto }) {
+  const pregunta = reto.preguntas[0]; // asumo solo 1 pregunta por reto
   const [items, setItems] = useState(shuffleArray(pregunta.opciones));
   const [resultado, setResultado] = useState(null);
 
@@ -43,7 +41,7 @@ const OrderAndSecuence = ({reto}) => {
                       {...provided.draggableProps}
                       {...provided.dragHandleProps}
                       style={{
-                        background: "#a20606ff",
+                        background: "#e41a1aff",
                         padding: "10px",
                         marginBottom: "8px",
                         borderRadius: "4px",
@@ -68,6 +66,4 @@ const OrderAndSecuence = ({reto}) => {
       {resultado && <p>{resultado}</p>}
     </div>
   );
-};
-
-export default OrderAndSecuence;
+}

@@ -2,6 +2,7 @@ const actividadesEconomicas =
   {agricultura: "Agricultura",
   industria: "Industria",
   comercio: "Comercio",
+  construccion: "Construcción",
   transporte: "Transporte y almacenamiento",
   hosteleria: "Hostelería",
   informacion: "Información y comunicaciones",
