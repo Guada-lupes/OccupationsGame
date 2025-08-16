@@ -18,8 +18,8 @@ p {
 
 /* 4. Quita los estilos por defecto de listas si tienen el rol "list" /
 / Esto es útil para listas personalizadas sin viñetas ni números */
-ul[role="list"],
-ol[role="list"] {
+ul,
+ol {
   list-style: none;
 }
 

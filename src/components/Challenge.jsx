@@ -6,20 +6,47 @@ import Relation from "../challenges/Relation";
 import FindStrange from "../challenges/FindStrange";
 import CompleteWord from "../challenges/CompleteWord";
 import MultipleChoice from "../challenges/MultipleChoice";
+import styles from "../styles/challenge.module.css"
 
-const Challenge = ({ reto }) => {
+
+const Challenge = ({ reto, id, next, profesiones }) => {
   //tenemos el cuenta el tipo de reto y generamos componentes segun el
 
   return (
-    <div>
-      {reto.tipo === "verdadero-falso" && <TrueOrFalse reto={reto} />}
-      {reto.tipo === "ordenar-secuencia" && <OrderAndSecuence reto={reto} />}
-      {reto.tipo === "clasificar" && <Clasification reto={reto} />}
-      {reto.tipo === "relacionar" && <Relation reto={reto} />}
-      {reto.tipo === "encuentra-impostor" && <FindStrange reto={reto} />}
-      {reto.tipo === "completar-frases" && <CompleteWord reto={reto} />}
-            {reto.tipo === "multiple-choice" && <MultipleChoice reto={reto} />}
+    <>
+    <div className={styles.container}>
+      <h2>Resuelve el reto</h2>
+      {reto.tipo === "verdadero-falso" && (
+        <TrueOrFalse reto={reto} id={id} next={next} profesiones={profesiones}/>
+      )}
+      {reto.tipo === "ordenar-secuencia" && (
+        <OrderAndSecuence reto={reto} id={id} next={next} />
+      )}
+      {reto.tipo === "clasificar" && (
+        <Clasification reto={reto} id={id} next={next} />
+      )}
+      {reto.tipo === "relacionar" && (
+        <Relation reto={reto} id={id} next={next} />
+      )}
+      {reto.tipo === "encuentra-impostor" && (
+        <FindStrange reto={reto} id={id} next={next} />
+      )}
+      {reto.tipo === "completar-frases" && (
+        <CompleteWord reto={reto} id={id} next={next} />
+      )}
+      {reto.tipo === "multiple-choice" && (
+        <MultipleChoice reto={reto} id={id} next={next} />
+      )}
     </div>
+    <dialog id="reto_desbloqueado" className={styles.modal}>
+      <div className={styles.text_container}>
+              <p>¡Reto superado!</p>
+      <button className="btn" onClick={()=>document.getElementById("reto_desbloqueado").close()}>Aceptar</button>
+      </div>
+
+    </dialog>
+    </>
+    
   );
 };
 

@@ -1,25 +1,45 @@
-import React from 'react';
-import { useState } from 'react';
+import React from "react";
+import { useState, useEffect } from "react";
+import { usePlayer } from "../context/PlayerContext";
+import { unlockedChallenge } from "../../utils/unlockedChallenge";
 
-const TrueOrFalse = ({reto}) => {
+const TrueOrFalse = ({ reto, id, next }) => {
+  const { dispatch } = usePlayer();
 
-
-const [respuestas, setRespuestas] = useState(Array(reto?.preguntas?.length).fill(""));
-  const [resultados, setResultados] = useState(Array(reto.preguntas.length).fill(null));
+  //Crea un array con un string vacio por cada pregunta y guarda las respuestas que da el usuario
+  const [respuestas, setRespuestas] = useState(
+    Array(reto?.preguntas?.length).fill("")
+  );
+  //Crea un array con null como resultado para cada respuesta
+  //este nos indicará si el reto esta superado
+  const [resultados, setResultados] = useState(
+    Array(reto.preguntas.length).fill(null)
+  );
 
   const handleChange = (index, value) => {
+    //hace una copia de respuestas
     const nuevasRespuestas = [...respuestas];
+    //modifica el valor de la respuesta segun su index
     nuevasRespuestas[index] = value;
+    //actualiza las respuestas
     setRespuestas(nuevasRespuestas);
   };
 
   const verificarRespuesta = (index) => {
+    //compara la respuesta segun su indice con la respuesta correcta
     const esCorrecta =
       respuestas[index] === reto.preguntas[index].respuestaCorrecta;
     const nuevosResultados = [...resultados];
     nuevosResultados[index] = esCorrecta;
+    //Actualiza resultados
     setResultados(nuevosResultados);
   };
+
+  useEffect(() => {
+    if (resultados[0] && resultados[1]) {
+      unlockedChallenge(next, id, dispatch);
+    }
+  }, [resultados]);
 
   return (
     <>
@@ -37,7 +57,6 @@ const [respuestas, setRespuestas] = useState(Array(reto?.preguntas?.length).fill
             />
             Verdadero
           </label>
-
           <label>
             <input
               type="radio"
@@ -48,22 +67,16 @@ const [respuestas, setRespuestas] = useState(Array(reto?.preguntas?.length).fill
             />
             Falso
           </label>
-
           <div>
             <button onClick={() => verificarRespuesta(i)}>Probar</button>
           </div>
-
           {resultados[i] !== null && (
-            <p>
-              {resultados[i] ? "¡Correcto!" : "Incorrecto"}
-            </p>
+            <p>{resultados[i] ? "¡Correcto!" : "Incorrecto"}</p>
           )}
         </div>
       ))}
     </>
   );
-
-
 };
 
 export default TrueOrFalse;

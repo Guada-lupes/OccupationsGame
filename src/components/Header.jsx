@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import { useLocation } from 'react-router-dom';
 import { logOut } from '../../utils/login';
 import { usePlayer } from '../context/PlayerContext';
+import styles from "../styles/header.module.css"
 
 export const Header = () => {
     const location = useLocation();
@@ -10,12 +11,13 @@ export const Header = () => {
     const {dispatch} = usePlayer();
     return (
         <>
-        {showHeader && <div>
-            <Link to={"/all_tribus"}><p>Inicio</p></Link>
+        {showHeader && <div className={styles.container}>
+            <Link to={"/all_tribus"}>Inicio</Link>
             {/* <Link>Como jugar</Link>
             <Link>Sobre la aplicación</Link>
-            <Link>Avatar</Link> */}
-            <Link to={"/"}><p onClick={()=>logOut(dispatch)}>Salir</p></Link>
+             */}
+             <Link to={"/player"}>Jugador</Link>
+            <Link to={"/"}onClick={()=>logOut(dispatch)}>Salir</Link>
         </div>}
         </>
         

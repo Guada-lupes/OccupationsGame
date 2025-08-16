@@ -1,7 +1,8 @@
 export const initialState = {
   login: false,
   name: "",
-  unlockedTribe: [],
+  unlockedTribe: ["agricultura"],
+  doneChallenge:[],
   savedOccupations: [],
 };
 
@@ -14,10 +15,13 @@ export function playerReduce(state, action) {
     case "unlocked_tribe":
         if(state.unlockedTribe.includes(action.payload))
             return state;
-      return {...state,  unlockedTribe: [...state.unlockTribe, action.payload] };
+      return {...state,  unlockedTribe: [...state.unlockedTribe, action.payload] };
     case "saved_occupation":
         if(state.savedOccupations.includes(action.payload))return state;
       return { ...state, savedOccupations: [...state.savedOccupations, action.payload ]};
+          case "done_challenge":
+        if(state.doneChallenge.includes(action.payload))return state;
+      return { ...state, doneChallenge: [...state.doneChallenge, action.payload ]};
     case "reset":
       return initialState;
     default:

@@ -284,7 +284,7 @@ export const tribus = [
         },
       ],
     },
-    ocupaciones: [
+    profesiones: [
       {
         nombre: "Conductoras/es asalariadas/os de camiones",
         link: "https://www.sepe.es/dctm/perfiles:09019af48024fdaa/RElTRVdFQg==/CONDUCTORES%20ASALARIADOS%20DE%20CAMIONES.pdf",
@@ -348,7 +348,7 @@ export const tribus = [
         },
       ],
     },
-    ocupaciones: [
+    profesiones: [
       {
         nombre: "Camareras/os",
         link: "https://www.sepe.es/dam/jcr:491620ab-2042-4909-99e2-b6fb8775cf91/Camareros.pdf",
@@ -410,7 +410,7 @@ export const tribus = [
         },
       ],
     },
-    ocupaciones: [
+    profesiones: [
       {
         nombre: "Técnicas/os en operaciones de sistemas informáticos",
         link: "https://www.sepe.es/dctm/perfiles:09019af48024fdb5/RElTRVdFQg==/T_CNICOS%20EN%20OPERACIONES%20DE%20SISTEMAS%20INFORM_TICOS.pdf",
@@ -468,7 +468,7 @@ export const tribus = [
         "Espacio comercial": ["Local de tienda", "Nave industrial"],
       },
     },
-    ocupaciones: [
+    profesiones: [
       {
         nombre: "Mantenedoras/es y conserjes de edificios",
         link: "https://www.sepe.es/dctm/perfiles:09019af48024fdab/RElTRVdFQg==/CONSERJES%20DE%20EDIFICIOS.pdf",
@@ -525,7 +525,7 @@ export const tribus = [
         },
       ],
     },
-    ocupaciones: [
+    profesiones: [
       {
         nombre:
           "Técnicas/os en prevención de riesgos laborales y salud ambiental",
@@ -585,7 +585,7 @@ export const tribus = [
         },
       ],
     },
-    ocupaciones: [
+    profesiones: [
       {
         nombre: "Trabajador social",
         link: "https://www.sepe.es/dam/jcr:99b1e736-aaef-4c43-be6b-691b7987ed3a/Profesionales_del_trabajo_y_de_la_educacion_social.pdf",
@@ -655,7 +655,7 @@ export const tribus = [
         Cuaderno: "Tomar apuntes",
       },
     },
-    ocupaciones: [
+    profesiones: [
       {
         nombre: "Profesores de enseñanza primaria, secundaria y universitaria",
         link: "https://www.sepe.es/dctm/perfiles:09019af480260fbd/RElTRVdFQg==/PROFESORES%20DE%20ENSE%C3%91ANZA%20SECUNDARIA.pdf",
@@ -713,7 +713,7 @@ export const tribus = [
         },
       ],
     },
-    ocupaciones: [
+    profesiones: [
       {
         nombre: "Auxiliares de enfermería",
         link: "https://www.sepe.es/dam/jcr:88725df7-e559-4ed5-ac9a-491d90d722b9/Auxiliares_enfermeria.pdf",
@@ -772,7 +772,7 @@ export const tribus = [
         },
       ],
     },
-    ocupaciones: [
+    profesiones: [
       {
         nombre: "Instructores de actividades deportivas",
         link: "https://www.sepe.es/dctm/perfiles:09019af480260fc3/RElTRVdFQg==/ENTRENADORES/AS,%20_RBITROS/AS%20E%20INSTRUCTORES/AS%20DEPORTIVOS/AS%20.pdf",
@@ -829,7 +829,7 @@ export const tribus = [
         },
       ],
     },
-    ocupaciones: [
+    profesiones: [
       {
         nombre: "Operadores de máquinas de lavandería y tintorería",
         link: "https://www.sepe.es/dam/jcr:044db129-1423-468b-a041-e2289f3ec4ce/Operadores_de_maquinas_de_lavanderia_y_tintoreria.pdf",

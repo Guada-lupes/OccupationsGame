@@ -1,13 +1,20 @@
 import React, { useState } from "react";
 import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
+import { usePlayer } from "../context/PlayerContext";
+import {unlockedChallenge} from "../../utils/unlockedChallenge"
 
-export default function Clasification({ reto }) {
+export default function Clasification({ reto, id, next }) {
+  const { dispatch } = usePlayer();
+  //extraemos valores
   const { instrucciones, elementos, categorias } = reto;
-  
+
   // Estado inicial: todos los elementos en "porClasificar"
   const initialState = {
     porClasificar: elementos,
-    ...Object.keys(categorias).reduce((acc, cat) => ({ ...acc, [cat]: [] }), {})
+    ...Object.keys(categorias).reduce(
+      (acc, cat) => ({ ...acc, [cat]: [] }),
+      {}
+    ),
   };
 
   const [listas, setListas] = useState(initialState);
@@ -34,7 +41,7 @@ export default function Clasification({ reto }) {
     setListas({
       ...listas,
       [source.droppableId]: sourceList,
-      [destination.droppableId]: destList
+      [destination.droppableId]: destList,
     });
   }
 
@@ -52,8 +59,12 @@ export default function Clasification({ reto }) {
         break;
       }
     }
-
-    setResultado(correcto ? "✅ ¡Todo correcto!" : "❌ Hay elementos mal clasificados");
+    if (correcto) {
+      unlockedChallenge(next, id, dispatch)
+    }
+    setResultado(
+      correcto ? "✅ ¡Todo correcto!" : "❌ Hay elementos mal clasificados"
+    );
   }
 
   function renderLista(id, items) {
@@ -68,7 +79,7 @@ export default function Clasification({ reto }) {
               padding: "10px",
               width: "250px",
               minHeight: "200px",
-              borderRadius: "6px"
+              borderRadius: "6px",
             }}
           >
             <h4>{id !== "porClasificar" ? id : "Por clasificar"}</h4>
@@ -85,7 +96,7 @@ export default function Clasification({ reto }) {
                       marginBottom: "8px",
                       borderRadius: "4px",
                       border: "1px solid #ccc",
-                      ...provided.draggableProps.style
+                      ...provided.draggableProps.style,
                     }}
                   >
                     {item}
@@ -104,15 +115,13 @@ export default function Clasification({ reto }) {
     <div>
       <h3>{instrucciones}</h3>
       <DragDropContext onDragEnd={onDragEnd}>
-        <div style={{ display: "flex", gap: "20px" }}>
+        <div style={{ display: "flex", gap: "20px", marginTop: "1rem" }}>
           {renderLista("porClasificar", listas.porClasificar)}
-          {Object.keys(categorias).map((cat) =>
-            renderLista(cat, listas[cat])
-          )}
+          {Object.keys(categorias).map((cat) => renderLista(cat, listas[cat]))}
         </div>
       </DragDropContext>
 
-      <button onClick={comprobar} style={{ marginTop: "10px" }}>
+      <button className="btn" onClick={comprobar} style={{ marginTop: "10px" }}>
         Comprobar
       </button>
 

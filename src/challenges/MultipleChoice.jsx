@@ -1,18 +1,27 @@
 import React, { useState } from "react";
+import { usePlayer } from "../context/PlayerContext";
+import { unlockedChallenge } from "../../utils/unlockedChallenge";
 
-export default function MultipleChoice({ reto }) {
+export default function MultipleChoice({ reto, id, next }) {
+  const { dispatch } = usePlayer();
   const { preguntas } = reto;
   const [indice, setIndice] = useState(0);
   const [resultado, setResultado] = useState(null);
+  const [respuestasCorrectas, setRespuestasCorrectas] = useState([]);
 
   const preguntaActual = preguntas[indice];
 
   function comprobar(opcion) {
     if (opcion === preguntaActual.respuestaCorrecta) {
       setResultado("✅ ¡Correcto!");
+      setRespuestasCorrectas((prev) => [...prev, true]);
     } else {
-      setResultado(`❌ Incorrecto. La respuesta correcta es: ${preguntaActual.respuestaCorrecta}`);
+      setResultado(`❌ Incorrecto`);
     }
+  }
+
+  function reintentar() {
+    setResultado(null);
   }
 
   function siguientePregunta() {
@@ -20,7 +29,12 @@ export default function MultipleChoice({ reto }) {
       setIndice(indice + 1);
       setResultado(null);
     } else {
-      alert("🏆 ¡Has completado el reto!");
+      const todasCorrectas = respuestasCorrectas.length === preguntas.length;
+      if (todasCorrectas) {
+      unlockedChallenge(next, id, dispatch);
+      } else {
+        alert("🔁 Has terminado, pero algunas respuestas fueron incorrectas.");
+      }
     }
   }
 
@@ -46,10 +60,15 @@ export default function MultipleChoice({ reto }) {
           </button>
         ))}
       </div>
+
       {resultado && (
         <>
           <p>{resultado}</p>
-          <button onClick={siguientePregunta}>Siguiente</button>
+          {resultado.startsWith("✅") ? (
+            <button onClick={siguientePregunta}>Siguiente</button>
+          ) : (
+            <button onClick={reintentar}>Probar otra vez</button>
+          )}
         </>
       )}
     </div>

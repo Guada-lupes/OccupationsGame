@@ -17,6 +17,7 @@ export const PlayerProvider = ({ children }) => {
   // Guardar en localStorage cada vez que cambia
   useEffect(() => {
     localStorage.setItem("player", JSON.stringify(state));
+    
   }, [state]);
 
   return (

@@ -1,13 +1,17 @@
 import React, { useState } from "react";
 import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
+import { usePlayer } from "../context/PlayerContext";
+import { unlockedChallenge } from "../../utils/unlockedChallenge";
+import styles from "../styles/relation.module.css"
 
-export default function Relation({ reto }) {
+export default function Relation({ reto, id, next }) {
+  const { dispatch } = usePlayer();
   const { instrucciones, columnaA, columnaB, respuestaCorrecta } = reto;
 
   // Estado inicial: todos los ejemplos en la lista "disponibles"
   const initialState = {
     disponibles: columnaB,
-    ...columnaA.reduce((acc, comercio) => ({ ...acc, [comercio]: [] }), {})
+    ...columnaA.reduce((acc, comercio) => ({ ...acc, [comercio]: [] }), {}),
   };
 
   const [listas, setListas] = useState(initialState);
@@ -41,7 +45,7 @@ export default function Relation({ reto }) {
     setListas({
       ...listas,
       [source.droppableId]: sourceList,
-      [destination.droppableId]: destList
+      [destination.droppableId]: destList,
     });
   }
 
@@ -54,14 +58,19 @@ export default function Relation({ reto }) {
         break;
       }
     }
-    setResultado(correcto ? "✅ ¡Todo correcto!" : "❌ Hay errores en la relación");
+    if (correcto) {
+      unlockedChallenge(next, id, dispatch);
+    }
+    setResultado(
+      correcto ? "✅ ¡Todo correcto!" : "❌ Hay errores en la relación"
+    );
   }
 
   function renderLista(id, items, isSlot = false) {
     return (
       <Droppable droppableId={id}>
         {(provided) => (
-          <div
+          <div 
             ref={provided.innerRef}
             {...provided.droppableProps}
             style={{
@@ -73,7 +82,7 @@ export default function Relation({ reto }) {
               border: "1px dashed #ccc",
               display: "flex",
               alignItems: "center",
-              justifyContent: "center"
+              justifyContent: "center",
             }}
           >
             {items.map((item, index) => (
@@ -88,7 +97,7 @@ export default function Relation({ reto }) {
                       padding: "8px",
                       borderRadius: "4px",
                       border: "1px solid #ccc",
-                      ...provided.draggableProps.style
+                      ...provided.draggableProps.style,
                     }}
                   >
                     {item}
@@ -123,7 +132,7 @@ export default function Relation({ reto }) {
         {renderLista("disponibles", listas.disponibles)}
       </DragDropContext>
 
-      <button onClick={comprobar} style={{ marginTop: "10px" }}>
+      <button className="btn" onClick={comprobar} style={{ marginTop: "10px" }}>
         Comprobar
       </button>
 
