@@ -42,16 +42,16 @@ unlockedChallenge(next, id, dispatch)
   }
 
   return (
-    <div>
-      <h3>{pregunta.enunciado}</h3>
-
+    <section>
+            <h3>{pregunta.enunciado}</h3>
+   <div style={{margin: "2rem auto", justifyItems: "center"}}>
       <DragDropContext onDragEnd={handleOnDragEnd}>
         <Droppable droppableId="opciones">
           {(provided) => (
             <ul
               {...provided.droppableProps}
               ref={provided.innerRef}
-              style={{ listStyle: "none", padding: 0 }}
+              style={{ listStyle: "none", padding: 0, minWidth: "40rem" }}
             >
               {items.map((opcion, index) => (
                 <Draggable key={opcion} draggableId={opcion} index={index}>
@@ -62,7 +62,7 @@ unlockedChallenge(next, id, dispatch)
                       {...provided.draggableProps}
                       {...provided.dragHandleProps}
                       style={{
-                        background: "#e41a1aff",
+                        background: "var(--color-bordes2-o)",
                         padding: "10px",
                         marginBottom: "8px",
                         borderRadius: "4px",
@@ -79,12 +79,12 @@ unlockedChallenge(next, id, dispatch)
           )}
         </Droppable>
       </DragDropContext>
-
-      <button className="btn" onClick={comprobarRespuesta} style={{ marginTop: "10px" }}>
-        Comprobar
-      </button>
-
       {resultado && <p>{resultado}</p>}
     </div>
+          <button className="btn" onClick={comprobarRespuesta} style={{ marginTop: "10px" }}>
+        Comprobar
+      </button>
+    </section>
+ 
   );
 }

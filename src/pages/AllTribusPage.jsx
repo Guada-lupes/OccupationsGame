@@ -7,8 +7,11 @@ import styles from "../styles/allTribus.module.css"
 const AllTribusPage = () => {
   const { state } = usePlayer();
   const unlockTribes = (id) => state.unlockedTribe.includes(id);
+  const challengeUnresolved = (id) => state.doneChallenge.includes(id);
+  const theClass = (id)=>  `icono-desbloqueado icono ${challengeUnresolved(id) ? "" : "unresolved"}`
+
   return (
-    <>
+    <section>
     <h2>El planeta de las profesiones</h2>
     <p>Cada Tribu tiene sus propios misterios. ¿Podrás desbloquear todas las tribus? </p>
         <div className={styles.container}>
@@ -16,14 +19,14 @@ const AllTribusPage = () => {
         const Icon = tribu.imagen;
         return unlockTribes(tribu.id) ? (
           <Link to={`/${tribu.id}`} key={index}>
-            <Icon stroke="green" fill="none" />
+            <Icon name={theClass(tribu.id)} stroke="green" fill="none" />
           </Link>
         ) : (
-          <Icon stroke="green" fill="none" />
+          <Icon name="icono-bloqueado" stroke="green" fill="none" />
         );
       })}
     </div>
-    </>
+    </section>
 
   );
 };

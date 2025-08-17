@@ -47,8 +47,9 @@ export default function CompleteWord({ reto, id, next }) {
         style={{
           display: "flex",
           flexDirection: "column",
-          gap: "8px",
+          gap: "10px",
           marginBottom: "10px",
+          marginTop: "2rem"
         }}
       >
         {preguntaActual.opciones.map((opcion) => (
@@ -61,7 +62,7 @@ export default function CompleteWord({ reto, id, next }) {
               borderRadius: "6px",
               border: "1px solid #ccc",
               cursor: resultado ? "not-allowed" : "pointer",
-              background: resultado ? "#bf2424ff" : "#2a8a31ff",
+              background: resultado ? "var(--color-bordes-o)" : "var(--color-bordes2-o)",
               textAlign: "left",
             }}
           >
@@ -74,9 +75,9 @@ export default function CompleteWord({ reto, id, next }) {
         <>
           <p>{resultado}</p>
           {resultado.startsWith("✅") ? (
-            <button onClick={siguientePregunta}>Siguiente</button>
+            <button className="btn" onClick={siguientePregunta}>Siguiente</button>
           ) : (
-            <button onClick={reintentar}>Probar otra vez</button>
+            <button className="btn" onClick={reintentar}>Probar otra vez</button>
           )}
         </>
       )}

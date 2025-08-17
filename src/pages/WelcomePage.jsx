@@ -4,6 +4,7 @@ import Button from "../components/Button";
 import { useUser } from "../trash/useUser";
 import { usePlayer } from "../context/PlayerContext";
 import { checkPassword } from "../../utils/login";
+import styles from "../styles/welcomePage.module.css"
 
 export const WelcomePage = () => {
   const { state, dispatch } = usePlayer();
@@ -34,7 +35,8 @@ export const WelcomePage = () => {
     }
   }, [state.login]);
   return (
-    <div>
+
+          <div className={styles.container}>
       <h1>Explora el planeta de las profesiones</h1>
       <input
         type="text"
@@ -51,7 +53,10 @@ export const WelcomePage = () => {
         onChange={(e) => getPassword(e)}
       />
       <Button onClick={()=>checkPassword(name, password, dispatch)} texto={"Comenzar"} />
+        <img style={{width: "400px"}} src="..\..\public\image.png" alt="" />
     </div>
+
+
   );
 };
 

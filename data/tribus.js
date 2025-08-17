@@ -804,6 +804,7 @@ export const tribus = [
           "Orientan a turistas y visitantes transmitiendo información cultural y geográfica.",
       },
     ],
+        siguienteTribu: "otros",
   },
   {
     id: "otros",

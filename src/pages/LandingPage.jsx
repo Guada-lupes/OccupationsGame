@@ -5,7 +5,8 @@ import { usePlayer } from "../context/PlayerContext";
 const LandingPage = () => {
 const {state} = usePlayer();
   return (
-    <div>
+    <section>
+          <div>
       <h1>
         Hola {state.name}, te damos la bienvenida al Planeta de las profesiones
       </h1>
@@ -17,6 +18,8 @@ const {state} = usePlayer();
       <p>¿Estas preparada para comenzar la aventura?</p>
       <Button texto={"Comenzar"} link={"/all_tribus"} />
     </div>
+    </section>
+
   );
 };
 

@@ -40,7 +40,7 @@ const Challenge = ({ reto, id, next, profesiones }) => {
     </div>
     <dialog id="reto_desbloqueado" className={styles.modal}>
       <div className={styles.text_container}>
-              <p>¡Reto superado!</p>
+              <p className={styles.p}>¡Reto superado!</p>
       <button className="btn" onClick={()=>document.getElementById("reto_desbloqueado").close()}>Aceptar</button>
       </div>
 

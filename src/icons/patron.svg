@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120">
+  <defs>
+    <pattern id="pintadera" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M0 12 L12 0 L24 12 L12 24 Z" fill="none" stroke="#fff" stroke-width="1" opacity="0.05"/>
+      <path d="M0 12 Q12 0 24 12 Q12 24 0 12Z" fill="none" stroke="#fff" stroke-width="0.8" opacity="0.04"/>
+      <circle cx="12" cy="12" r="1.6" fill="#fff" opacity="0.06"/>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#pintadera)"/>
+</svg>

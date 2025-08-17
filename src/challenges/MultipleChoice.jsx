@@ -41,7 +41,7 @@ export default function MultipleChoice({ reto, id, next }) {
   return (
     <div style={{ maxWidth: "500px", margin: "0 auto" }}>
       <h3>{preguntaActual.enunciado}</h3>
-      <div style={{ display: "flex", flexDirection: "column", gap: "8px", marginBottom: "10px" }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: "10px", marginBottom: "10px", marginTop: "2rem" }}>
         {preguntaActual.opciones.map((opcion) => (
           <button
             key={opcion}
@@ -52,7 +52,7 @@ export default function MultipleChoice({ reto, id, next }) {
               borderRadius: "6px",
               border: "1px solid #ccc",
               cursor: resultado ? "not-allowed" : "pointer",
-              background: resultado ? "#de2d2dff" : "#31b84aff",
+              background: resultado ? "var(--color-bordes-o)" : "var(--color-bordes2-o)",
               textAlign: "left"
             }}
           >
@@ -65,9 +65,9 @@ export default function MultipleChoice({ reto, id, next }) {
         <>
           <p>{resultado}</p>
           {resultado.startsWith("✅") ? (
-            <button onClick={siguientePregunta}>Siguiente</button>
+            <button className="btn" onClick={siguientePregunta}>Siguiente</button>
           ) : (
-            <button onClick={reintentar}>Probar otra vez</button>
+            <button className="btn" onClick={reintentar}>Probar otra vez</button>
           )}
         </>
       )}

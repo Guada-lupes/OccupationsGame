@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
 import { usePlayer } from "../context/PlayerContext";
 import { unlockedChallenge } from "../../utils/unlockedChallenge";
-import styles from "../styles/relation.module.css"
+import styles from "../styles/relation.module.css";
 
 export default function Relation({ reto, id, next }) {
   const { dispatch } = usePlayer();
@@ -70,17 +70,19 @@ export default function Relation({ reto, id, next }) {
     return (
       <Droppable droppableId={id}>
         {(provided) => (
-          <div 
+          <div
             ref={provided.innerRef}
             {...provided.droppableProps}
             style={{
-              background: isSlot ? "#ea3f3fff" : "#f4f4f4",
+              background: isSlot
+                ? "var(--color-fondo-secundario-o)"
+                : "var(--color-fondo-secundario-o)",
               padding: "10px",
               width: isSlot ? "250px" : "250px",
               minHeight: "50px",
               borderRadius: "6px",
               border: "1px dashed #ccc",
-              display: "flex",
+              display: "block",
               alignItems: "center",
               justifyContent: "center",
             }}
@@ -93,7 +95,7 @@ export default function Relation({ reto, id, next }) {
                     {...provided.draggableProps}
                     {...provided.dragHandleProps}
                     style={{
-                      background: "#86de65ff",
+                      background: "var(--color-bordes2-o)",
                       padding: "8px",
                       borderRadius: "4px",
                       border: "1px solid #ccc",
@@ -113,30 +115,34 @@ export default function Relation({ reto, id, next }) {
   }
 
   return (
-    <div>
-      <h3>{instrucciones}</h3>
-      <DragDropContext onDragEnd={onDragEnd}>
-        <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-          {columnaA.map((comercio) => (
-            <div
-              key={comercio}
-              style={{ display: "flex", gap: "10px", alignItems: "center" }}
-            >
-              <div style={{ width: "250px" }}>{comercio}</div>
-              {renderLista(comercio, listas[comercio], true)}
-            </div>
-          ))}
-        </div>
+    <section>
+              <h3>{instrucciones}</h3>
+      <div style={{ display: "grid" , gridTemplateColumns:"repeat(auto-fill,minmax(400px,1fr))", gap: "2rem", margin: "2rem 0", justifyItems: "center"}}>
 
-        <h4 style={{ marginTop: "20px" }}>Opciones disponibles</h4>
-        {renderLista("disponibles", listas.disponibles)}
-      </DragDropContext>
-
+        <DragDropContext onDragEnd={onDragEnd}>
+          <div
+            style={{ display: "flex", flexDirection: "column", gap: "10px" }}
+          >
+            {columnaA.map((comercio) => (
+              <div
+                key={comercio}
+                style={{ display: "flex", gap: "10px", alignItems: "center", width:"fit-content" }}
+              >
+                <div style={{ width: "250px" }}>{comercio}</div>
+                {renderLista(comercio, listas[comercio], true)}
+              </div>
+            ))}
+          </div>
+          <div style={{textAlign: "left", width:"fit-content"}}>
+            <h4 style={{ marginTop: "20px" }}>Opciones disponibles</h4>
+            {renderLista("disponibles", listas.disponibles)}
+          </div>
+        </DragDropContext>
+        {resultado && <p>{resultado}</p>}
+      </div>
       <button className="btn" onClick={comprobar} style={{ marginTop: "10px" }}>
         Comprobar
       </button>
-
-      {resultado && <p>{resultado}</p>}
-    </div>
+    </section>
   );
 }

@@ -7,7 +7,8 @@ export default function FindStrange({ reto, next, id }) {
   const [respuestas, setRespuestas] = useState({});
 
   const handleSelect = (preguntaIndex, opcion) => {
-    const esCorrecta = opcion === reto.preguntas[preguntaIndex].respuestaCorrecta;
+    const esCorrecta =
+      opcion === reto.preguntas[preguntaIndex].respuestaCorrecta;
 
     setRespuestas((prev) => ({
       ...prev,
@@ -16,7 +17,8 @@ export default function FindStrange({ reto, next, id }) {
   };
 
   const comprobarRespuestas = () => {
-    const todasRespondidas = Object.keys(respuestas).length === reto.preguntas.length;
+    const todasRespondidas =
+      Object.keys(respuestas).length === reto.preguntas.length;
     const todasCorrectas = reto.preguntas.every(
       (pregunta, i) => respuestas[i]?.esCorrecta === true
     );
@@ -28,77 +30,79 @@ export default function FindStrange({ reto, next, id }) {
     if (todasCorrectas) {
       unlockedChallenge(next, id, dispatch);
     }
-
   };
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-      {reto.preguntas.map((pregunta, index) => {
-        const respuestaUsuario = respuestas[index];
-        return (
-          <div
-            key={index}
-            style={{
-              padding: "15px",
-              border: "1px solid #ddd",
-              borderRadius: "12px",
-              background: "#f9f9f9",
-            }}
-          >
-            <h3>{pregunta.enunciado}</h3>
-            <div style={{ display: "flex", flexDirection: "column", gap: "8px", marginTop: "10px" }}>
-              {pregunta.opciones.map((opcion, i) => {
-                const seleccionada = respuestaUsuario?.opcion === opcion;
-                return (
-                  <button
-                    key={i}
-                    onClick={() => handleSelect(index, opcion)}
-                    style={{
-                      padding: "10px",
-                      border: "1px solid #888",
-                      borderRadius: "8px",
-                      cursor: "pointer",
-                      background: seleccionada ? "#007bff" : "white",
-                      color: seleccionada ? "white" : "black",
-                      transition: "0.2s",
-                    }}
-                  >
-                    {opcion}
-                  </button>
-                );
-              })}
-            </div>
-
-            {/* Feedback inmediato debajo de las opciones */}
-            {respuestaUsuario && (
-              <p
+    <section>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(400px, 1fr))", gap: "20px", margin: "2rem 0",  }}>
+        {reto.preguntas.map((pregunta, index) => {
+          const respuestaUsuario = respuestas[index];
+          return (
+            <div
+              key={index}
+              style={{
+                padding: "15px",
+                border: "1px solid #ddd",
+                borderRadius: "12px",
+                background: "var(--color-fondo-secundario-o)",
+                width: "fit-content",
+                minWidth: "-webkit-fill-available"
+              }}
+            >
+              <h3>{pregunta.enunciado}</h3>
+              <div
                 style={{
-                  marginTop: "8px",
-                  fontWeight: "bold",
-                  color: respuestaUsuario.esCorrecta ? "#28a745" : "#dc3545",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "8px",
+                  marginTop: "10px",
                 }}
               >
-                {respuestaUsuario.esCorrecta ? "Correcto ✅" : "Incorrecto ❌"}
-              </p>
-            )}
-          </div>
-        );
-      })}
+                {pregunta.opciones.map((opcion, i) => {
+                  const seleccionada = respuestaUsuario?.opcion === opcion;
+                  return (
+                    <button
+                      key={i}
+                      onClick={() => handleSelect(index, opcion)}
+                      style={{
+                        padding: "10px",
+                        border: "1px solid #888",
+                        borderRadius: "8px",
+                        cursor: "pointer",
+                        background: seleccionada
+                          ? "var(--color-bordes-o)"
+                          : "var(--color-bordes2-o)",
+                        color: seleccionada ? "white" : "black",
+                        transition: "0.2s",
+                      }}
+                    >
+                      {opcion}
+                    </button>
+                  );
+                })}
+              </div>
 
-      <button
-        onClick={comprobarRespuestas}
-        style={{
-          padding: "12px",
-          background: "#28a745",
-          color: "white",
-          border: "none",
-          borderRadius: "10px",
-          cursor: "pointer",
-          fontSize: "16px",
-        }}
-      >
+              {/* Feedback inmediato debajo de las opciones */}
+              {respuestaUsuario && (
+                <p
+                  style={{
+                    marginTop: "8px",
+                    fontWeight: "bold",
+                    color: respuestaUsuario.esCorrecta ? "#28a745" : "#dc3545",
+                  }}
+                >
+                  {respuestaUsuario.esCorrecta
+                    ? "Correcto ✅"
+                    : "Incorrecto ❌"}
+                </p>
+              )}
+            </div>
+          );
+        })}
+      </div>
+      <button className="btn" onClick={comprobarRespuestas}>
         Enviar respuestas
       </button>
-    </div>
+    </section>
   );
 }

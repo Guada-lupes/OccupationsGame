@@ -7,8 +7,7 @@ const OccupationsCard = ({ profesiones }) => {
   const { state, dispatch } = usePlayer();
 
   function saveOccupations(p) {
-    console.log("hola");
-    
+
     dispatch({ type: "saved_occupation", payload: p });
   }
 
@@ -23,7 +22,7 @@ const OccupationsCard = ({ profesiones }) => {
           // let isSaved = state.saved_occupation.includes(p.nombre)
           return (
             <div className="card" key={i}>
-              <h3>{p.nombre}</h3>
+              <h3 className={styles.h3}>{p.nombre}</h3>
               <p>{p.descripcion}</p>
               <div className={styles.button_container}>
                 <Button
@@ -36,8 +35,8 @@ const OccupationsCard = ({ profesiones }) => {
             </div>
           );
         })}
-        <Button texto={"Volver"} link={"/all_tribus"} />
       </div>
+              <Button texto={"Volver"} link={"/all_tribus"} />
     </div>
   );
 };

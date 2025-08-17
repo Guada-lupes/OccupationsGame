@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { usePlayer } from "../context/PlayerContext";
 import { unlockedChallenge } from "../../utils/unlockedChallenge";
+import styles from "../styles/trueOrFalse.module.css"
 
 const TrueOrFalse = ({ reto, id, next }) => {
   const { dispatch } = usePlayer();
@@ -44,10 +45,9 @@ const TrueOrFalse = ({ reto, id, next }) => {
   return (
     <>
       {reto.preguntas.map((p, i) => (
-        <div key={i}>
+        <div className={styles.container} key={i}>
           <p>{p.enunciado}</p>
-
-          <label>
+          <label >
             <input
               type="radio"
               name={`pregunta-${i}`}
@@ -67,11 +67,11 @@ const TrueOrFalse = ({ reto, id, next }) => {
             />
             Falso
           </label>
-          <div>
-            <button onClick={() => verificarRespuesta(i)}>Probar</button>
+          <div className={styles.button_container}>
+            <button className="btn" onClick={() => verificarRespuesta(i)}>Probar</button>
           </div>
           {resultados[i] !== null && (
-            <p>{resultados[i] ? "¡Correcto!" : "Incorrecto"}</p>
+            <p className={styles.p}>{resultados[i] ? "¡Correcto!" : "Incorrecto"}</p>
           )}
         </div>
       ))}

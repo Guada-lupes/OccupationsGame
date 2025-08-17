@@ -15,16 +15,21 @@ const PlayerPage = () => {
   }
 
   return (
-    <div>
+    <section>
+          <div>
       <h1>Revisa tu progreso {state.name}</h1>
       <h2>Tribus desbloqueadas</h2>
-      <ul>
+      {unlockedTribus.length<=0 ? (<p>Aún no has desbloqueado ninguna Tribu</p>) :
+(              <ul>
         {unlockedTribus.map((e, i) => (
           <li key={i}>{e}</li>
         ))}
-      </ul>
+      </ul>)
+      }
+
       <h2>Ocupaciones guardadas</h2>
-      <ul>
+      {state.savedOccupations<=0 ? (<p>Aún no has guardado ninguna ocupación</p>) :
+      (      <ul>
         {state.savedOccupations.map((o, i) => (
           <li key={i}>
             <h3>{o.nombre}</h3>
@@ -32,8 +37,12 @@ const PlayerPage = () => {
             <a href={o.link}>Más información</a>
           </li>
         ))}
-      </ul>
+      </ul> )
+      }
+
     </div>
+    </section>
+
   );
 };
 

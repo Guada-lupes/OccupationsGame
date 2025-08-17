@@ -2,5 +2,5 @@
     display: flex;
     flex-direction: row;
     gap: var(--texto-lg);
-    margin-bottom: 4rem;
+    margin: 2rem;
 }

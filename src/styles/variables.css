@@ -3,17 +3,29 @@
 
 :root {
   /* Colores principales */
-  --color-primario: #2d6a4f; /* Verde profundo - identidad */
-  --color-secundario: #95d5b2; /* Verde claro - acentos */
-  --color-acento: #ffb703; /* Amarillo cálido - resaltar */
-  --color-peligro: #d90429; /* Rojo - errores o bloqueado */
-  --color-exito: #38b000; /* Verde brillante - desbloqueado */
-  --color-fondo: #f8f9fa; /* Fondo neutro */
-  --color-texto: #212529; /* Texto principal */
-  --color-texto-secundario: #6c757d; /* Texto atenuado */
+  /* Versión oscura*/
+  --color-fondo-o: #1b1b1b;
+  --color-fondo-secundario-o: #212529;
+  --color-titulo-o: #bdbdbd;
+  --color-texto-o: #ffffff;
+  --color-boton-o: #ff9800;
+  --color-boton-txt-o: #ffffff;
+  --color-bordes-o: #4caf50;
+  --color-bordes2-o: #2e7d32;
+  --color-detalles-o: #1565c0;
+  --color-extra-o: #8d6e63;
+  /*Version clara*/
+  --color-fondo-c: #f5f5f5;
+  --color-fondo-secundario-c: #8d6e63;
+  --color-titulo-c: #212121;
+  --color-texto-c: #1b1b1b;
+  --color-boton-c: #2e7d32;
+  --color-boton-txt-c: #ffffff;
+  --color-bordes-c: #ff9800;
+  --color-detalles-c: #1565c0;
 
   /* Tipografías */
-  --fuente-principal: "Poppins", sans-serif;
+  --fuente-principal: "Roboto", sans-serif;
   --fuente-titulos: "Merriweather", serif;
 
   /* Tamaños de texto */
@@ -38,29 +50,38 @@
 body {
   font-family: var(--fuente-principal);
   font-size: var(--texto-md);
-  color: var(--color-texto);
-  background-color: var(--color-fondo);
-  margin: 0;
-  padding: 0;
+  color: var(--color-texto-o);
+  background-color: var(--color-fondo-secundario-o);
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+  text-align: center;
 }
 
 /* Titulares */
 h1,
 h2,
+h3,
 h4 {
   font-family: var(--fuente-titulos);
-  color: var(--color-primario);
-  padding-bottom: var(--texto-lg);
-  margin-bottom: var(--texto-lg);
+  color: var(--color-titulo-o);
 }
-h3, h4{
-    font-family: var(--fuente-titulos);
-  color: var(--color-primario);
-  padding-bottom: var(--texto-xs);
+h1 {
+  padding: 0.5rem;
+  margin-bottom: 2rem;
+  font-style: italic;
 }
-
+h2 {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+h3,
+h4 {
+  padding: 0.2rem;
+  margin-bottom: 0.5rem;
+}
 p {
-  margin-bottom: var(--texto-sm);
+  margin-bottom: 0.5rem;
 }
 /* 📎 Enlaces */
 a {
@@ -76,35 +97,18 @@ a:hover {
 
 /* 🔘 Botones */
 .btn {
-  display: inline-block;
+  /* display: inline-block; */
   padding: var(--btn-padding);
   font-size: var(--btn-fuente);
-  font-weight: bold;
+  font-weight: 600;
   border-radius: var(--texto-xxs);
   cursor: pointer;
+  background-color: var(--color-boton-o);
   border: none;
-  box-shadow: var(--sombra-suave);
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
-
-.btn-primario {
-  background-color: var(--color-primario);
-  color: white;
-}
-
-.btn-primario:hover {
-  background-color: #1b4332; /* más oscuro */
-  transform: scale(1.05);
-}
-
-.btn-secundario {
-  background-color: var(--color-secundario);
-  color: var(--color-texto);
-}
-
-.btn-secundario:hover {
-  background-color: #74c69d;
-  transform: scale(1.05);
+.btn:hover {
+  background-color: var(--color-bordes-o);
 }
 
 /* 🪶 Iconos */
@@ -114,28 +118,42 @@ a:hover {
 }
 
 .icono-bloqueado {
-  color: var(--color-peligro);
+  color: var(--color-extra-o);
 }
 
 .icono-desbloqueado {
-  color: var(--color-exito);
+  color: var(--color-bordes2-o);
+}
+.unresolved{
+color: rgb(151, 50, 50);
+}
+.icono:hover {
+  color: var(--color-boton-o);
 }
 /*Iputs*/
 input {
   margin: var(--texto-md);
   padding: var(--texto-xxs);
+  border: none;
   border-radius: var(--texto-xxs);
 }
 /* 📦 Tarjetas o contenedores */
 .card {
-  background: white;
+  background: var(--color-fondo-o);
   border-radius: var(--borde-redondeado);
   box-shadow: var(--sombra-suave);
   padding: 0.5rem;
   margin: 2rem;
   transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card:hover {
   transform: translateY(-4px);
+}
+section {
+  max-width: 80vw;
+  margin: auto;
 }

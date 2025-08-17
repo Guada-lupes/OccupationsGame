@@ -16,7 +16,7 @@ export const Header = () => {
             {/* <Link>Como jugar</Link>
             <Link>Sobre la aplicación</Link>
              */}
-             <Link to={"/player"}>Jugador</Link>
+             <Link to={"/player"}>Jugadora</Link>
             <Link to={"/"}onClick={()=>logOut(dispatch)}>Salir</Link>
         </div>}
         </>

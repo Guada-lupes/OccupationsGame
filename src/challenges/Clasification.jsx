@@ -75,7 +75,7 @@ export default function Clasification({ reto, id, next }) {
             ref={provided.innerRef}
             {...provided.droppableProps}
             style={{
-              background: "#ae0707ff",
+              background: "var(--color-fondo-secundario-o)",
               padding: "10px",
               width: "250px",
               minHeight: "200px",
@@ -91,7 +91,7 @@ export default function Clasification({ reto, id, next }) {
                     {...provided.draggableProps}
                     {...provided.dragHandleProps}
                     style={{
-                      background: "#6fe45dff",
+                      background: "var(--color-bordes2-o)",
                       padding: "8px",
                       marginBottom: "8px",
                       borderRadius: "4px",
@@ -115,7 +115,7 @@ export default function Clasification({ reto, id, next }) {
     <div>
       <h3>{instrucciones}</h3>
       <DragDropContext onDragEnd={onDragEnd}>
-        <div style={{ display: "flex", gap: "20px", marginTop: "1rem" }}>
+        <div style={{ display: "flex", gap: "20px", marginTop: "2rem", justifyContent:"center", marginBottom: "2rem" }}>
           {renderLista("porClasificar", listas.porClasificar)}
           {Object.keys(categorias).map((cat) => renderLista(cat, listas[cat]))}
         </div>
