@@ -53,7 +53,7 @@ export const WelcomePage = () => {
         onChange={(e) => getPassword(e)}
       />
       <Button onClick={()=>checkPassword(name, password, dispatch)} texto={"Comenzar"} />
-        <img style={{width: "400px"}} src="..\..\public\image.png" alt="" />
+        <img style={{width: "400px"}} src="..\..\public\jeep.png" alt="" />
     </div>
 
 

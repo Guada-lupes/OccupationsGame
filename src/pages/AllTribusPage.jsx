@@ -11,11 +11,14 @@ const AllTribusPage = () => {
   const theClass = (id)=>  `icono-desbloqueado icono ${challengeUnresolved(id) ? "" : "unresolved"}`
 
   return (
-    <section>
-    <h2>El planeta de las profesiones</h2>
-    <p>Cada Tribu tiene sus propios misterios. ¿Podrás desbloquear todas las tribus? </p>
-        <div className={styles.container}>
-      {tribus.map((tribu, index) => {
+    <div >
+          <section className={styles.section}>
+    <h1>El planeta de las profesiones</h1>
+    <p>Cada Tribu tiene sus propios misterios. Una Tribu en verde signifa que has superado el reto. Una Tribu en rojo esta desbloqueada pero aún debes comprobar tu conocimeintos. ¿Podrás desbloquear todas las tribus? </p>
+        </section>
+        <div className={styles.tribus_container}>
+          <div className={styles.grid}>
+            {tribus.map((tribu, index) => {
         const Icon = tribu.imagen;
         return unlockTribes(tribu.id) ? (
           <Link to={`/${tribu.id}`} key={index}>
@@ -25,8 +28,12 @@ const AllTribusPage = () => {
           <Icon name="icono-bloqueado" stroke="green" fill="none" />
         );
       })}
+          </div>
+      
     </div>
-    </section>
+
+    </div>
+
 
   );
 };

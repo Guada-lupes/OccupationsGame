@@ -46,6 +46,7 @@
   --btn-fuente: var(--texto-md);
 }
 
+
 /* 🔤 Texto */
 body {
   font-family: var(--fuente-principal);
@@ -116,7 +117,9 @@ a:hover {
   font-size: 1.5rem;
   transition: color 0.3s ease;
 }
-
+.icono-player{
+  width: 2rem;
+}
 .icono-bloqueado {
   color: var(--color-extra-o);
 }

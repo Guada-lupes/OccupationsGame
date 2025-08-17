@@ -12,7 +12,7 @@ const OccupationsCard = ({ profesiones }) => {
   }
 
   return (
-    <div>
+    <div >
       <h2>
         Tu exploración a dado frutos, aquí tienes las más populares ocupaciones
         de la tribu{" "}
@@ -22,7 +22,7 @@ const OccupationsCard = ({ profesiones }) => {
           // let isSaved = state.saved_occupation.includes(p.nombre)
           return (
             <div className="card" key={i}>
-              <h3 className={styles.h3}>{p.nombre}</h3>
+              <h3 >{p.nombre}</h3>
               <p>{p.descripcion}</p>
               <div className={styles.button_container}>
                 <Button

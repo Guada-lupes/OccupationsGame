@@ -1,7 +1,7 @@
 
 
 export const AgriculturaIcons = ({name}) => {
-return(<svg className={name} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+return(<svg  className={name} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
   <path d="M4 19c2.5 0 4-2 8-2s5.5 2 8 2"/>
   <path d="M12 17V9"/>
   <path d="M12 9c0-2.5 2-4.5 4.5-5M12 9c0-2.5-2-4.5-4.5-5"/>

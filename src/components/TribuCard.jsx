@@ -14,7 +14,6 @@ export const TribuCard = () => {
 
   const tribu = tribus.find((t) => t.id === id);
   const isWin = state.doneChallenge.includes(tribu.id);
-  console.log(state);
   
   return (
     <div>
