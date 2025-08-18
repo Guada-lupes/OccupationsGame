@@ -17,8 +17,8 @@ const PlayerPage = () => {
   }
 
   return (
-    <section>
-      <div>
+    <div className={styles.lados}>
+      <section className={styles.section}>
         <h1>Revisa tu progreso {state.name}</h1>
         <img
           className={styles.img}
@@ -71,8 +71,8 @@ const PlayerPage = () => {
             ))}
           </div>
         )}
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 

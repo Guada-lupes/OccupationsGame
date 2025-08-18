@@ -7,27 +7,29 @@ const LandingPage = () => {
   const { state } = usePlayer();
   const name = state.name.length > 1 ? ` ${state.name}` : "";
   return (
-    <section>
-      <div>
-        <div className={styles.container}>
-          <img className={styles.img} src="..\..\public\cardon.png" alt="" />
-          <div className={styles.texto_container}>
-            <h1 className={styles.p}>
-              Hola{name}, te damos la bienvenida al Planeta de las profesiones
-            </h1>
-            <p className={styles.p}>
-              En este pais cada tribu pertenece a una profesión. Descubre las 14
-              tribus y sus peculiaridades superando retos y desbloqueando nuevos
-              territorios.
-            </p>
-            <p className={styles.p}>
-              ¿Estas preparada para comenzar la aventura?
-            </p>
+    <>
+      <div className={styles.lados}>
+        <section className={styles.section}>
+          <div className={styles.container}>
+            <div className={styles.texto_container}>
+              <h1 className={styles.p}>
+                Hola{name}, te damos la bienvenida al Planeta de las profesiones
+              </h1>
+              <p className={styles.p}>
+                En este pais cada tribu pertenece a una profesión. Descubre las
+                14 tribus y sus peculiaridades superando retos y desbloqueando
+                nuevos territorios.
+              </p>
+              <p className={styles.p}>
+                ¿Estas preparada para comenzar la aventura?
+              </p>
+            </div>
+            <img className={styles.img} src="..\..\public\mapa.png" alt="" />
           </div>
-        </div>
-        <Button texto={"Comenzar"} link={"/all_tribus"} />
+          <Button texto={"Comenzar"} link={"/all_tribus"} />
+        </section>
       </div>
-    </section>
+    </>
   );
 };
 

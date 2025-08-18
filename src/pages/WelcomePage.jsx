@@ -4,11 +4,12 @@ import Button from "../components/Button";
 import { useUser } from "../trash/useUser";
 import { usePlayer } from "../context/PlayerContext";
 import { checkPassword } from "../../utils/login";
-import styles from "../styles/welcomePage.module.css"
+import styles from "../styles/welcomePage.module.css";
 
 export const WelcomePage = () => {
   const { state, dispatch } = usePlayer();
   const [password, setPassword] = useState("hola");
+  const [arrancar, setArrancar] = useState(false);
 
   const navigate = useNavigate();
   const { updateName } = useUser();
@@ -26,37 +27,44 @@ export const WelcomePage = () => {
   }
   //actualiza el nombre bien
   useEffect(() => {
-    updateName(name);;
+    updateName(name);
   }, [name]);
 
   useEffect(() => {
-    if(state.login){
-      navigate("/landing");
+    if (state.login) {
+      setArrancar(true);
+      setTimeout(() => {
+        navigate("/landing");
+      }, 2000);
     }
   }, [state.login]);
   return (
-
-          <div className={styles.container}>
+    <div className={styles.container}>
       <h1>Explora el planeta de las profesiones</h1>
       <input
         type="text"
         onChange={(e) => getName(e)}
         value={name}
-        placeholder="Elige un nombre"
+        placeholder="Introduce tu nombre"
       />
       <input
         type="password"
         name="password"
         id="password"
-        placeholder="Introduce contraseña"
+        placeholder="Introduce la contraseña"
         value={password}
         onChange={(e) => getPassword(e)}
       />
-      <Button onClick={()=>checkPassword(name, password, dispatch)} texto={"Comenzar"} />
-        <img style={{width: "400px"}} src="..\..\public\jeep.png" alt="" />
+      <Button
+        onClick={() => checkPassword(name, password, dispatch)}
+        texto={"Comenzar"}
+      />
+      <img
+        className={`${styles.img} ${arrancar ? styles.img_arrancar : ""}`}
+        src="..\..\public\jeep.png"
+        alt="Un jeep que se vibra"
+      />
     </div>
-
-
   );
 };
 
