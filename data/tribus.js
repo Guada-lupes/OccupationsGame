@@ -19,7 +19,7 @@ export const tribus = [
     nombre: "Agricultura",
     tribu: "Mapuches Guardianes del Territorio",
     descripcion:
-      "Expertos en el cultivo de la tierra y el manejo sostenible de los recursos naturales.",
+      "“Hijos de la tierra fértil, los Mapuches han aprendido a escuchar el murmullo del suelo y el canto de las estaciones. Sus manos hacen brotar semillas que alimentan a todas las tribus. Visten colores verdes y ocres, símbolos de la vida y la cosecha. En las grandes celebraciones, comparten frutos y cereales con quienes los visitan, porque creen que el alimento debe ser siempre un bien común.”",
     imagen: AgriculturaIcons,
     desbloqueada: true,
     reto: {
@@ -77,7 +77,7 @@ export const tribus = [
     nombre: "Industria manufacturera y suministros",
     tribu: "Sioux Forjadores de Acero",
     descripcion:
-      "Maestros en transformar materias primas en productos terminados, desde alimentos hasta maquinaria.",
+      "“Los Sioux son maestros del metal y la transformación. De sus talleres salen herramientas, máquinas y objetos que sostienen la vida del planeta. Su cultura valora el trabajo colectivo: cada creación lleva la marca de todo el clan. En sus forjas, el fuego nunca se apaga, pues creen que mantenerlo vivo es mantener el progreso encendido.”",
     imagen: IndusIcons,
     desbloqueada: false,
     reto: {
@@ -143,7 +143,7 @@ export const tribus = [
     nombre: "Construcción",
     tribu: "Zapotecas Arquitectos del Horizonte",
     descripcion:
-      "Expertos en levantar, reparar y mantener estructuras, desde cimientos hasta instalaciones eléctricas.",
+      "“Constructores de ciudades, puentes y refugios, los Zapotecas miran siempre al horizonte: donde otros ven vacío, ellos ven estructuras posibles. Sus templos de piedra son espacios de encuentro entre tribus, porque creen que toda obra debe servir al bien común. Su cultura celebra la unión entre lo práctico y lo bello: para ellos, cada edificio es también una obra de arte.”",
     imagen: ConstruIcon,
     desbloqueada: false,
     reto: {
@@ -203,7 +203,7 @@ export const tribus = [
       "Comercio al por mayor y al por menor, reparación de vehículos de motor y motocicletas",
     tribu: "Navajos Maestros del Trueque",
     descripcion:
-      "Maestros del intercambio, la venta y la reparación. Mantienen en movimiento el comercio y los vehículos.",
+      "“Los Navajos son viajeros del mercado: conocen el valor de cada objeto y el poder de cada intercambio. Su habilidad para negociar los convierte en puentes entre tribus. Sus campamentos son coloridos, repletos de mercancías y voces que ofrecen, regatean y celebran el trueque. Además, son hábiles reparadores: nada que llega a sus manos se da por perdido.”",
     imagen: ComerIcon,
     desbloqueada: false,
     reto: {
@@ -265,7 +265,7 @@ export const tribus = [
     nombre: "Transporte y almacenamiento",
     tribu: "Apaches Rutas Sin Fin",
     descripcion:
-      "Especialistas en mover personas y mercancías de un lugar a otro de forma segura, rápida y eficiente, conectando comunidades y mercados.",
+      "“Los Apaches nunca permanecen demasiado tiempo en un mismo lugar. Sus caravanas cruzan territorios, mares y cielos, asegurando que todo llegue a su destino. Su cultura se basa en el movimiento y la libertad: creen que cada camino abierto es un nuevo lazo entre tribus. Guardan mapas y relatos de todas las rutas, convirtiéndose en memoria viviente de los caminos del planeta.”",
     imagen: TransIcon,
     desbloqueada: false,
     reto: {
@@ -324,7 +324,7 @@ export const tribus = [
     nombre: "Hostelería",
     tribu: "Mayas Anfitriones del Sol",
     descripcion:
-      "Maestros en acoger, servir y crear experiencias memorables en hoteles, restaurantes y otros espacios de ocio.",
+      "“Los Mayas dominan el arte de recibir. Sus aldeas son oasis de descanso, donde viajeros de todas las tribus encuentran calor, alimento y hospitalidad. Adornan sus hogares con símbolos solares, porque creen que cada huésped trae consigo un nuevo amanecer. Su cultura se basa en el servicio y el cuidado: para ellos, atender al visitante es honrar al planeta mismo.”",
     imagen: HosteIcon,
     desbloqueada: false,
     reto: {
@@ -387,7 +387,7 @@ export const tribus = [
     nombre: "Información y comunicaciones",
     tribu: "Incas Mensajeros del Viento",
     descripcion:
-      "Expertos en crear, gestionar y transmitir información a través de medios, tecnología y redes que conectan al mundo.",
+      "“Los Incas dominan el arte de enviar mensajes a través del aire, de la luz y de las señales invisibles. Son los portadores de noticias, ideas e historias. Su cultura se basa en la conexión: creen que unir mentes y corazones es tan vital como el alimento. En sus festivales, liberan cometas y globos que representan la comunicación entre los pueblos.”",
     imagen: InfoIcon,
     desbloqueada: false,
     reto: {
@@ -449,7 +449,7 @@ export const tribus = [
     nombre: "Actividades inmobiliarias",
     tribu: "Guaraníes Dueños de la Llave",
     descripcion:
-      "Expertos en la gestión, valoración y mantenimiento de propiedades. Custodian el buen uso de la tierra y edificaciones en su territorio.",
+      "“Los Guaraníes son los guardianes de hogares, tierras y espacios de convivencia. Su símbolo es la llave, porque para ellos cada puerta abierta representa una oportunidad. Custodian las aldeas y aconsejan a las tribus sobre cómo aprovechar y cuidar el territorio. Su cultura valora la seguridad y la pertenencia: creen que un lugar propio es el inicio de toda historia.”",
     imagen: InmoIcon,
     desbloqueada: false,
     reto: {
@@ -507,7 +507,7 @@ export const tribus = [
     nombre: "Actividades profesionales, científicas y técnicas",
     tribu: "Quechuas Sabios de la Montaña",
     descripcion:
-      "Una tribu sabia que protege la salud, la seguridad y la calidad de todo lo que entra en su territorio. Observan cada detalle para garantizar el bienestar de su gente.",
+      "“A los Quechuas se los reconoce por su sabiduría y su búsqueda incansable del conocimiento. Habitan en lo alto de las montañas, donde observan el cielo y estudian los misterios de la naturaleza. Su cultura rinde culto a la investigación y a la precisión: cada descubrimiento es compartido con las demás tribus, porque creen que la ciencia solo cobra sentido cuando ilumina a todos.”",
     imagen: CienIcon,
     desbloqueada: false,
     reto: {
@@ -559,7 +559,7 @@ export const tribus = [
     nombre: "Actividades administrativas y servicios auxiliares",
     tribu: "Tarahumaras Chamanes del Papeleo",
     descripcion:
-      "Organizados y disciplinados, los Mapuches del Orden mantienen el flujo de tareas en perfecto equilibrio, asegurando que cada rincón de su territorio funcione como un reloj.",
+      "“Los Tarahumaras son guardianes del orden. Entre pergaminos, sellos y registros, organizan la vida del planeta. Aunque su trabajo parece invisible, todas las tribus dependen de ellos. Visten con túnicas llenas de símbolos y numerales, recordando que cada dato es sagrado. Su cultura venera la claridad y la transparencia: creen que el caos se combate con reglas claras y justas.”",
     imagen: AdminIcon,
     desbloqueada: false,
     reto: {
@@ -660,7 +660,7 @@ export const tribus = [
         nombre: "Profesores de enseñanza primaria, secundaria y universitaria",
         link: "https://www.sepe.es/dctm/perfiles:09019af480260fbd/RElTRVdFQg==/PROFESORES%20DE%20ENSE%C3%91ANZA%20SECUNDARIA.pdf",
         descripcion:
-          "Imparten conocimientos en distintas etapas educativas, desde la educación básica hasta la universitaria.",
+          "“Los Hopi son narradores, maestros y guías de la memoria. Bajo la sombra de sus árboles sagrados, cuentan historias y transmiten saberes a las nuevas generaciones. Su cultura valora la enseñanza como un legado que nunca termina: creen que cada palabra compartida se convierte en semilla de futuro. Sus ceremonias son círculos de aprendizaje, donde nadie enseña sin aprender.”",
       },
       {
         nombre: "Técnicos en educación infantil",
@@ -694,7 +694,7 @@ export const tribus = [
     nombre: "Actividades sanitarias y de servicios sociales",
     tribu: "Chasca Sanadores de la Luz",
     descripcion:
-      "Conocidos por su sabiduría en curar y cuidar a la comunidad, esta tribu domina el arte de la sanación y la protección social.",
+      "“Los Chasca caminan entre la vida y la fragilidad, curando heridas del cuerpo y del espíritu. Se reconocen por llevar lámparas que nunca se apagan, símbolo de la esperanza. Su cultura se basa en la compasión y el servicio: creen que cuidar a los vulnerables es la forma más alta de sabiduría. Allí donde hay dolor, los Chasca encienden la luz de la vida.”",
     imagen: SaniIcon,
     desbloqueada: false,
     reto: {
@@ -752,7 +752,7 @@ export const tribus = [
     nombre: "Actividades artísticas, recreativas y de entretenimiento",
     tribu: "Yaquis Creadores de Sueños",
     descripcion:
-      "Maestros en arte, deporte y celebración, estos guerreros mantienen viva la cultura y la alegría.",
+      "“Los Yaquis pintan, cantan, bailan y narran mundos imposibles. Su misión es mantener vivo el espíritu del planeta a través del arte y la creatividad. Sus aldeas son un estallido de colores, música y representaciones. Creen que el entretenimiento no es un lujo, sino un alimento del alma. En sus festivales, todas las tribus se reúnen para celebrar la imaginación.”",
     imagen: ArtiIcon,
     desbloqueada: false,
     reto: {
@@ -811,7 +811,7 @@ export const tribus = [
     nombre: "Otros",
     tribu: "Totones Dueños de Todo un Poco",
     descripcion:
-      "Conocidos por honrar la tradición y acompañar a las almas, esta tribu es maestra de la estética, el cuidado y los ritos.",
+      "“Los Totones se ocupan de los aspectos más diversos y delicados de la vida: desde la belleza del presente hasta el cuidado en la despedida final. Su cultura mezcla rituales de transformación con ceremonias de respeto a la muerte. Son versátiles y sabios, porque entienden que cada etapa de la vida merece atención y cuidado. Para ellos, no hay tarea pequeña si ayuda a preservar la dignidad.”",
     imagen: OtroIcon,
     desbloqueada: false,
     reto: {

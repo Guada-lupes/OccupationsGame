@@ -33,7 +33,7 @@
   --texto-xs: 0.75rem;
   --texto-sm: 0.875rem;
   --texto-md: 1rem;
-  --texto-lg: 1.25rem;
+  --texto-lg: 1.2rem;
   --texto-xl: 1.5rem;
   --texto-xxl: 2rem;
 
@@ -50,7 +50,7 @@
 /* 🔤 Texto */
 body {
   font-family: var(--fuente-principal);
-  font-size: var(--texto-md);
+  font-size: var(--texto-lg);
   color: var(--color-texto-o);
   background-color: var(--color-fondo-secundario-o);
   width: 100vw;
@@ -58,6 +58,8 @@ body {
   margin: auto;
   text-align: center;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Titulares */
@@ -72,18 +74,22 @@ h1 {
   padding: 0.5rem;
   margin-bottom: 2rem;
   font-style: italic;
+  font-size: 2rem;
 }
 h2 {
   padding: 0.5rem;
   margin-bottom: 1rem;
+  font-size: 1.7rem;
 }
 h3,
 h4 {
   padding: 0.2rem;
   margin-bottom: 0.5rem;
+  font-size: 1.rem;
 }
 p {
   margin-bottom: 0.5rem;
+
 }
 /* 📎 Enlaces */
 a {
@@ -120,6 +126,11 @@ a:hover {
 }
 .icono-player{
   width: 2rem;
+}
+.icono-card{
+  width: 5rem;
+  margin: auto;
+  padding-bottom: 2rem;
 }
 .icono-bloqueado {
   color: var(--color-extra-o);

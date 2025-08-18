@@ -6,6 +6,7 @@ import AllTribusPage from "./pages/AllTribusPage";
 import { PlayerProvider } from "./context/PlayerContext";
 import TribuCard from "./components/TribuCard";
 import PlayerPage from "./pages/PlayerPage";
+// import Footer from "./components/Footer"
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="/:id" element={<TribuCard/>}/>
           <Route path="/player" element={<PlayerPage/>}/>
         </Routes>
+        {/* <Footer/> */}
       </PlayerProvider>
     </>
   );

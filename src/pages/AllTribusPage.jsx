@@ -10,6 +10,8 @@ const AllTribusPage = () => {
   const challengeUnresolved = (id) => state.doneChallenge.includes(id);
   const theClass = (id) =>
     `icono-desbloqueado icono ${challengeUnresolved(id) ? "" : "unresolved"}`;
+  const tribusOnly = tribus.map((t)=> t.tribu+ " /"+ t.nombre)
+console.log(tribusOnly);
 
   return (
     <div className={styles.lados}>
@@ -17,10 +19,17 @@ const AllTribusPage = () => {
         <div className={styles.text_container}>
           <h1>El planeta de las profesiones</h1>
           <p>
-            Cada Tribu tiene sus propios misterios. Una Tribu en verde signifa
-            que has superado el reto. Una Tribu en rojo esta desbloqueada pero
-            aún debes comprobar tu conocimeintos. ¿Podrás desbloquear todas las
-            tribus?{" "}
+            "En este planeta conviven catorce tribus, cada una con su propio
+            saber, sus costumbres y su forma de aportar al bienestar común.
+            Aunque distintas, todas se necesitan: unas producen lo que otras
+            consumen, unas crean lo que otras transforman, unas investigan lo
+            que otras aplican. El intercambio de bienes, ideas y servicios es lo
+            que mantiene en equilibrio a este mundo. Tu viaje te llevará a
+            conocerlas una a una. No será fácil: cada tribu protege sus
+            conocimientos con retos y pruebas. Solo quien demuestra curiosidad,
+            ingenio y valentía puede ganarse su confianza. ¿Estás listo/a para
+            descubrir sus secretos y convertirte en un verdadero explorador del
+            Planeta de las Profesiones?"
           </p>
         </div>
 

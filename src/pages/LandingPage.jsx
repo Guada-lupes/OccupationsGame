@@ -12,16 +12,20 @@ const LandingPage = () => {
         <section className={styles.section}>
           <div className={styles.container}>
             <div className={styles.texto_container}>
-              <h1 className={styles.p}>
-                Hola{name}, te damos la bienvenida al Planeta de las profesiones
-              </h1>
+              <h1 className={styles.p}>Bienvenida/o viajera/o{name}.</h1>
               <p className={styles.p}>
-                En este pais cada tribu pertenece a una profesión. Descubre las
-                14 tribus y sus peculiaridades superando retos y desbloqueando
-                nuevos territorios.
+                "Has llegado al Planeta de las Profesiones, un mundo vibrante y
+                en constante movimiento, donde el conocimiento es la energía que
+                todo lo impulsa. Aquí, cada rincón guarda secretos sobre el
+                trabajo humano, cada paso es un reto, y cada reto, una
+                oportunidad de aprender. Tu misión es explorar este planeta
+                desconocido, superar los desafíos que encontrarás y descubrir a
+                qué tribu y a qué profesión sientes que perteneces. Prepárate:
+                lo que hoy empieza como un juego, puede convertirse en la llave
+                que abra las puertas de tu futuro."
               </p>
               <p className={styles.p}>
-                ¿Estas preparada para comenzar la aventura?
+                ¿Estas preparada/o para comenzar la aventura?
               </p>
             </div>
             <img className={styles.img} src="..\..\public\mapa.png" alt="" />

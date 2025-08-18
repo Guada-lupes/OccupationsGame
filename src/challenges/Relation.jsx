@@ -75,8 +75,8 @@ export default function Relation({ reto, id, next }) {
             {...provided.droppableProps}
             style={{
               background: isSlot
-                ? "var(--color-fondo-secundario-o)"
-                : "var(--color-fondo-secundario-o)",
+                ? "var(--color-fondo-o)"
+                : "var(--color-fondo-o)",
               padding: "10px",
               width: isSlot ? "250px" : "250px",
               minHeight: "50px",

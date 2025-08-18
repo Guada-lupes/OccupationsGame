@@ -14,20 +14,27 @@ export const TribuCard = () => {
 
   const tribu = tribus.find((t) => t.id === id);
   const isWin = state.doneChallenge.includes(tribu.id);
-
+  const Icon = tribu.imagen;
   return (
     <div className={styles.lados}>
       <section className={styles.section}>
         <h1>{tribu.tribu}</h1>
+        <Icon
+          name={"icono-desbloqueado icono-card"}
+          stroke="green"
+          fill="none"
+        />
         {!isWin ? (
           <div>
             <p>{tribu.descripcion}</p>
-            <Challenge
-              reto={tribu.reto}
-              id={tribu.id}
-              next={tribu.siguienteTribu}
-              profesiones={tribu.profesiones}
-            />
+            <div className={styles.challenge}>
+              <Challenge
+                reto={tribu.reto}
+                id={tribu.id}
+                next={tribu.siguienteTribu}
+                profesiones={tribu.profesiones}
+              />
+            </div>
           </div>
         ) : (
           <OccupationsCard profesiones={tribu.profesiones} />

@@ -75,7 +75,7 @@ export default function Clasification({ reto, id, next }) {
             ref={provided.innerRef}
             {...provided.droppableProps}
             style={{
-              background: "var(--color-fondo-secundario-o)",
+              background: "var(--color-fondo-o)",
               padding: "10px",
               width: "250px",
               minHeight: "200px",

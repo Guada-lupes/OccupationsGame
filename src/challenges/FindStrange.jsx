@@ -44,7 +44,7 @@ export default function FindStrange({ reto, next, id }) {
                 padding: "15px",
                 border: "1px solid #ddd",
                 borderRadius: "12px",
-                background: "var(--color-fondo-secundario-o)",
+                background: "var(--color-fondo-o)",
                 width: "fit-content",
                 minWidth: "-webkit-fill-available"
               }}
