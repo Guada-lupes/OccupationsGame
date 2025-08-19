@@ -28,7 +28,7 @@ const LandingPage = () => {
                 ¿Estas preparada/o para comenzar la aventura?
               </p>
             </div>
-            <img className={styles.img} src="..\..\public\mapa.png" alt="" />
+            <img className={styles.img} src="/mapa.png" alt="" />
           </div>
           <Button texto={"Comenzar"} link={"/all_tribus"} />
         </section>

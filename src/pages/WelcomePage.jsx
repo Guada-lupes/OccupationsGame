@@ -55,7 +55,7 @@ export const WelcomePage = () => {
       />
       <img
         className={`${styles.img} ${arrancar ? styles.img_arrancar : ""}`}
-        src="..\..\public\jeep.png"
+        src="/jeep.png"
         alt="Un jeep que se vibra"
       />
     </div>
