@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "../components/Button";
-import { useUser } from "../trash/useUser";
 import { usePlayer } from "../context/PlayerContext";
 import { checkPassword } from "../../utils/login";
 import styles from "../styles/welcomePage.module.css";
