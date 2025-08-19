@@ -22,7 +22,7 @@ const PlayerPage = () => {
         <h1>Revisa tu progreso {state.name}</h1>
         <img
           className={styles.img}
-          src="..\..\public\user.png"
+          src="/user.png"
           alt="Imagen de perfil de usuario"
         />
         {/* TRIBUS _______________________________________________________________________*/}
