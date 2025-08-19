@@ -660,7 +660,7 @@ export const tribus = [
         nombre: "Profesores de enseñanza primaria, secundaria y universitaria",
         link: "https://www.sepe.es/dctm/perfiles:09019af480260fbd/RElTRVdFQg==/PROFESORES%20DE%20ENSE%C3%91ANZA%20SECUNDARIA.pdf",
         descripcion:
-          "“Los Hopi son narradores, maestros y guías de la memoria. Bajo la sombra de sus árboles sagrados, cuentan historias y transmiten saberes a las nuevas generaciones. Su cultura valora la enseñanza como un legado que nunca termina: creen que cada palabra compartida se convierte en semilla de futuro. Sus ceremonias son círculos de aprendizaje, donde nadie enseña sin aprender.”",
+          "Imparten clases en centros educativos siguiendo los planes oficiales en distintos niveles.",
       },
       {
         nombre: "Técnicos en educación infantil",

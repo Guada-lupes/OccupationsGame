@@ -2,26 +2,45 @@ export const initialState = {
   login: false,
   name: "",
   unlockedTribe: ["agricultura"],
-  doneChallenge:[],
+  doneChallenge: [],
   savedOccupations: [],
 };
 
 export function playerReduce(state, action) {
   switch (action.type) {
-        case "log_in":
+    case "log_in":
       return { ...state, login: action.payload };
     case "set_name":
       return { ...state, name: action.payload };
     case "unlocked_tribe":
-        if(state.unlockedTribe.includes(action.payload))
-            return state;
-      return {...state,  unlockedTribe: [...state.unlockedTribe, action.payload] };
+      if (state.unlockedTribe.includes(action.payload)) return state;
+      return {
+        ...state,
+        unlockedTribe: [...state.unlockedTribe, action.payload],
+      };
     case "saved_occupation":
-        if(state.savedOccupations.includes(action.payload))return state;
-      return { ...state, savedOccupations: [...state.savedOccupations, action.payload ]};
-          case "done_challenge":
-        if(state.doneChallenge.includes(action.payload))return state;
-      return { ...state, doneChallenge: [...state.doneChallenge, action.payload ]};
+      if (state.savedOccupations.includes(action.payload)) return state;
+      return {
+        ...state,
+        savedOccupations: [...state.savedOccupations, action.payload],
+      };
+    case "removed_occupation":
+      if (!state.savedOccupations.includes(action.payload)) return state;
+      {
+        let ocupations = state.savedOccupations;
+        let index = ocupations.findIndex(action.payload);
+        let newArray = {
+          ...state,
+          savedOccupations: [...state.savedOccupations].slice(index, index + 1),
+        };
+        return newArray
+      }
+    case "done_challenge":
+      if (state.doneChallenge.includes(action.payload)) return state;
+      return {
+        ...state,
+        doneChallenge: [...state.doneChallenge, action.payload],
+      };
     case "reset":
       return initialState;
     default:
