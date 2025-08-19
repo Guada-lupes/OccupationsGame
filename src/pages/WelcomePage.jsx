@@ -11,7 +11,6 @@ export const WelcomePage = () => {
   const [arrancar, setArrancar] = useState(false);
 
   const navigate = useNavigate();
-  const { updateName } = useUser();
   const [name, setName] = useState("");
 
   //guardar contraseña
