@@ -1,6 +1,6 @@
 import React from "react";
 import { createContext, useContext, useReducer, useEffect } from "react";
-import { initialState, playerReduce } from "../reduce/PlayerReduce";
+import { initialState, playerReduce } from "../reduce/playerReduce";
 
   // Cargar del localStorage si existe
   function loadFromStorage() {
