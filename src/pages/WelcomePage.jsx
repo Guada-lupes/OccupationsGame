@@ -23,10 +23,6 @@ export const WelcomePage = () => {
     const value = e.target.value;
     setName(value);
   }
-  //actualiza el nombre bien
-  useEffect(() => {
-    updateName(name);
-  }, [name]);
 
   useEffect(() => {
     if (state.login) {
