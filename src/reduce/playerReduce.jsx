@@ -25,16 +25,21 @@ export function playerReduce(state, action) {
         savedOccupations: [...state.savedOccupations, action.payload],
       };
     case "removed_occupation":
-      if (!state.savedOccupations.includes(action.payload)) return state;
-      {
-        let ocupations = state.savedOccupations;
-        let index = ocupations.findIndex(action.payload);
-        let newArray = {
-          ...state,
-          savedOccupations: [...state.savedOccupations].slice(index, index + 1),
-        };
-        return newArray
-      }
+      
+      let occupation = action.payload.nombre;
+      if (
+        !state.savedOccupations.map((e) => {
+          e.nombre.includes(occupation);
+        })
+      )
+        return state;
+      let newArray = [];
+      let allOcupations = [...state.savedOccupations];
+      newArray = allOcupations.filter((e, i) => {
+        return e.nombre !== occupation;
+        
+      });
+      return { ...state, savedOccupations: newArray };
     case "done_challenge":
       if (state.doneChallenge.includes(action.payload)) return state;
       return {

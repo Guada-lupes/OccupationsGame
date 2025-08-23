@@ -10,8 +10,7 @@ const AllTribusPage = () => {
   const challengeUnresolved = (id) => state.doneChallenge.includes(id);
   const theClass = (id) =>
     `icono-desbloqueado icono ${challengeUnresolved(id) ? "" : "unresolved"}`;
-  const tribusOnly = tribus.map((t)=> t.tribu+ " /"+ t.nombre)
-console.log(tribusOnly);
+
 
   return (
     <div className={styles.lados}>

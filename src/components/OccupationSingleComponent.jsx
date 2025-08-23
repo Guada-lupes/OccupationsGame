@@ -4,16 +4,17 @@ import { usePlayer } from "../context/PlayerContext";
 import styles from "../styles/occupations.module.css";
 
 const OccupationSingleComponent = ({ p, i }) => {
-  const { dispatch } = usePlayer();
-  const [save, setSave] = useState("Guardar");
+  const { state, dispatch } = usePlayer();
+  const isSaved = state.savedOccupations.some((o) => o.nombre === p.nombre);
 
   function saveOccupations(p) {
-    if (save === "Guardar") {
-      dispatch({ type: "saved_occupation", payload: p });
-      setSave("Guardado");
+    if (isSaved) {
+      dispatch({ type: "removed_occupation", payload: p });
+      setSave(false);
+      return;
     } else {
-    //   dispatch({ type: "removed_occupation", payload: p });
-    //   setSave("Guardar");
+      dispatch({ type: "saved_occupation", payload: p });
+      setSave(true);
     }
   }
   return (
@@ -25,8 +26,10 @@ const OccupationSingleComponent = ({ p, i }) => {
           texto={"Saber más"}
           onClick={() => window.open(p.link, "_blank")}
         />
-
-        <Button onClick={() => saveOccupations(p)} texto={save} />
+        <Button
+          onClick={() => saveOccupations(p)}
+          texto={isSaved ? "Eliminar" : "Guardar"}
+        />
       </div>
     </div>
   );
