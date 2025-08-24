@@ -33,32 +33,44 @@ export const WelcomePage = () => {
     }
   }, [state.login]);
   return (
-    <div className={styles.container}>
-      <h1>Explora el planeta de las profesiones</h1>
-      <input
-        type="text"
-        onChange={(e) => getName(e)}
-        value={name}
-        placeholder="Introduce tu nombre"
-      />
-      <input
-        type="password"
-        name="password"
-        id="password"
-        placeholder="Introduce la contraseña"
-        value={password}
-        onChange={(e) => getPassword(e)}
-      />
-      <Button
-        onClick={() => checkPassword(name, password, dispatch)}
-        texto={"Comenzar"}
-      />
+    <section className={styles.section}>
+      <form
+        onSubmit={() => checkPassword(name, password, dispatch)}
+        className={styles.container}
+      >
+        <h1 className={styles.h1}>Explora el planeta de las profesiones</h1>
+        <input
+          required
+          spellCheck="false" //No corrige la ortografía
+          autoComplete="off" // Mejor para nombres
+          autoCapitalize="words" // Capitaliza cada palabra
+          id="name"
+          minLength="3" //Mínimo de letras
+          type="text"
+          onChange={(e) => getName(e)}
+          value={name}
+          placeholder="Tu nombre"
+        />
+        <input
+          required
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Introduce la contraseña"
+          value={password}
+          onChange={(e) => getPassword(e)}
+        />
+        <button type="submit" className="btn">
+          Comenzar
+        </button>
+      </form>
+
       <img
         className={`${styles.img} ${arrancar ? styles.img_arrancar : ""}`}
         src="/jeep.png"
         alt="Un jeep que se vibra"
       />
-    </div>
+    </section>
   );
 };
 

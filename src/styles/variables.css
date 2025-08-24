@@ -31,11 +31,11 @@
   /* Tamaños de texto */
   --texto-xxs: 0.5rem;
   --texto-xs: 0.75rem;
-  --texto-sm: 0.875rem;
+  --texto-sm: 0.9rem;
   --texto-md: 1rem;
-  --texto-lg: 1.2rem;
+  --texto-lg: 1.1rem;
   --texto-xl: 1.5rem;
-  --texto-xxl: 2rem;
+  --texto-xxl: 2.5rem;
 
   /* Bordes y sombras */
   --borde-redondeado: 8px;
@@ -46,20 +46,17 @@
   --btn-fuente: var(--texto-md);
 }
 
-
 /* 🔤 Texto */
 body {
   font-family: var(--fuente-principal);
   font-size: var(--texto-lg);
   color: var(--color-texto-o);
   background-color: var(--color-fondo-secundario-o);
-  width: 100vw;
+  /* width: 100vw;
   height: 100vh;
   margin: auto;
-  text-align: center;
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
+  text-align: center; */
+  overflow-x: hidden;
 }
 
 /* Titulares */
@@ -72,24 +69,24 @@ h4 {
 }
 h1 {
   padding: 0.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   font-style: italic;
-  font-size: 2rem;
+  font-size: clamp(1.6rem, 4vw, var(--texto-xxl));
 }
 h2 {
   padding: 0.5rem;
   margin-bottom: 1rem;
-  font-size: 1.7rem;
+
 }
 h3,
 h4 {
   padding: 0.2rem;
   margin-bottom: 0.5rem;
-  font-size: 1.rem;
+  font-size: 1rem;
 }
 p {
   margin-bottom: 0.5rem;
-
+  font-size: clamp(var(--texto-md), 2vw, var(--texto-lg));
 }
 /* 📎 Enlaces */
 a {
@@ -107,7 +104,7 @@ a:hover {
 .btn {
   /* display: inline-block; */
   padding: var(--btn-padding);
-  font-size: var(--btn-fuente);
+  font-size: clamp(var(--texto-md), 2vw, var(--texto-lg));
   font-weight: 600;
   border-radius: var(--texto-xxs);
   cursor: pointer;
@@ -117,6 +114,10 @@ a:hover {
 }
 .btn:hover {
   background-color: var(--color-bordes-o);
+  border: solid 1px var(--color-texto-o);
+}
+.btn:active {
+  background-color: var(--color-detalles-c);
 }
 
 /* 🪶 Iconos */
@@ -124,10 +125,10 @@ a:hover {
   font-size: 1.5rem;
   transition: color 0.3s ease;
 }
-.icono-player{
+.icono-player {
   width: 2rem;
 }
-.icono-card{
+.icono-card {
   width: 5rem;
   margin: auto;
   padding-bottom: 2rem;
@@ -139,15 +140,14 @@ a:hover {
 .icono-desbloqueado {
   color: var(--color-bordes2-o);
 }
-.unresolved{
-color: rgb(151, 50, 50);
+.unresolved {
+  color: rgb(151, 50, 50);
 }
 .icono:hover {
   color: var(--color-boton-o);
 }
 /*Iputs*/
 input {
-  margin: var(--texto-md);
   padding: var(--texto-xxs);
   border: none;
   border-radius: var(--texto-xxs);
@@ -164,11 +164,6 @@ input {
   flex-direction: column;
   justify-content: space-between;
 }
-
 .card:hover {
   transform: translateY(-4px);
-}
-section {
-  max-width: 80vw;
-  margin: auto;
 }
