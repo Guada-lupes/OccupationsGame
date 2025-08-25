@@ -17,7 +17,7 @@
 .img {
   display: flex;
   position: absolute;
-  bottom: -2rem;
+  bottom: -1rem;
   width: clamp(14rem, 24vw, 19rem);
   animation: llegar 2s ease-in-out forwards,
     vibrar 0.2s ease-in-out 2s infinite alternate;
