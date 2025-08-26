@@ -1,9 +1,9 @@
 .container{
-    margin: 2rem;
+
 }
 .modal:open{
 margin: auto;
-width: 60%;
+width: clamp(14rem, 40%, 29rem);
 height: 30%;
 border-width: 0.1rem;
 border-radius: var(--texto-xxs);
@@ -16,8 +16,12 @@ border-color: var(--color-bordes-o);
 display: flex;
 flex-direction: column;
 align-items: center;
-margin-top: 10%;
+height: 100%;
+    justify-content: space-evenly;
 }
 p{
     margin-bottom: 1rem;
+}
+h2{
+    text-align: center;
 }

@@ -15,7 +15,7 @@ const Challenge = ({ reto, id, next, profesiones }) => {
   return (
     <>
     <div className={styles.container}>
-      <h2>Resuelve el reto</h2>
+      <h2 className={styles.h2}>Resuelve el reto</h2>
       {reto.tipo === "verdadero-falso" && (
         <TrueOrFalse reto={reto} id={id} next={next} profesiones={profesiones}/>
       )}

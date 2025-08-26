@@ -19,8 +19,8 @@ const OccupationSingleComponent = ({ p, i }) => {
   }
   return (
     <div className="card" key={i}>
-      <h3>{p.nombre}</h3>
-      <p>{p.descripcion}</p>
+      <h3 className={styles.h3}>{p.nombre}</h3>
+      <p className={styles.p_description}>{p.descripcion}</p>
       <div className={styles.button_container}>
         <Button
           texto={"Saber más"}

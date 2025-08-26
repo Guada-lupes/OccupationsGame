@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { usePlayer } from "../context/PlayerContext";
 import { unlockedChallenge } from "../../utils/unlockedChallenge";
-import styles from "../styles/trueOrFalse.module.css"
+import styles from "../styles/trueOrFalse.module.css";
 
 const TrueOrFalse = ({ reto, id, next }) => {
   const { dispatch } = usePlayer();
@@ -47,31 +47,42 @@ const TrueOrFalse = ({ reto, id, next }) => {
       {reto.preguntas.map((p, i) => (
         <div className={styles.container} key={i}>
           <p>{p.enunciado}</p>
-          <label >
-            <input
-              type="radio"
-              name={`pregunta-${i}`}
-              value="Verdadero"
-              checked={respuestas[i] === "Verdadero"}
-              onChange={(e) => handleChange(i, e.target.value)}
-            />
-            Verdadero
-          </label>
-          <label>
-            <input
-              type="radio"
-              name={`pregunta-${i}`}
-              value="Falso"
-              checked={respuestas[i] === "Falso"}
-              onChange={(e) => handleChange(i, e.target.value)}
-            />
-            Falso
-          </label>
+          <div>
+            <label className={styles.label}>
+              <input
+                className={styles.input}
+                type="radio"
+                name={`pregunta-${i}`}
+                value="Verdadero"
+                checked={respuestas[i] === "Verdadero"}
+                onChange={(e) => handleChange(i, e.target.value)}
+              />
+              Verdadero
+            </label>
+          </div>
+          <div>
+            <label className={styles.label}>
+              <input
+                className={styles.input}
+                type="radio"
+                name={`pregunta-${i}`}
+                value="Falso"
+                checked={respuestas[i] === "Falso"}
+                onChange={(e) => handleChange(i, e.target.value)}
+              />
+              Falso
+            </label>
+          </div>
+
           <div className={styles.button_container}>
-            <button className="btn" onClick={() => verificarRespuesta(i)}>Probar</button>
+            <button className="btn" onClick={() => verificarRespuesta(i)}>
+              Probar
+            </button>
           </div>
           {resultados[i] !== null && (
-            <p className={styles.p}>{resultados[i] ? "¡Correcto!" : "Incorrecto"}</p>
+            <p className={styles.p}>
+              {resultados[i] ? "¡Correcto!" : "Incorrecto"}
+            </p>
           )}
         </div>
       ))}

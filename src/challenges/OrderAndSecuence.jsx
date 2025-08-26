@@ -42,16 +42,15 @@ unlockedChallenge(next, id, dispatch)
   }
 
   return (
-    <section>
-            <h3>{pregunta.enunciado}</h3>
-   <div style={{margin: "2rem auto", justifyItems: "center"}}>
+    <section className={styles.section}>
+            <p className={styles.p}>{pregunta.enunciado}</p>
+   <div className={styles.container}>
       <DragDropContext onDragEnd={handleOnDragEnd}>
         <Droppable droppableId="opciones">
           {(provided) => (
             <ul
               {...provided.droppableProps}
               ref={provided.innerRef}
-              style={{ listStyle: "none", padding: 0, minWidth: "40rem" }}
             >
               {items.map((opcion, index) => (
                 <Draggable key={opcion} draggableId={opcion} index={index}>

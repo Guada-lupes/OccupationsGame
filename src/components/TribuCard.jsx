@@ -16,31 +16,27 @@ export const TribuCard = () => {
   const isWin = state.doneChallenge.includes(tribu.id);
   const Icon = tribu.imagen;
   return (
-    <div className={styles.lados}>
-      <section className={styles.section}>
-        <h1>{tribu.tribu}</h1>
-        <Icon
-          name={"icono-desbloqueado icono-card"}
-          stroke="green"
-          fill="none"
-        />
-        {!isWin ? (
-          <div>
-            <p>{tribu.descripcion}</p>
-            <div className={styles.challenge}>
-              <Challenge
-                reto={tribu.reto}
-                id={tribu.id}
-                next={tribu.siguienteTribu}
-                profesiones={tribu.profesiones}
-              />
-            </div>
+    <section className={styles.section}>
+      <h1 className={styles.h1}>{tribu.tribu}</h1>
+      <Icon name={"icono-desbloqueado icono-card"} stroke="green" fill="none" />
+      {!isWin ? (
+        <div className={styles.container}>
+          <p className={styles.p}>{tribu.descripcion}</p>
+          <div className={styles.challenge}>
+            <Challenge
+              reto={tribu.reto}
+              id={tribu.id}
+              next={tribu.siguienteTribu}
+              profesiones={tribu.profesiones}
+            />
           </div>
-        ) : (
+        </div>
+      ) : (
+        <div className={styles.container}>
           <OccupationsCard profesiones={tribu.profesiones} />
-        )}
-      </section>
-    </div>
+        </div>
+      )}
+    </section>
   );
 };
 

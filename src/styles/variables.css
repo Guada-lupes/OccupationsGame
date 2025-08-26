@@ -76,12 +76,12 @@ h1 {
 h2 {
   padding: 0.5rem;
   margin-bottom: 1rem;
+    font-size: clamp(1.4rem, 3vw, var(--texto-xl));
 }
-h3,
-h4 {
+h3{
   padding: 0.2rem;
   margin-bottom: 0.5rem;
-  font-size: 1rem;
+  font-size: clamp(1.2rem, 2nw, var(--texto-lg));
 }
 p {
   margin-bottom: 0.5rem;
@@ -110,6 +110,7 @@ a:hover {
   background-color: var(--color-boton-o);
   border: none;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  margin: 1rem auto;
 }
 .btn:hover {
   background-color: var(--color-bordes-o);
@@ -144,7 +145,7 @@ a:hover {
   color: rgb(151, 50, 50);
 }
 .icono:hover {
-  transform: scale(120%);
+  scale: 120%;
   color: var(--color-boton-o);
 }
 /*Iputs*/
@@ -155,15 +156,18 @@ input {
 }
 /* 📦 Tarjetas o contenedores */
 .card {
+  /* width: clamp(15rem, 30vw, 27rem); */
   background: var(--color-fondo-o);
   border-radius: var(--borde-redondeado);
   box-shadow: var(--sombra-suave);
   padding: 0.5rem;
-  margin: 2rem;
+  /* margin: clamp(0.5rem, 1vw, 2rem); */
   transition: transform 0.2s ease;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+  justify-self: center;
 }
 .card:hover {
   transform: translateY(-4px);

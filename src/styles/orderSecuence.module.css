@@ -1,4 +1,22 @@
-.li{
-    font-size: var(--texto-md);
-    font-weight: bold;
+.li {
+  font-size: var(--texto-md);
+  font-weight: bold;
+  text-align: center;
+}
+.section {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.p{
+    text-align: center;
+}
+.ul{
+    width: clamp(10rem, 60vw, 30rem);
+    list-style: none;
+    padding: 0;
+}
+.container{
+    margin: 2rem auto;
+    justify-items: center;
 }
