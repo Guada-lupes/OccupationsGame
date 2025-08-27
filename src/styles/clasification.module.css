@@ -1,0 +1,19 @@
+.container{
+border: solid 1px white;
+}
+.drageablesZone{
+border: solid 1px white;
+width: auto;
+height: 100px;
+}
+.drageable{
+border: solid 1px white;
+}
+.zonesss{
+border: solid 1px white;
+}
+.zone{
+border: solid 1px white;
+width: auto;
+height: 100px;
+}
