@@ -1,19 +1,16 @@
-.container{
-border: solid 1px white;
+.container {
+  border: solid 1px white;
 }
-.drageablesZone{
-border: solid 1px white;
-width: auto;
-height: 100px;
+
+.drageable {
+  border: solid 1px white;
+  background-color: var(--color-bordes-o);
+  border-radius: 0.1rem;
+  padding: 0.5rem;
+  width: 7rem;
+  text-align: center;
 }
-.drageable{
-border: solid 1px white;
+.zonesss {
+  border: solid 1px white;
 }
-.zonesss{
-border: solid 1px white;
-}
-.zone{
-border: solid 1px white;
-width: auto;
-height: 100px;
-}
+
