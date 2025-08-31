@@ -76,9 +76,9 @@ h1 {
 h2 {
   padding: 0.5rem;
   margin-bottom: 1rem;
-    font-size: clamp(1.4rem, 3vw, var(--texto-xl));
+  font-size: clamp(1.4rem, 3vw, var(--texto-xl));
 }
-h3{
+h3 {
   padding: 0.2rem;
   margin-bottom: 0.5rem;
   font-size: clamp(1.2rem, 2nw, var(--texto-lg));
@@ -172,3 +172,4 @@ input {
 .card:hover {
   transform: translateY(-4px);
 }
+
