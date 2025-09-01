@@ -41,7 +41,6 @@
   margin-bottom: 0.5rem; 
   text-align: center;
   cursor: grab;
-
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 

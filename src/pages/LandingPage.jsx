@@ -9,7 +9,7 @@ const LandingPage = () => {
   return (
     <>
       <section className={styles.section}>
-        <h1 className={styles.h1}>Bienvenida/o viajera/o{name}.</h1>
+        <h1 className={styles.h1}>Te damos la bienvenida{name}.</h1>
         <div className={styles.container}>
           <div className={styles.img}>
             <img src="/mapa.png" alt="" />
@@ -27,7 +27,7 @@ const LandingPage = () => {
               de tu futuro."
             </p>
             <p className={styles.p}>
-              ¿Estas preparada/o para comenzar la aventura?
+              ¿Todo listo para comenzar la aventura?
             </p>
           </div>
         </div>

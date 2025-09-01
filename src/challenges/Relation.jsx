@@ -150,36 +150,103 @@ export default function Relation({ reto, id, next }) {
   const { dispatch } = usePlayer();
   const { instrucciones, columnaA, columnaB, respuestaCorrecta } = reto;
   const [initialState, setInitialState] = useState({
-    list: columnaB,
+    list: columnaB, //es un array
     // .map crea parejas [categoria, ""]
     // objecto.fromentries convierte en objetos las parejas ["", ""]. El resultado es un solo objeto.
     userResult: Object.fromEntries(columnaA.map((comercio) => [comercio, ""])),
   });
   function onDragEnd(result) {
-    const { source, destination } = result;
+    const { source, destination, draggableId } = result;
+      const start = source.droppableId;
+      const end = destination.droppableId;
+      const item = draggableId;
+    if (!destination) return;
+    if (
+      source.droppableId === destination.droppableId &&
+      source.index === destination.index
+    )
+      return;
+      //si el destino es items, pero el origen es distinto
+    if (destination.droppableId === "items" && source.droppableId !== "items") {
+      console.log("mover en lista");
+      
+      //eliminamos el elemento de la selección de usuario
+
+      setInitialState((prev) => ({
+        ...prev,
+        ...prev.userResult,
+        [categorie]: "",
+      }));
+      //Añadimos el elemento a la lista nuevamente
+      //Creamos copia y aseguramos no se repita elemento
+      const newList = Array.from(initialState.list).filter((e) => e !== item);
+      newList.splice(itemIndexDestination, 0, item);
+      setInitialState((prev) => ({
+        ...prev,
+        list: newList,
+      }));
+    }
+    //aqui todos los casos en los que el droppableId es una categoria
+      setInitialState((prev) => ({
+        ...prev,
+        ...prev.userResult,
+        [categorie]: item,
+      }));
+    //aqui los casos en se reordene la lista de items
+    
   }
+
   return (
     <section>
       <DragDropContext onDragEnd={onDragEnd}>
-        {/* elementos disponibles en horizontal columna B*/}
-        {/* COLUMNA B */}
-        <Droppable droppableId="columnaB">
-          {(provided) => (
-            <div ref={provided.innerRef} {...provided.droppableProps}>
-              {columnaB.map((e, i) => (
-                <Draggable key={e} draggableId={e} index={i}>
-                  {(provided) =>
-                  <div
-                  {...provided.draggableProps}
-                  {...provided.dragHandleProps}
-                  ref={provided.innerRef}
-                  >{e}</div>}
-                </Draggable>
-              ))}
-              {provided.placeholder}
-            </div>
-          )}
-        </Droppable>
+        <div className={styles.container}>
+          {/* elementos disponibles en horizontal columna B*/}
+          {/* COLUMNA B */}
+          <Droppable droppableId="items">
+            {(provided) => (
+              <div
+                ref={provided.innerRef}
+                {...provided.droppableProps}
+                className={styles.zone_items}
+              >
+                {columnaB.map((e, i) => (
+                  <Draggable key={e} draggableId={e} index={i}>
+                    {(provided) => (
+                      <div
+                        {...provided.draggableProps}
+                        {...provided.dragHandleProps}
+                        ref={provided.innerRef}
+                        className={styles.draggable}
+                      >
+                        {e}
+                      </div>
+                    )}
+                  </Draggable>
+                ))}
+                {provided.placeholder}
+              </div>
+            )}
+          </Droppable>
+          {/* ColumnaA */}
+          <div className={styles.zone_categories}>
+            {columnaA.map((c, i) => (
+              <p key={i}>{c}</p>
+            ))}
+          </div>
+          <div className={styles.zone_useChoice}>
+            {columnaA.map((e, i) => (
+              <Droppable key={i} droppableId={e} index={i}>
+                {(provided) => (
+                  <div 
+                  className={styles.zone_useChoice}
+                  ref={provided.innerRef} {...provided.droppableProps}>
+                    {provided.placeholder}
+                  </div>
+                )}
+              </Droppable>
+            ))}
+          </div>
+        </div>
       </DragDropContext>
     </section>
   );
