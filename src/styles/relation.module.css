@@ -1,10 +1,16 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
 .container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 1.5rem;
-  padding: 1rem;
+  grid-template-rows: repeat(2, auto);
+  gap: 1vw;
   text-align: center;
+  width: clamp(100%, 50vw, 50rem);
   && div:first-child {
     grid-column: span 2 / span 2;
   }
@@ -12,42 +18,71 @@
 .zone_items {
   border: 2px solid var(--color-bordes-o);
   border-radius: 0.5rem;
-  padding: 1rem;
+  padding: 1vw;
   background: var(--color-fondo-o);
   transition: background-color 0.2s ease;
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.5rem;
   text-align: center;
+  height: fit-content;
+  min-height: 2rem;
+  &&[data-on-dragging="true"] {
+    background-color: var(--color-bordes-c);
+  }
 }
 .zone_categories {
   border: 2px solid var(--color-bordes-o);
   border-radius: 0.5rem;
-  padding: 1rem;
+  padding: 1vw;
   background: var(--color-fondo-o);
-  transition: background-color 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   && p {
-    padding: 1rem;
+    padding: clamp(0.4rem, 1vw, 1rem);
     border-radius: 0.5rem;
     background-color: var(--color-bordes-o);
     color: var(--color-fondo-o);
+    flex: 1;
+    margin: 0;
   }
 }
 .zone_useChoice {
   border: 2px solid var(--color-bordes-o);
   border-radius: 0.5rem;
-  padding: 1rem;
+  padding: 1vw;
   background: var(--color-fondo-o);
-  /* transition: background-color 0.2s ease; */
-  min-height: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
+.categorie_drop {
+  flex: 1;
+  border: 2px solid var(--color-bordes-o);
+  border-radius: 0.5rem;
+  &&[data-on-dragging="true"] {
+    background-color: var(--color-bordes-c);
+  }
+}
+
 .draggable {
   border: 1px solid var(--color-bordes-o);
-  background-color: var(--color-fondo-claro);
+  background-color: var(--color-fondo-o);
   border-radius: 0.25rem;
-  padding: 0.5rem 1rem;
-  margin-bottom: 0.5rem;
+  padding: 0.5rem;
   text-align: center;
   cursor: grab;
-  /* transition: transform 0.2s ease, box-shadow 0.2s ease; */
+  height: 100%;
+  align-content: center;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  && p {
+    margin: 0;
+  }
+  &&:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 }

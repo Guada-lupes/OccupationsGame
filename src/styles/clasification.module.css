@@ -38,7 +38,7 @@
   background-color: var(--color-fondo-claro);
   border-radius: 0.25rem;
   padding: 0.5rem 1rem;
-  margin-bottom: 0.5rem; 
+  margin-bottom: 0.5rem;
   text-align: center;
   cursor: grab;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -52,6 +52,7 @@
 
 .dragging {
   transform: rotate(5deg) scale(1.05);
+  background-color: var(--color-fondo-o);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   z-index: 1000;
   cursor: grabbing;

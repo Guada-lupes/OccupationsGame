@@ -27,13 +27,13 @@
 }
 /* Formulario */
 input[type="text"]:focus {
-  background-color: var(--color-bordes-o);
+  background-color: var(--color-bordes-c);
   outline: none;
   color: var(--color-texto-o);
   border: solid 1px var(--color-texto-o);
 }
 input[type="password"]:focus {
-  background-color: var(--color-bordes-o);
+  background-color: var(--color-bordes-c);
   outline: none;
   color: var(--color-texto-o);
     border: solid 1px var(--color-texto-o);
