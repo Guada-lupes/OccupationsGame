@@ -9,7 +9,7 @@ const LandingPage = () => {
   return (
     <>
       <section className={styles.section}>
-        <h1 className={styles.h1}>Te damos la bienvenida{name}.</h1>
+        <h1 className={styles.h1}>Te damos la bienvenida{name.toUpperCase()}</h1>
         <div className={styles.container}>
           <div className={styles.img}>
             <img src="/mapa.png" alt="" />

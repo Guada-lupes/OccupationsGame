@@ -10,3 +10,27 @@
 .img {
   width: 4rem;
 }
+.progress_bar {
+  height: 3vh;
+  width: 16vw;
+  background-color: var(--color-texto-o);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+.progress_fill {
+  height: 100%;
+  background-color: var(--color-bordes-o);
+  transition: width 0.3s ease-in-out;
+}
+.progress_bar::after {
+  content: "%";
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  pointer-events: none;
+}

@@ -2,12 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { logOut } from "../../utils/login";
 import { usePlayer } from "../context/PlayerContext";
+import ProgressBar from "./ProgressBar";
 import styles from "../styles/header.module.css";
 
 export const Header = () => {
   const { dispatch } = usePlayer();
   return (
     <div className={styles.container}>
+      <ProgressBar/>
       <Link to={"/all_tribus"}>Inicio</Link>
       {/* <Link>Como jugar</Link>
             <Link>Sobre la aplicación</Link>

@@ -6,12 +6,14 @@ import { PlayerProvider } from "./context/PlayerContext";
 import TribuCard from "./components/TribuCard";
 import PlayerPage from "./pages/PlayerPage";
 import Layout from "./pages/Layout";
+import ScrollToTop from "../utils/ScrollToTop";
 
 function App() {
   return (
     <>
       <PlayerProvider>
         <Layout>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<WelcomePage />} />
             <Route path="/landing" element={<LandingPage />} />

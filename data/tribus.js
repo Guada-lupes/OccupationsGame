@@ -563,28 +563,29 @@ export const tribus = [
     imagen: AdminIcon,
     desbloqueada: false,
     reto: {
-      tipo: "ordenar-secuencia",
-      preguntas: [
-        {
-          enunciado:
-            "Ordena los pasos habituales para archivar un documento en una oficina.",
-          opciones: [
-            "Clasificar por tipo",
-            "Etiquetar",
-            "Colocar en carpeta",
-            "Registrar en inventario",
-            "Guardar en archivo",
-          ],
-          respuestaCorrecta: [
-            "Clasificar por tipo",
-            "Registrar en inventario",
-            "Etiquetar",
-            "Colocar en carpeta",
-            "Guardar en archivo",
-          ],
-        },
+  tipo: "ordenar-secuencia",
+  preguntas: [
+    {
+      enunciado: "Ordena los pasos habituales para redactar y enviar un correo electrónico profesional en una oficina.",
+      opciones: [
+        "Escribir el cuerpo del mensaje",
+        "Revisar ortografía y tono",
+        "Definir el asunto",
+        "Añadir destinatarios",
+        "Adjuntar documentos si es necesario",
+        "Pulsar 'Enviar'"
       ],
-    },
+      respuestaCorrecta: [
+        "Definir el asunto",
+        "Añadir destinatarios",
+        "Escribir el cuerpo del mensaje",
+        "Adjuntar documentos si es necesario",
+        "Revisar ortografía y tono",
+        "Pulsar 'Enviar'"
+      ]
+    }
+  ]
+},
     profesiones: [
       {
         nombre: "Trabajador social",

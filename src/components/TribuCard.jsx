@@ -11,10 +11,10 @@ export const TribuCard = () => {
 
   //esta es la carta que se despliega cuando entramos en una tribu
   const { id } = useParams();
-
   const tribu = tribus.find((t) => t.id === id);
   const isWin = state.doneChallenge.includes(tribu.id);
   const Icon = tribu.imagen;
+  
   return (
     <section className={styles.section}>
       <h1 className={styles.h1}>{tribu.tribu}</h1>
