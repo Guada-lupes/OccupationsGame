@@ -12,8 +12,6 @@
   width: 1rem;
   height: 1rem;
 }
-.container {
-}
 .p {
   margin-top: 1rem;
 }
@@ -21,4 +19,21 @@
   margin: 2rem;
   display: flex;
   justify-content: center;
+}
+/* Contenedor principal - crucial para ocultar tarjetas no activas */
+.carrusel_container {
+  width: 100%;
+  overflow: hidden; /* CLAVE: oculta las tarjetas que están fuera del viewport */
+}
+
+/* Wrapper que contiene todas las tarjetas - se mueve horizontalmente */
+.carrusel {
+  display: flex; /* CLAVE: coloca tarjetas lado a lado */
+  width: 200%; /* CLAVE: 100% por cada tarjeta (2 tarjetas = 200%) */
+}
+
+/* Cada tarjeta individual */
+.card {
+  width: 50%; /* CLAVE: 50% de su cotenedor, osea la mitad de 200% */
+  flex-shrink: 0; /* CLAVE: evita que se compriman */
 }

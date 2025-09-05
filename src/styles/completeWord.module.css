@@ -1,0 +1,14 @@
+.carrusel {
+  display: flex; /* CLAVE: alinea tarjetas horizontalmente */
+  overflow-x: auto; /* CLAVE: permite scroll horizontal */
+  scroll-snap-type: x mandatory; /*CLAVE: snap obligatorio en eje X */
+  scroll-behavior: smooth; /*Scroll suave al usar scrollIntoView */
+  /* Ocultar barra */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer y Edge */
+}
+.card {
+  min-width: 100%; /*CLAVE: cada tarjeta ocupa todo el ancho visible */
+  scroll-snap-align: start; /* CLAVE: punto de snap al inicio de cada tarjeta */
+  flex-shrink: 0; /* CLAVE: mantiene el ancho mínimo */
+}

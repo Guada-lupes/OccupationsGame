@@ -43,11 +43,14 @@ const TrueOrFalse = ({ reto, id, next }) => {
   }, [resultados]);
 
   return (
-    <>
-      {reto.preguntas.map((p, i) => (
-        <div className={styles.container} key={i}>
-          <p>{p.enunciado}</p>
-          <div>
+  <>
+    <div className={styles.carrusel_container}>
+      <div className={styles.carrusel}>
+        <button>⬅️</button>
+        {reto.preguntas.map((p, i) => (
+          // empieza Card
+          <div className={styles.card} key={i} id={i}>
+            <p>{p.enunciado}</p>
             <label className={styles.label}>
               <input
                 className={styles.input}
@@ -59,8 +62,6 @@ const TrueOrFalse = ({ reto, id, next }) => {
               />
               Verdadero
             </label>
-          </div>
-          <div>
             <label className={styles.label}>
               <input
                 className={styles.input}
@@ -72,22 +73,26 @@ const TrueOrFalse = ({ reto, id, next }) => {
               />
               Falso
             </label>
-          </div>
+            <div className={styles.button_container}>
+              <button className="btn" onClick={() => verificarRespuesta(i)}>
+                Probar
+              </button>
+            </div>
 
-          <div className={styles.button_container}>
-            <button className="btn" onClick={() => verificarRespuesta(i)}>
-              Probar
-            </button>
+            {resultados[i] !== null && (
+              <p className={styles.p}>
+                {resultados[i] ? "¡Correcto!" : "Incorrecto"}
+              </p>
+            )}
           </div>
-          {resultados[i] !== null && (
-            <p className={styles.p}>
-              {resultados[i] ? "¡Correcto!" : "Incorrecto"}
-            </p>
-          )}
-        </div>
-      ))}
-    </>
-  );
-};
+          // termina Card
+        ))}
+      </div>
+      <button>➡️</button>
+    </div>
+  </>
+)
+
+}
 
 export default TrueOrFalse;

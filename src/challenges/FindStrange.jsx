@@ -108,6 +108,7 @@ import styles from "../styles/findeStrange.module.css";
 //   );
 // }
 export default function FindStrange({ reto, next, id }) {
+  const { dispatch } = usePlayer();
   const { preguntas } = reto;
   const initialState = preguntas.map((pregunta, i) => ({
     id: i,
@@ -115,29 +116,35 @@ export default function FindStrange({ reto, next, id }) {
     correctAnswer: pregunta.respuestaCorrecta,
     result: false,
   }));
-  const [result, setResult] = useState(false);
+  const [userResult, setUserResult] = useState(false);
   const [userChoice, setUserChoice] = useState(initialState);
-  console.log(initialState);
-
-function chosen(option, iq) {
-  setUserChoice(prev => 
-    prev.map(question => 
-      question.id === iq 
-        ? {
-            ...question,
-            userOption: option,
-            result: question.correctAnswer === option
-          }
-        : question
-    )
-  );
-  console.log(userChoice);
-  
-}
-
-  function checkAnswer() {
-    
+  function chosen(option, iq) {
+    setUserResult(false);
+    setUserChoice((prev) =>
+      prev.map((question) =>
+        question.id === iq
+          ? {
+              ...question,
+              userOption: option,
+              result: question.correctAnswer === option,
+            }
+          : question
+      )
+    );
   }
+  function checkAnswer() {
+    let isCorrect = true;
+    const userResult = userChoice.filter(
+      (pregunta) => pregunta.result === true
+    );
+    if (userResult.length != 2) {
+      isCorrect = false;
+    } else {
+      unlockedChallenge(next, id, dispatch);
+    }
+    setUserResult(true);
+  }
+
   return (
     <section>
       {/* Mapeamos las preguntas */}
@@ -146,16 +153,27 @@ function chosen(option, iq) {
           <p>{question.enunciado}</p>
           {/* Mapeamos las opciones */}
           {question.opciones.map((option, i) => (
-            <button onClick={() => chosen(option, iq)} id={iq} key={i}>
+            <button
+              className={`${styles.button} ${userChoice[iq].userOption === option ? styles.select : styles.unSelect}`}
+              onClick={() => chosen(option, iq)}
+              id={iq}
+              key={i}
+            >
               {option}
             </button>
           ))}
           {/* Al resolver mostramos si es correcta o no */}
-          {result && <p>{userChoice[i].result ? "Correcto" : "Erróneo"}</p>}
+          {userResult && (
+            <p>
+              {userChoice[iq].result ? "✅ ¡Correcto!" : "❌ Elección errónea"}
+            </p>
+          )}
         </div>
       ))}
       {/* Boton para comprobar respuestas */}
-      <button onClick={checkAnswer}>Comprobar</button>
+      <button className="btn" onClick={checkAnswer}>
+        Comprobar
+      </button>
     </section>
   );
 }
