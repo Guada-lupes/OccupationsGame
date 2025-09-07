@@ -4,6 +4,7 @@ export const initialState = {
   unlockedTribe: ["agricultura"],
   doneChallenge: [],
   savedOccupations: [],
+  progresBar: 0,
 };
 
 export function playerReduce(state, action) {
@@ -25,7 +26,6 @@ export function playerReduce(state, action) {
         savedOccupations: [...state.savedOccupations, action.payload],
       };
     case "removed_occupation":
-      
       let occupation = action.payload.nombre;
       if (
         !state.savedOccupations.map((e) => {
@@ -37,7 +37,6 @@ export function playerReduce(state, action) {
       let allOcupations = [...state.savedOccupations];
       newArray = allOcupations.filter((e, i) => {
         return e.nombre !== occupation;
-        
       });
       return { ...state, savedOccupations: newArray };
     case "done_challenge":
@@ -45,6 +44,11 @@ export function playerReduce(state, action) {
       return {
         ...state,
         doneChallenge: [...state.doneChallenge, action.payload],
+      };
+    case "increment_progres":
+      return {
+        ...state,
+        progresBar: action.payload,
       };
     case "reset":
       return initialState;

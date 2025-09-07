@@ -15,9 +15,7 @@ export const PlayerProvider = ({ children }) => {
     initialState,
     loadFromStorage
   );
-  let copie = [...state.savedOccupations]
-  console.log(copie);
-  
+ 
   // Guardar en localStorage cada vez que cambia
   useEffect(() => {
     localStorage.setItem("player", JSON.stringify(state));

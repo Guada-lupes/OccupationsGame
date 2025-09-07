@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import Button from "../components/Button";
 import { usePlayer } from "../context/PlayerContext";
 import { checkPassword } from "../../utils/login";
 import styles from "../styles/welcomePage.module.css";
+import { gsap } from "gsap";
 
 export const WelcomePage = () => {
   const { state, dispatch } = usePlayer();
@@ -31,7 +31,15 @@ export const WelcomePage = () => {
         navigate("/landing");
       }, 2000);
     }
+  gsap.to("#moneda", {
+    duration: 3,
+    rotation: 360,
+    scale: 2
+  })
+
   }, [state.login]);
+
+
   return (
     <section className={styles.section}>
       <form
@@ -63,6 +71,7 @@ export const WelcomePage = () => {
         <button type="submit" className="btn">
           Comenzar
         </button>
+        
       </form>
 
       <img

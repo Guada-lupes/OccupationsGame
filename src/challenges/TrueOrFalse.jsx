@@ -6,7 +6,9 @@ import styles from "../styles/trueOrFalse.module.css";
 
 const TrueOrFalse = ({ reto, id, next }) => {
   const { dispatch } = usePlayer();
-
+  const { preguntas } = reto;
+  const [actualPosition, setActualPosition] = useState(0);
+  const [translate, setTranslate] = useState(0);
   //Crea un array con un string vacio por cada pregunta y guarda las respuestas que da el usuario
   const [respuestas, setRespuestas] = useState(
     Array(reto?.preguntas?.length).fill("")
@@ -42,57 +44,83 @@ const TrueOrFalse = ({ reto, id, next }) => {
     }
   }, [resultados]);
 
+  function handleNext() {
+    if (actualPosition === preguntas.length - 1) return;
+    setTranslate((prev) => prev + 50);
+    setActualPosition((prev) => prev + 1);
+  }
+  function handlePrev() {
+    if (actualPosition === 0) return;
+    setTranslate((prev) => prev - 50);
+    setActualPosition((prev) => prev - 1);
+  }
+
   return (
-  <>
-    <div className={styles.carrusel_container}>
-      <div className={styles.carrusel}>
-        <button>⬅️</button>
-        {reto.preguntas.map((p, i) => (
-          // empieza Card
-          <div className={styles.card} key={i} id={i}>
-            <p>{p.enunciado}</p>
-            <label className={styles.label}>
-              <input
-                className={styles.input}
-                type="radio"
-                name={`pregunta-${i}`}
-                value="Verdadero"
-                checked={respuestas[i] === "Verdadero"}
-                onChange={(e) => handleChange(i, e.target.value)}
-              />
-              Verdadero
-            </label>
-            <label className={styles.label}>
-              <input
-                className={styles.input}
-                type="radio"
-                name={`pregunta-${i}`}
-                value="Falso"
-                checked={respuestas[i] === "Falso"}
-                onChange={(e) => handleChange(i, e.target.value)}
-              />
-              Falso
-            </label>
-            <div className={styles.button_container}>
-              <button className="btn" onClick={() => verificarRespuesta(i)}>
-                Probar
-              </button>
+    <>
+      <div className={styles.carrusel_container}>
+        <button
+          className={`${styles.buttons} ${styles.back}`}
+          onClick={handlePrev}
+        >
+          ⬅️
+        </button>
+        <div
+          className={styles.carrusel}
+          style={{
+            transform: `translateX(-${translate}%`,
+            transition: "transform 0.3s ease",
+          }}
+        >
+          {reto.preguntas.map((p, i) => (
+            // empieza Card
+            <div className={styles.card} key={i} id={i}>
+              <p>{p.enunciado}</p>
+              <label className={styles.label}>
+                <input
+                  className={styles.input}
+                  type="radio"
+                  name={`pregunta-${i}`}
+                  value="Verdadero"
+                  checked={respuestas[i] === "Verdadero"}
+                  onChange={(e) => handleChange(i, e.target.value)}
+                />
+                Verdadero
+              </label>
+              <label className={styles.label}>
+                <input
+                  className={styles.input}
+                  type="radio"
+                  name={`pregunta-${i}`}
+                  value="Falso"
+                  checked={respuestas[i] === "Falso"}
+                  onChange={(e) => handleChange(i, e.target.value)}
+                />
+                Falso
+              </label>
+              <div className={styles.button_container}>
+                <button className="btn" onClick={() => verificarRespuesta(i)}>
+                  Probar
+                </button>
+              </div>
+
+              {resultados[i] !== null && (
+                <p className={styles.p}>
+                  {resultados[i] ? "¡Correcto!" : "Incorrecto"}
+                </p>
+              )}
             </div>
-
-            {resultados[i] !== null && (
-              <p className={styles.p}>
-                {resultados[i] ? "¡Correcto!" : "Incorrecto"}
-              </p>
-            )}
-          </div>
-          // termina Card
-        ))}
+            // termina Card
+          ))}
+        </div>
+        <button
+          className={`${styles.buttons} ${styles.next}`}
+          onClick={handleNext}
+        >
+          ➡️
+        </button>
       </div>
-      <button>➡️</button>
-    </div>
-  </>
-)
-
-}
+    </>
+  );
+};
 
 export default TrueOrFalse;

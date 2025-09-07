@@ -38,7 +38,7 @@ const AllTribusPage = () => {
               <Icon name={theClass(tribu.id)} stroke="green" fill="none" />
             </Link>
           ) : (
-            <Icon name="icono-bloqueado icono" stroke="green" fill="none" />
+            <Icon key={index} name="icono-bloqueado icono" stroke="green" fill="none" />
           );
         })}
       </div>

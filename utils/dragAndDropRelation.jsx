@@ -16,7 +16,6 @@ export function changeOrder(
 }
 //de item a categoria
 export function userChoice(setInitialState, to, item, initialState) {
-  console.log(initialState.userResult, to);
   if(initialState.userResult[to] !== "") return
   
   const newList = Array.from(initialState.list).filter((e) => e !== item);

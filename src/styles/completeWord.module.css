@@ -10,5 +10,63 @@
 .card {
   min-width: 100%; /*CLAVE: cada tarjeta ocupa todo el ancho visible */
   scroll-snap-align: start; /* CLAVE: punto de snap al inicio de cada tarjeta */
-  flex-shrink: 0; /* CLAVE: mantiene el ancho mínimo */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 1rem;
+}
+.options {
+  width: clamp(7rem, 19vw, 15rem);
+  padding: 0.4rem;
+  border-radius: 0.7rem;
+  align-self: center;
+  font-weight: bold;
+  border: none;
+  height: 100%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  &&:hover {
+    transform: translateY(-0.5rem);
+    
+  }
+  &&:focus {
+    background-color: var(--color-bordes-o);
+  }
+}
+.select {
+  background-color: var(--color-bordes-o);
+}
+.unSelect {
+  background-color: var(--color-bordes-o);
+}
+.button_container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  justify-content: center;
+  padding: 2rem;
+}
+.dot {
+  border-radius: 50%;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  &&:hover {
+    background-color: var(--color-bordes-o);
+  }
+  /* &&:focus {
+    background-color: var(--color-bordes-o);
+  } */
+}
+.dots_container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  padding: 1rem;
+}
+.no_select{
+   background-color: var(--color-titulo-o);
 }
