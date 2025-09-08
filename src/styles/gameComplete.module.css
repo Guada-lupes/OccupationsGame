@@ -1,0 +1,12 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container {
+  width: clamp(18rem, 80vw, 63rem);
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+}

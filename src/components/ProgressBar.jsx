@@ -11,7 +11,7 @@ const ProgressBar = () => {
     const currentCount = state.doneChallenge.length;
 
     if (currentCount > prevChallengeCount.current) {
-      if (state.doneChallenge.length === 13) {
+      if (state.doneChallenge.length === 14) {
         dispatch({ type: "increment_progres", payload: 100 });
         return;
       } else {

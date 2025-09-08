@@ -1,17 +1,17 @@
-import {AgriculturaIcons} from "../src/icons/Icons"
-import {IndusIcons}from "../src/icons/Icons"
-import {ComerIcon} from "../src/icons/Icons"
-import {ConstruIcon}from "../src/icons/Icons"
-import {TransIcon} from "../src/icons/Icons"
-import {HosteIcon}from "../src/icons/Icons"
-import {InfoIcon} from "../src/icons/Icons"
-import {InmoIcon}from "../src/icons/Icons"
-import {CienIcon} from "../src/icons/Icons"
-import {AdminIcon}from "../src/icons/Icons"
-import {EduIcon} from "../src/icons/Icons"
-import {SaniIcon}from "../src/icons/Icons"
-import {ArtiIcon} from "../src/icons/Icons"
-import {OtroIcon}from "../src/icons/Icons"
+import { AgriculturaIcons } from "../src/icons/Icons";
+import { IndusIcons } from "../src/icons/Icons";
+import { ComerIcon } from "../src/icons/Icons";
+import { ConstruIcon } from "../src/icons/Icons";
+import { TransIcon } from "../src/icons/Icons";
+import { HosteIcon } from "../src/icons/Icons";
+import { InfoIcon } from "../src/icons/Icons";
+import { InmoIcon } from "../src/icons/Icons";
+import { CienIcon } from "../src/icons/Icons";
+import { AdminIcon } from "../src/icons/Icons";
+import { EduIcon } from "../src/icons/Icons";
+import { SaniIcon } from "../src/icons/Icons";
+import { ArtiIcon } from "../src/icons/Icons";
+import { OtroIcon } from "../src/icons/Icons";
 
 export const tribus = [
   {
@@ -563,29 +563,30 @@ export const tribus = [
     imagen: AdminIcon,
     desbloqueada: false,
     reto: {
-  tipo: "ordenar-secuencia",
-  preguntas: [
-    {
-      enunciado: "Ordena los pasos habituales para redactar y enviar un correo electrónico profesional en una oficina.",
-      opciones: [
-        "Escribir el cuerpo del mensaje",
-        "Revisar ortografía y tono",
-        "Definir el asunto",
-        "Añadir destinatarios",
-        "Adjuntar documentos si es necesario",
-        "Pulsar 'Enviar'"
+      tipo: "ordenar-secuencia",
+      preguntas: [
+        {
+          enunciado:
+            "Ordena los pasos habituales para redactar y enviar un correo electrónico profesional en una oficina.",
+          opciones: [
+            "Escribir el cuerpo del mensaje",
+            "Revisar ortografía y tono",
+            "Definir el asunto",
+            "Añadir destinatarios",
+            "Adjuntar documentos si es necesario",
+            "Pulsar 'Enviar'",
+          ],
+          respuestaCorrecta: [
+            "Definir el asunto",
+            "Añadir destinatarios",
+            "Escribir el cuerpo del mensaje",
+            "Adjuntar documentos si es necesario",
+            "Revisar ortografía y tono",
+            "Pulsar 'Enviar'",
+          ],
+        },
       ],
-      respuestaCorrecta: [
-        "Definir el asunto",
-        "Añadir destinatarios",
-        "Escribir el cuerpo del mensaje",
-        "Adjuntar documentos si es necesario",
-        "Revisar ortografía y tono",
-        "Pulsar 'Enviar'"
-      ]
-    }
-  ]
-},
+    },
     profesiones: [
       {
         nombre: "Trabajador social",
@@ -805,7 +806,7 @@ export const tribus = [
           "Orientan a turistas y visitantes transmitiendo información cultural y geográfica.",
       },
     ],
-        siguienteTribu: "otros",
+    siguienteTribu: "otros",
   },
   {
     id: "otros",
