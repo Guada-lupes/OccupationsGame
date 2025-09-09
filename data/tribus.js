@@ -27,12 +27,12 @@ export const tribus = [
       preguntas: [
         {
           enunciado:
-            "El olivar y los frutales han aumentado su peso dentro de la agricultura española en las últimas décadas.",
+            "El empleo agrícola ha disminuido en los últimos años debido a la mecanización y al uso de tecnologías avanzadas para el control de cultivos. Aunque mejora la eficiencia, se reduce la necesidad de mano de obra tradicional y se demandan perfiles más cualificados. Responde: 'El olivar y los frutales han aumentado su peso dentro de la agricultura española en las últimas décadas.'",
           respuestaCorrecta: "Verdadero",
         },
         {
           enunciado:
-            "Casi la mitad de la superficie agrícola utilizada en España corresponde a tierras arables, principalmente cereales y cultivos herbáceos.",
+            "A diferencia de otras ramas del sector agrícola, la silvicultura y explotación forestal muestran una evolución positiva en empleo. Este subsegmento se beneficia de políticas medioambientales y de la creciente demanda de gestión sostenible de los recursos naturales. Responde: 'Casi la mitad de la superficie agrícola utilizada en España corresponde a tierras arables, principalmente cereales y cultivos herbáceos.'",
           respuestaCorrecta: "Verdadero",
         },
       ],
@@ -85,7 +85,7 @@ export const tribus = [
       preguntas: [
         {
           enunciado:
-            "Ordena las fases básicas en la producción de una prenda de ropa en la industria textil.",
+            "El sector industrial español sigue siendo clave en el empleo, destacando ramas como la alimentaria, metalúrgica, automotriz y química. En 2024, los proyectos estratégicos (PERTE) impulsan su modernización, con foco en sostenibilidad, digitalización e innovación tecnológica, especialmente en áreas como el vehículo eléctrico, energías renovables y semiconductores. Ordena las fases básicas en la producción de una prenda de ropa en la industria textil.",
           opciones: [
             "Diseño",
             "Corte de tela",
@@ -149,7 +149,7 @@ export const tribus = [
     reto: {
       tipo: "clasificar",
       instrucciones:
-        "Clasifica cada elemento como 'Herramienta de construcción' o 'Material de construcción'.",
+        "La alta demanda de vivienda y la rehabilitación de inmuebles impulsan el crecimiento del sector de la construcción en España. Sin embargo, la falta de profesionales cualificados y el envejecimiento de la plantilla dificultan cubrir las vacantes, especialmente en las actividades de edificación y construcción especializada, que lideran la recuperación del sector. Clasifica cada elemento como 'Herramienta de construcción' o 'Material de construcción'.",
       elementos: [
         "Cemento",
         "Taladro",
@@ -209,7 +209,7 @@ export const tribus = [
     reto: {
       tipo: "relacionar",
       instrucciones:
-        "Relaciona cada formato de comercio con el ejemplo que mejor lo represente.",
+        "El comercio sigue siendo un pilar estratégico de la economía española por su peso en el empleo y su impacto en el PIB. En los últimos años, se ha transformado profundamente por la digitalización y la globalización, lo que ha impulsado el comercio electrónico, la logística inteligente y nuevas formas de consumo conectadas a plataformas digitales. Relaciona cada formato de comercio con el ejemplo que mejor lo represente.",
       columnaA: [
         "Gran superficie",
         "Franquicia",
@@ -333,7 +333,7 @@ export const tribus = [
       preguntas: [
         {
       enunciado:
-        "La actividad turística alcanzó los 184.002 millones de euros en 2023, aproximadamente el ______ % del PIB en España.",
+        "El sector de la Hostelería sigue situándose en un escenario favorable. La actividad turística alcanzó los 184.002 millones de euros en 2023, aproximadamente el ______ % del PIB en España.",
       opciones: ["11%", "12,3%", "14%"],
       respuestaCorrecta: "12,3%"
         },
@@ -452,7 +452,7 @@ export const tribus = [
     reto: {
       tipo: "clasificar",
       instrucciones:
-        "El mercado inmobiliario español atraviesa una fase de crecimiento moderado, con precios al alza y escasez de oferta frente a una demanda robusta. Las políticas públicas buscan facilitar el acceso a la vivienda y fomentar la rehabilitación de edificios antiguos, en línea con una tendencia hacia la sostenibilidad y la eficiencia energética. Clasifica cada elemento como 'Tipo de vivienda' o 'Espacio comercial'.",
+        "El mercado inmobiliario español atraviesa una fase de crecimiento moderado, con precios al alza y escasez de oferta frente a una demanda robusta. Las políticas públicas buscan facilitar el acceso a la vivienda y fomentar la rehabilitación de edificios antiguos, en línea con una tendencia hacia la sostenibilidad y la eficiencia energética. Clasifica cada elemento como 'Políticas públicas de vivienda' o 'Tendencias del mercado inmobiliario privado'. A cada categoría le pertenecen 3 elementos.",
       elementos: [
         "Conservación del parque inmobiliario",
         "Rehabilitación energética de edificios",
@@ -709,7 +709,7 @@ export const tribus = [
           enunciado:
             "La sanidad y el sector geriátrico son un campo ideal para aplicar nuevas tecnologías como la telemedicina, la robótica, la realidad virtual o las aplicaciones móviles. Estas innovaciones permiten mejorar la calidad de vida de los pacientes y optimizar los servicios de salud. ¿Cuál de los siguientes NO es una innovación aplicada al sector sanitario?",
           opciones: ["Videojuegos", "Gatos robots", "Telemedicina"],
-          respuestaCorrecta: "Regla de carpintero",
+          respuestaCorrecta: "Videojuegos",
         },
       ],
     },
@@ -768,7 +768,7 @@ export const tribus = [
           enunciado:
             "Con 154 rodajes y más de 218 millones de euros generados en 2024, Canarias se ha convertido en un destino clave para producciones audiovisuales. Este auge ha impulsado el empleo local y dinamizado la economía insular. Completa la frase: 'En sólo un año, este sector ha sido capaz de generar más de ________ empleos directos en las islas.'",
           opciones: ["14.000", "9.800", "25.000"],
-          respuestaCorrecta: "Tiempos",
+          respuestaCorrecta: "14.000",
         },
       ],
     },
