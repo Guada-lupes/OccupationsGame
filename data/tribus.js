@@ -27,12 +27,12 @@ export const tribus = [
       preguntas: [
         {
           enunciado:
-            "La rotación de cultivos ayuda a conservar la fertilidad del suelo.",
+            "El olivar y los frutales han aumentado su peso dentro de la agricultura española en las últimas décadas.",
           respuestaCorrecta: "Verdadero",
         },
         {
           enunciado:
-            "El algodón es un cultivo que requiere mucha agua para su producción.",
+            "Casi la mitad de la superficie agrícola utilizada en España corresponde a tierras arables, principalmente cereales y cultivos herbáceos.",
           respuestaCorrecta: "Verdadero",
         },
       ],
@@ -208,27 +208,28 @@ export const tribus = [
     desbloqueada: false,
     reto: {
       tipo: "relacionar",
-      instrucciones: "Relaciona cada tipo de comercio con un ejemplo adecuado.",
+      instrucciones:
+        "Relaciona cada formato de comercio con el ejemplo que mejor lo represente.",
       columnaA: [
-        "Comercio minorista",
-        "Comercio mayorista",
+        "Gran superficie",
+        "Franquicia",
+        "Mercado tradicional",
+        "Plataforma de segunda mano",
         "Comercio electrónico",
-        "Comercio ambulante",
-        "Comercio internacional",
       ],
       columnaB: [
         "Amazon",
-        "Mercado callejero",
-        "Exportación de café",
+        "Wallapop",
+        "Burger King",
         "Supermercado de barrio",
-        "Distribuidora de bebidas para bares",
+        "Carrefour",
       ],
       respuestaCorrecta: {
-        "Comercio minorista": "Supermercado de barrio",
-        "Comercio mayorista": "Distribuidora de bebidas para bares",
+        "Gran superficie": "Carrefour",
+        Franquicia: "Burger King",
+        "Mercado tradicional": "Supermercado de barrio",
+        "Plataforma de segunda mano": "Wallapop",
         "Comercio electrónico": "Amazon",
-        "Comercio ambulante": "Mercado callejero",
-        "Comercio internacional": "Exportación de café",
       },
     },
     profesiones: [
@@ -272,15 +273,15 @@ export const tribus = [
       tipo: "encuentra-impostor",
       preguntas: [
         {
-          enunciado: "¿Cuál de estos NO es un medio de transporte terrestre?",
-          opciones: ["Autobús", "Tren", "Helicóptero"],
-          respuestaCorrecta: "Helicóptero",
+          enunciado: "El sector de Logística se encuentra en plena transformación, impulsada por importantes tendencias globales. La reducción de la huella de carbono y la adaptación al cambio climático son los más significativos para el 66% y el 50% de las empresas,  respectivamente. ¿Cuál de las siguientes no es una tecnología clave para el sector?",
+          opciones: ["El vapor", "Inteligencia artificial", "Robótica"],
+          respuestaCorrecta: "El vapor",
         },
         {
           enunciado:
-            "¿Cuál de estos NO se utiliza para el transporte marítimo?",
-          opciones: ["Ferry", "Petrolero", "Tranvía"],
-          respuestaCorrecta: "Tranvía",
+            "En cuanto a las tecnologías clave que pueden redefinir el futuro del sector, destacan la inteligencia artificial, la robótica, la automatización y aquellas que impulsan la transición energética. Por ello, los perfiles profesionales más demandados estarán vinculados a dichas tecnologías. ¿Cuál de los siguientes perfiles no está relacionado con el sector?",
+          opciones: ["Especialistas en vehículos autónomos", "Especialistas en vehículos eléctricos", "Especialistas en vehículos retro"],
+          respuestaCorrecta: "Especialistas en vehículos retro",
         },
       ],
     },
@@ -331,20 +332,16 @@ export const tribus = [
       tipo: "completar-frases",
       preguntas: [
         {
-          enunciado:
-            "En hostelería, el término 'check-in' se refiere al momento en que el cliente ______.",
-          opciones: [
-            "Paga la cuenta",
-            "Llega y se registra",
-            "Deja una propina",
-          ],
-          respuestaCorrecta: "Llega y se registra",
+      enunciado:
+        "La actividad turística alcanzó los 184.002 millones de euros en 2023, aproximadamente el ______ % del PIB en España.",
+      opciones: ["11%", "12,3%", "14%"],
+      respuestaCorrecta: "12,3%"
         },
         {
           enunciado:
-            "El sistema 'todo incluido' significa que el cliente tiene acceso a comidas, bebidas y algunos servicios sin ______ adicional.",
-          opciones: ["Costo", "Horario", "Turno"],
-          respuestaCorrecta: "Costo",
+            "El Gobierno de España está elaborando la Estrategia de Turismo Sostenible de España 2030, una agenda nacional de turismo para afrontar los retos del sector en el medio y largo plazo, impulsando los tres pilares de la sostenibilidad: socioeconómica, medioambiental y:",
+          opciones: ["Literaria", "Teritorial", "Artística"],
+          respuestaCorrecta: "Teritorial",
         },
       ],
     },
@@ -395,18 +392,18 @@ export const tribus = [
       preguntas: [
         {
           enunciado:
-            "¿Cuál de estas tecnologías se considera de comunicación masiva?",
-          opciones: ["Teléfono fijo", "Televisión", "Walkie-talkie"],
-          respuestaCorrecta: "Televisión",
+            "Big Data se refiere al manejo y análisis de conjuntos de datos tan grandes y complejos que no pueden procesarse con herramientas tradicionales. Ayuda a detectar _______ ________",
+          opciones: ["Intrusos en la organización", "Patrones y tendencias", "Mentiras de los empleados"],
+          respuestaCorrecta: "Patrones y tendencias",
         },
         {
-          enunciado: "El protocolo HTTP se utiliza principalmente para:",
+          enunciado: "Una IA aprende a través de entrenamiento con grandes cantidades de datos. Reconoce patrones en esos datos y ajusta sus modelos internos para mejorar su precisión. La IA genera sus respuestas: ",
           opciones: [
-            "Navegar por páginas web",
-            "Hacer llamadas telefónicas",
-            "Enviar mensajes de texto",
+            "Desde cero",
+            "Consultando a expertas",
+            "A partir de patrones",
           ],
-          respuestaCorrecta: "Navegar por páginas web",
+          respuestaCorrecta: "A partir de patrones",
         },
       ],
     },
@@ -455,17 +452,18 @@ export const tribus = [
     reto: {
       tipo: "clasificar",
       instrucciones:
-        "Clasifica cada elemento como 'Tipo de vivienda' o 'Espacio comercial'.",
+        "El mercado inmobiliario español atraviesa una fase de crecimiento moderado, con precios al alza y escasez de oferta frente a una demanda robusta. Las políticas públicas buscan facilitar el acceso a la vivienda y fomentar la rehabilitación de edificios antiguos, en línea con una tendencia hacia la sostenibilidad y la eficiencia energética. Clasifica cada elemento como 'Tipo de vivienda' o 'Espacio comercial'.",
       elementos: [
-        "Apartamento",
-        "Chalet",
-        "Local de tienda",
-        "Nave industrial",
-        "Piso",
+        "Conservación del parque inmobiliario",
+        "Rehabilitación energética de edificios",
+        "Inversión extranjera en vivienda",
+        "Límites al precio del alquiler en zonas tensionadas",
+        "Ayudas al alquiler para jóvenes",
+        "Demanda de viviendas sostenibles",
       ],
       categorias: {
-        "Tipo de vivienda": ["Apartamento", "Chalet", "Piso"],
-        "Espacio comercial": ["Local de tienda", "Nave industrial"],
+        "Políticas públicas de vivienda": ["Ayudas al alquiler para jóvenes", "Conservación del parque inmobiliario", "Límites al precio del alquiler en zonas tensionadas"],
+        "Tendencias del mercado inmobiliario privado": ["Rehabilitación energética de edificios", "Inversión extranjera en vivienda", "Demanda de viviendas sostenibles"],
       },
     },
     profesiones: [
@@ -515,13 +513,13 @@ export const tribus = [
       preguntas: [
         {
           enunciado:
-            "El método científico implica observar, formular hipótesis y experimentar.",
+            "La basura espacial son restos de satélites, cohetes o fragmentos que orbitan alrededor de la Tierra. Se genera al lanzar y usar tecnología espacial, y puede chocar con satélites activos o naves, dificultando la investigación y las comunicaciones. Responde: Los principales países que generan basura espacial son Estados Unidos, Rusia y China.",
           respuestaCorrecta: "Verdadero",
         },
         {
           enunciado:
-            "En ciencia, una teoría comprobada deja de poder ser cuestionada.",
-          respuestaCorrecta: "Falso",
+            "Los baños secos funcionan sin agua: separan y tratan los desechos humanos de manera natural. Ahorran miles de litros de agua potable al año, reducen la contaminación y pueden transformarse en compost útil para la agricultura.Responde: Los baños secos ya se usan en países como Suecia, México o Kenia.",
+          respuestaCorrecta: "Verdadero",
         },
       ],
     },
@@ -567,7 +565,7 @@ export const tribus = [
       preguntas: [
         {
           enunciado:
-            "Ordena los pasos habituales para redactar y enviar un correo electrónico profesional en una oficina.",
+            "En 2024, más de 198.000 empresas operan en actividades como oficinas, jardinería, alquiler, agencias de viajes, empleo y seguridad. Seis de cada diez tienen menos de siete años, lo que refleja un sector dinámico y en expansión, aunque con baja longevidad empresarial. Estas actividades han crecido por encima de la media nacional en creación de nuevas empresas.. Ordena los pasos habituales para redactar y enviar un correo electrónico profesional en una oficina.",
           opciones: [
             "Escribir el cuerpo del mensaje",
             "Revisar ortografía y tono",
@@ -634,7 +632,7 @@ export const tribus = [
     reto: {
       tipo: "relacionar",
       instrucciones:
-        "Relaciona cada herramienta educativa con su uso principal.",
+        "La educación en España se adapta a los cambios del mercado laboral, incorporando competencias técnicas y transversales como idiomas, TIC y habilidades blandas. Entre 2020 y 2024, el empleo ha crecido notablemente, con más afiliaciones y contrataciones, especialmente en el sector educativo, donde se reforzó la plantilla docente tras la pandemia. Relaciona cada herramienta educativa con su uso principal.",
       columnaA: [
         "Pizarra",
         "Libro de texto",
@@ -703,14 +701,14 @@ export const tribus = [
       tipo: "encuentra-impostor",
       preguntas: [
         {
-          enunciado: "¿Cuál de estos NO es un profesional sanitario?",
-          opciones: ["Médico", "Enfermero", "Arquitecto"],
-          respuestaCorrecta: "Arquitecto",
+          enunciado: "El envejecimiento de la población en España está impulsando el crecimiento del sector de los cuidados y la atención sociosanitaria. Este sector demanda cada vez más personal cualificado, con mejores condiciones laborales y formación especializada. ¿Cuál de los siguientes NO es un centro de atención sanitaria?",
+          opciones: ["Hospital público", "Residencia geriátrica", "Centro comercial"],
+          respuestaCorrecta: "Centro comercial",
         },
         {
           enunciado:
-            "¿Cuál de estos NO se utiliza habitualmente en un hospital?",
-          opciones: ["Estetoscopio", "Bisturí", "Regla de carpintero"],
+            "La sanidad y el sector geriátrico son un campo ideal para aplicar nuevas tecnologías como la telemedicina, la robótica, la realidad virtual o las aplicaciones móviles. Estas innovaciones permiten mejorar la calidad de vida de los pacientes y optimizar los servicios de salud. ¿Cuál de los siguientes NO es una innovación aplicada al sector sanitario?",
+          opciones: ["Videojuegos", "Gatos robots", "Telemedicina"],
           respuestaCorrecta: "Regla de carpintero",
         },
       ],
@@ -762,14 +760,14 @@ export const tribus = [
       preguntas: [
         {
           enunciado:
-            "El ________ es la técnica de pintar sobre paredes húmedas con pigmentos naturales.",
-          opciones: ["Fresco", "Acrílico", "Óleo"],
-          respuestaCorrecta: "Fresco",
+            "El sector de los videojuegos en España ha crecido exponencialmente, convirtiéndose en una de las principales industrias culturales. Su impacto va más allá del entretenimiento, generando empleo, exportaciones y formación especializada. Completa la frase: 'En 2024, el sector de los videojuegos superó por primera vez los _______ millones de euros de facturación'",
+          opciones: ["5", "2.408", "1.430"],
+          respuestaCorrecta: "2.408",
         },
         {
           enunciado:
-            "En música, el compás indica el número de ________ por cada medida.",
-          opciones: ["Notas", "Tiempos", "Instrumentos"],
+            "Con 154 rodajes y más de 218 millones de euros generados en 2024, Canarias se ha convertido en un destino clave para producciones audiovisuales. Este auge ha impulsado el empleo local y dinamizado la economía insular. Completa la frase: 'En sólo un año, este sector ha sido capaz de generar más de ________ empleos directos en las islas.'",
+          opciones: ["14.000", "9.800", "25.000"],
           respuestaCorrecta: "Tiempos",
         },
       ],
@@ -821,14 +819,14 @@ export const tribus = [
       preguntas: [
         {
           enunciado:
-            "¿Cuál de estas actividades entra en la categoría de 'otros servicios'?",
-          opciones: ["Peluquería", "Cultivo de maíz", "Producción de cemento"],
-          respuestaCorrecta: "Peluquería",
+            "La digitalización también está transformando el sector funerario, y una gran parte de la sociedad, especialmente los más jóvenes, exige servicios modernos. Entre los más solicitados se encuentran los servicios funerales vía streaming y la gestión de la comunicación de despedidas a través de redes sociales. Más aún, el 70,3% considera importante:",
+          opciones: ["Catering vegano", "Borrado de huella digital", "Música en vivo"],
+          respuestaCorrecta: "Borrado de huella digital",
         },
         {
-          enunciado: "Un taller de reparación de bicicletas pertenece a:",
-          opciones: ["Servicios", "Industria", "Agricultura"],
-          respuestaCorrecta: "Servicios",
+          enunciado: "El autocuidado se ha convertido en una prioridad para los consumidores. En 2022, el consumo per cápita en cosmética y perfumería alcanzó los 185€, superando cifras prepandemia. El sector ha crecido un 11,3% respecto a 2021, impulsado por la innovación y la diversificación de canales. España es un gran exportador de perfumes, ocupando el puesto número:",
+          opciones: ["Dos", "Diez", "Tercero"],
+          respuestaCorrecta: "Dos",
         },
       ],
     },
