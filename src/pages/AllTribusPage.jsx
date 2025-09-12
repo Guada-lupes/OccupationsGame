@@ -10,27 +10,39 @@ const AllTribusPage = () => {
   const challengeUnresolved = (id) => state.doneChallenge.includes(id);
   const theClass = (id) =>
     `icono-desbloqueado icono ${challengeUnresolved(id) ? "" : "unresolved"}`;
-console.log(state);
+  console.log(state);
 
   return (
     <section className={styles.section}>
       <h1>El planeta de las profesiones</h1>
       <div className={styles.text_container}>
-        <p className={styles.p}>
-          "En este planeta conviven catorce tribus, cada una con su propio
-          saber, sus costumbres y su forma de aportar al bienestar común. Aunque
-          distintas, todas se necesitan: unas producen lo que otras consumen,
-          unas crean lo que otras transforman, unas investigan lo que otras
-          aplican. El intercambio de bienes, ideas y servicios es lo que
-          mantiene en equilibrio a este mundo. Tu viaje te llevará a conocerlas
-          una a una. No será fácil: cada tribu protege sus conocimientos con
-          retos y pruebas. Solo quien demuestra curiosidad, ingenio y valentía
-          puede ganarse su confianza. ¿Estás listo/a para descubrir sus secretos
-          y convertirte en un verdadero explorador del Planeta de las
-          Profesiones?"
-        </p>
+        <div className={styles.p}>
+          <p>
+            <strong>La aventura ha comenzado.</strong>
+          </p>
+          <p>
+            Solo podrás visitar las tribus cuando estén desbloqueadas; lo sabrás
+            porque aparecerán en rojo. Haz clic en la tribu para entrar.
+          </p>
+          <p>
+            Dentro te espera un reto difícil: si lo superas, la tribu te
+            mostrará las ocupaciones con mayor demanda de empleo. Si seleccionas{" "}
+            <strong>“Saber más”</strong>, accederás a información adicional.
+            También puedes <strong>“Guardar”</strong> la ocupación para
+            revisarla más tarde.
+          </p>
+          <p>
+            Cuando termines, regresa a la página principal y verás que has
+            desbloqueado una nueva tribu.
+          </p>
+          <p>
+            Al finalizar el juego, te pediremos que respondas unas breves
+            preguntas sobre tu experiencia para ayudarnos a mejorar la
+            aplicación.
+          </p>
+          <p>¡Mucha suerte!</p>
+        </div>
       </div>
-
       <div className={styles.grid}>
         {tribus.map((tribu, index) => {
           const Icon = tribu.imagen;
@@ -39,7 +51,12 @@ console.log(state);
               <Icon name={theClass(tribu.id)} stroke="green" fill="none" />
             </Link>
           ) : (
-            <Icon key={index} name="icono-bloqueado icono" stroke="green" fill="none" />
+            <Icon
+              key={index}
+              name="icono-bloqueado icono"
+              stroke="green"
+              fill="none"
+            />
           );
         })}
       </div>

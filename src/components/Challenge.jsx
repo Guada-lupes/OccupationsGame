@@ -10,13 +10,14 @@ import MultipleChoice from "../challenges/MultipleChoice";
 import { CoinComponent } from "./CoinComponent";
 import styles from "../styles/challenge.module.css";
 
-const Challenge = ({ reto, id, next, profesiones }) => {
+const Challenge = ({ reto, id, next, profesiones, nombre }) => {
   //tenemos el cuenta el tipo de reto y generamos componentes segun el
 
   return (
     <>
       <div className={styles.container}>
         <h2 className={styles.h2}>Resuelve el reto</h2>
+        <h3>Actividad economica: "{nombre}"</h3>
         {reto.tipo === "verdadero-falso" && (
           <TrueOrFalse
             reto={reto}

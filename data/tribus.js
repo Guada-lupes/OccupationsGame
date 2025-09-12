@@ -273,15 +273,20 @@ export const tribus = [
       tipo: "encuentra-impostor",
       preguntas: [
         {
-          enunciado: "El sector de Logística se encuentra en plena transformación, impulsada por importantes tendencias globales. La reducción de la huella de carbono y la adaptación al cambio climático son los más significativos para el 66% y el 50% de las empresas,  respectivamente. ¿Cuál de las siguientes no es una tecnología clave para el sector?",
+          enunciado:
+            "El sector de Logística se encuentra en plena transformación, impulsada por importantes tendencias globales. La reducción de la huella de carbono y la adaptación al cambio climático son los más significativos para el 66% y el 50% de las empresas,  respectivamente. ¿Cuál de las siguientes no es una tecnología clave para el sector?",
           opciones: ["El vapor", "Inteligencia artificial", "Robótica"],
           respuestaCorrecta: "El vapor",
         },
         {
           enunciado:
             "En cuanto a las tecnologías clave que pueden redefinir el futuro del sector, destacan la inteligencia artificial, la robótica, la automatización y aquellas que impulsan la transición energética. Por ello, los perfiles profesionales más demandados estarán vinculados a dichas tecnologías. ¿Cuál de los siguientes perfiles no está relacionado con el sector?",
-          opciones: ["Especialistas en vehículos autónomos", "Especialistas en vehículos eléctricos", "Especialistas en vehículos retro"],
-          respuestaCorrecta: "Especialistas en vehículos retro",
+          opciones: [
+            "Especialistas en vehículos autónomos",
+            "Especialistas en vehículos eléctricos",
+            "Especialistas en rosquillas",
+          ],
+          respuestaCorrecta: "Especialistas en rosquillas",
         },
       ],
     },
@@ -332,10 +337,10 @@ export const tribus = [
       tipo: "completar-frases",
       preguntas: [
         {
-      enunciado:
-        "El sector de la Hostelería sigue situándose en un escenario favorable. La actividad turística alcanzó los 184.002 millones de euros en 2023, aproximadamente el ______ % del PIB en España.",
-      opciones: ["11%", "12,3%", "14%"],
-      respuestaCorrecta: "12,3%"
+          enunciado:
+            "El sector de la Hostelería sigue situándose en un escenario favorable. La actividad turística alcanzó los 184.002 millones de euros en 2023, aproximadamente el ______ % del PIB en España.",
+          opciones: ["11%", "12,3%", "14%"],
+          respuestaCorrecta: "12,3%",
         },
         {
           enunciado:
@@ -392,12 +397,17 @@ export const tribus = [
       preguntas: [
         {
           enunciado:
-            "Big Data se refiere al manejo y análisis de conjuntos de datos tan grandes y complejos que no pueden procesarse con herramientas tradicionales. Ayuda a detectar _______ ________",
-          opciones: ["Intrusos en la organización", "Patrones y tendencias", "Mentiras de los empleados"],
+            "Dentro de esta sección destaca la actividad de Programación, consultoría y otras actividades informáticas que cuenta con 38.602 empresas activas en 2024, de las cuales más de la mitad son autónomos; también incluye grandes empresas, con más de  53 mil trabajadores. Responde: 'Big Data se refiere al manejo y análisis de conjuntos de datos tan grandes y complejos que no pueden procesarse con herramientas tradicionales. Ayuda a detectar _______ ________'",
+          opciones: [
+            "Intrusos en la organización",
+            "Patrones y tendencias",
+            "Mentiras de los empleados",
+          ],
           respuestaCorrecta: "Patrones y tendencias",
         },
         {
-          enunciado: "Una IA aprende a través de entrenamiento con grandes cantidades de datos. Reconoce patrones en esos datos y ajusta sus modelos internos para mejorar su precisión. La IA genera sus respuestas: ",
+          enunciado:
+            "El empleo ha ido aumentando en sectores expuestos a la Inteligencia Artificial; entre las empresas que han adoptado IA predominan las más grandes y las más productivas. El desarrollo de la IA requerirá también la mejora continua de la ciberseguridad. Responde: 'Una IA aprende a través de entrenamiento con grandes cantidades de datos. Reconoce patrones en esos datos y ajusta sus modelos internos para mejorar su precisión. La IA genera sus respuestas ______ _______' ",
           opciones: [
             "Desde cero",
             "Consultando a expertas",
@@ -452,18 +462,26 @@ export const tribus = [
     reto: {
       tipo: "clasificar",
       instrucciones:
-        "El mercado inmobiliario español atraviesa una fase de crecimiento moderado, con precios al alza y escasez de oferta frente a una demanda robusta. Las políticas públicas buscan facilitar el acceso a la vivienda y fomentar la rehabilitación de edificios antiguos, en línea con una tendencia hacia la sostenibilidad y la eficiencia energética. Clasifica cada elemento como 'Políticas públicas de vivienda' o 'Tendencias del mercado inmobiliario privado'. A cada categoría le pertenecen 3 elementos.",
+        "El mercado inmobiliario español atraviesa una fase de crecimiento moderado, con precios al alza y escasez de oferta frente a una demanda robusta. Las políticas públicas buscan facilitar el acceso a la vivienda y fomentar la rehabilitación de edificios antiguos, en línea con una tendencia hacia la sostenibilidad y la eficiencia energética. Clasifica cada elemento como 'Problemas de vivienda' o 'Posibles soluciones a la vivienda'. A cada categoría le pertenecen 3 elementos.",
       elementos: [
-        "Conservación del parque inmobiliario",
-        "Rehabilitación energética de edificios",
-        "Inversión extranjera en vivienda",
-        "Límites al precio del alquiler en zonas tensionadas",
-        "Ayudas al alquiler para jóvenes",
-        "Demanda de viviendas sostenibles",
+        "Normativa para vivienda asequible",
+        "Rehabilitación de edificios abandonados",
+        "Precios muy altos",
+        "Alquileres vacacionales",
+        "Creación de vivienda protegida",
+        "Escasez de oferta de vivienda",
       ],
       categorias: {
-        "Políticas públicas de vivienda": ["Ayudas al alquiler para jóvenes", "Conservación del parque inmobiliario", "Límites al precio del alquiler en zonas tensionadas"],
-        "Tendencias del mercado inmobiliario privado": ["Rehabilitación energética de edificios", "Inversión extranjera en vivienda", "Demanda de viviendas sostenibles"],
+        "Problemas de la vivienda": [
+          "Escasez de oferta de vivienda",
+          "Alquileres vacacionales",
+          "Precios muy altos",
+        ],
+        "Posibles soluciones": [
+          "Creación de vivienda protegida",
+          "Rehabilitación de edificios abandonados",
+          "Normativa para vivienda asequible",
+        ],
       },
     },
     profesiones: [
@@ -513,13 +531,13 @@ export const tribus = [
       preguntas: [
         {
           enunciado:
-            "La basura espacial son restos de satélites, cohetes o fragmentos que orbitan alrededor de la Tierra. Se genera al lanzar y usar tecnología espacial, y puede chocar con satélites activos o naves, dificultando la investigación y las comunicaciones. Responde: Los principales países que generan basura espacial son Estados Unidos, Rusia y China.",
+            "El sector de actividades profesionales, científicas y técnicas está creciendo gracias a la digitalización y al uso de nuevas tecnologías. Profesiones como la consultoría, la investigación de mercados, la ingeniería y la arquitectura tienen cada vez más oportunidades de empleo, sobre todo porque las empresas necesitan servicios especializados para mejorar su competitividad. Responde: 'El sector profesional ofrece nuevas oportunidades de empleo gracias a la digitalización y los servicios especializados.'",
           respuestaCorrecta: "Verdadero",
         },
         {
           enunciado:
-            "Los baños secos funcionan sin agua: separan y tratan los desechos humanos de manera natural. Ahorran miles de litros de agua potable al año, reducen la contaminación y pueden transformarse en compost útil para la agricultura.Responde: Los baños secos ya se usan en países como Suecia, México o Kenia.",
-          respuestaCorrecta: "Verdadero",
+            "En el ámbito jurídico, la tecnología (Legal Tech) está cambiando la forma de trabajar. Ahora se usan contratos inteligentes, plataformas en línea para resolver conflictos y herramientas de inteligencia artificial. Esto ayuda a reducir costes y a que los servicios legales sean más accesibles. Responde: 'La tecnología en el sector jurídico ha dificultado el acceso a los servicios legales'",
+          respuestaCorrecta: "Falso",
         },
       ],
     },
@@ -575,8 +593,8 @@ export const tribus = [
             "Pulsar 'Enviar'",
           ],
           respuestaCorrecta: [
-            "Definir el asunto",
             "Añadir destinatarios",
+            "Definir el asunto",
             "Escribir el cuerpo del mensaje",
             "Adjuntar documentos si es necesario",
             "Revisar ortografía y tono",
@@ -642,16 +660,16 @@ export const tribus = [
       ],
       columnaB: [
         "Tomar apuntes",
-        "Exponer contenido visual",
+        "Proyectar una presentación",
         "Presentar lecciones en clase",
-        "Acceder a recursos y tareas",
+        "Acceso online a recursos y tareas",
         "Consultar información estructurada",
       ],
       respuestaCorrecta: {
         Pizarra: "Presentar lecciones en clase",
         "Libro de texto": "Consultar información estructurada",
-        Proyector: "Exponer contenido visual",
-        "Plataforma online": "Acceder a recursos y tareas",
+        Proyector: "Proyectar una presentación",
+        "Plataforma online": "Acceso online a recursos y tareas",
         Cuaderno: "Tomar apuntes",
       },
     },
@@ -701,14 +719,19 @@ export const tribus = [
       tipo: "encuentra-impostor",
       preguntas: [
         {
-          enunciado: "El envejecimiento de la población en España está impulsando el crecimiento del sector de los cuidados y la atención sociosanitaria. Este sector demanda cada vez más personal cualificado, con mejores condiciones laborales y formación especializada. ¿Cuál de los siguientes NO es un centro de atención sanitaria?",
-          opciones: ["Hospital público", "Residencia geriátrica", "Centro comercial"],
+          enunciado:
+            "El envejecimiento de la población en España está impulsando el crecimiento del sector de los cuidados y la atención sociosanitaria. Este sector demanda cada vez más personal cualificado, con mejores condiciones laborales y formación especializada. ¿Cuál de los siguientes NO es un centro de atención sanitaria?",
+          opciones: [
+            "Hospital público",
+            "Residencia geriátrica",
+            "Centro comercial",
+          ],
           respuestaCorrecta: "Centro comercial",
         },
         {
           enunciado:
             "La sanidad y el sector geriátrico son un campo ideal para aplicar nuevas tecnologías como la telemedicina, la robótica, la realidad virtual o las aplicaciones móviles. Estas innovaciones permiten mejorar la calidad de vida de los pacientes y optimizar los servicios de salud. ¿Cuál de los siguientes NO es una innovación aplicada al sector sanitario?",
-          opciones: ["Videojuegos", "Gatos robots", "Telemedicina"],
+          opciones: ["LAs vacuna", "Gatos robots", "Telemedicina"],
           respuestaCorrecta: "Videojuegos",
         },
       ],
@@ -820,11 +843,16 @@ export const tribus = [
         {
           enunciado:
             "La digitalización también está transformando el sector funerario, y una gran parte de la sociedad, especialmente los más jóvenes, exige servicios modernos. Entre los más solicitados se encuentran los servicios funerales vía streaming y la gestión de la comunicación de despedidas a través de redes sociales. Más aún, el 70,3% considera importante:",
-          opciones: ["Catering vegano", "Borrado de huella digital", "Música en vivo"],
+          opciones: [
+            "Catering vegano",
+            "Borrado de huella digital",
+            "La vida eterna",
+          ],
           respuestaCorrecta: "Borrado de huella digital",
         },
         {
-          enunciado: "El autocuidado se ha convertido en una prioridad para los consumidores. En 2022, el consumo per cápita en cosmética y perfumería alcanzó los 185€, superando cifras prepandemia. El sector ha crecido un 11,3% respecto a 2021, impulsado por la innovación y la diversificación de canales. España es un gran exportador de perfumes, ocupando el puesto número:",
+          enunciado:
+            "El autocuidado se ha convertido en una prioridad para los consumidores. En 2022, el consumo per cápita en cosmética y perfumería alcanzó los 185€, superando cifras prepandemia. El sector ha crecido un 11,3% respecto a 2021, impulsado por la innovación y la diversificación de canales. España es un gran exportador de perfumes, ocupando el puesto número:",
           opciones: ["Dos", "Diez", "Tercero"],
           respuestaCorrecta: "Dos",
         },

@@ -116,7 +116,7 @@ const [actual, setActual] = useState(0)
           {preguntas.map((p, ip) => (
             // Cards
             <div className={styles.card} id={ip} key={ip}>
-              <h2>Pregunta{ip + 1}</h2>
+              <h4>Pregunta{ip + 1}</h4>
               <p>{p.enunciado}</p>
               {/* Opciones */}
               <div className={styles.button_container}>

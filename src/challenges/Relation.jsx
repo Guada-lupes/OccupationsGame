@@ -8,6 +8,7 @@ import {
   userChoice,
   changeCategorie,
   checkAnswer,
+  changeBetweenCategories,
 } from "../../utils/dragAndDropRelation.jsx";
 import styles from "../styles/relation.module.css";
 
@@ -187,9 +188,12 @@ export default function Relation({ reto, id, next }) {
       console.log("si es");
       bringBack(setInitialState, initialState, endIndex, item, from);
     }
-    //de cateogoria a categoria
+    //de cateogoria a categoria vacia
     if (from !== "items" && to !== "items") {
-      changeCategorie(setInitialState, from, to, item, initialState);
+      if (initialState.userResult[to] === "") {
+        changeCategorie(setInitialState, from, to, item, initialState);
+      }
+      changeBetweenCategories(setInitialState, from, to, item, initialState);
     }
   }
   function check() {

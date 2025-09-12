@@ -16,8 +16,8 @@ export function changeOrder(
 }
 //de item a categoria
 export function userChoice(setInitialState, to, item, initialState) {
-  if(initialState.userResult[to] !== "") return
-  
+  if (initialState.userResult[to] !== "") return;
+
   const newList = Array.from(initialState.list).filter((e) => e !== item);
 
   setInitialState((prev) => ({
@@ -41,27 +41,43 @@ export function bringBack(setInitialState, initialState, endIndex, item, from) {
     },
   }));
 }
-// de categoria a categoria
+// de categoria a categoria vacia
 export function changeCategorie(setInitialState, from, to, item, initialState) {
-  if(initialState.userResult[to] !== "")return
-  setInitialState((prev)=>
-(  {
+  if (initialState.userResult[to] !== "") return;
+  console.log("categoria a categoria");
+
+  setInitialState((prev) => ({
     ...prev,
-    userResult:{
-...prev.userResult,
-[from]: "",
-[to]: item
-    }
-  }))
+    userResult: {
+      ...prev.userResult,
+      [from]: "",
+      [to]: item,
+    },
+  }));
 }
+//de categoria a categoria ocupada
+export function changeBetweenCategories(setInitialState, from, to, item, initialState) {
+  if (initialState.userResult[to] === "") return;
+  const item2 = initialState.userResult[to];
+  console.log();
+
+  setInitialState((prev) => ({
+    ...prev,
+    userResult: {
+      ...prev.userResult,
+      [from]: item2,
+      [to]: item,
+    },
+  }));
+}
+
+//comprobar respuesta
 export function checkAnswer(initialState, respuestaCorrecta, setResultado) {
-
-  let verify = Object.entries(initialState.userResult).every(([key, value]) =>
-respuestaCorrecta[key] === value
-  )
-  if(!verify){
-
-    return false
+  let verify = Object.entries(initialState.userResult).every(
+    ([key, value]) => respuestaCorrecta[key] === value
+  );
+  if (!verify) {
+    return false;
   }
-return true
+  return true;
 }

@@ -39,8 +39,8 @@ export default function MultipleChoice({ reto, id, next }) {
   }
 
   return (
-    <div style={{ maxWidth: "500px", margin: "0 auto" }}>
-      <h3>{preguntaActual.enunciado}</h3>
+    <div>
+      <h4>{preguntaActual.enunciado}</h4>
       <div style={{ display: "flex", flexDirection: "column", gap: "10px", marginBottom: "10px", marginTop: "2rem" }}>
         {preguntaActual.opciones.map((opcion) => (
           <button

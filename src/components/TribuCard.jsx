@@ -28,6 +28,7 @@ export const TribuCard = () => {
               id={tribu.id}
               next={tribu.siguienteTribu}
               profesiones={tribu.profesiones}
+              nombre={tribu.nombre}
             />
           </div>
         </div>

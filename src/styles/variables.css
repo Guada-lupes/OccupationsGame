@@ -146,7 +146,7 @@ a:hover {
 }
 .icono:hover {
   scale: 120%;
-  color: var(--color-boton-o);
+  /* color: var(--color-boton-o); */
 }
 /*Iputs*/
 input {

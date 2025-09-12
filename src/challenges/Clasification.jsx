@@ -366,7 +366,7 @@ export default function Clasification({ reto, id, next }) {
                 {...provided.droppableProps}
                 className={styles.zone}
               >
-                <h3>Elementos</h3>
+                <h4>Elementos</h4>
                 {userChoice.elementos.map((item, index) => (
                   <Draggable key={item} draggableId={item} index={index}>
                     {(provided, snapshot) => (
