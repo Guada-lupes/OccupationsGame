@@ -354,7 +354,7 @@ export default function Clasification({ reto, id, next }) {
   };
 
   return (
-    <section>
+    <section className={styles.section}>
       <p>{reto.instrucciones}</p>
       <DragDropContext onDragEnd={handleDragEnd}>
         <div className={styles.container}>
@@ -366,7 +366,7 @@ export default function Clasification({ reto, id, next }) {
                 {...provided.droppableProps}
                 className={styles.zone}
               >
-                <h4>Elementos</h4>
+                <h3>Elementos</h3>
                 {userChoice.elementos.map((item, index) => (
                   <Draggable key={item} draggableId={item} index={index}>
                     {(provided, snapshot) => (
@@ -418,7 +418,7 @@ export default function Clasification({ reto, id, next }) {
         </div>
       </DragDropContext>
       <p>{resultado}</p>
-      <button className="btn" onClick={checkAnswer}>
+      <button className="btn button" onClick={checkAnswer}>
         Comprobar
       </button>
     </section>

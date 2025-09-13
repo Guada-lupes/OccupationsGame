@@ -17,9 +17,8 @@ const PlayerPage = () => {
   }
 
   return (
-    <div className={styles.lados}>
       <section className={styles.section}>
-        <h1>Revisa tu progreso {state.name}</h1>
+        <h1 className={styles.h1}>Revisa tu progreso {state.name}</h1>
         <img
           className={styles.img}
           src="/user.png"
@@ -28,7 +27,7 @@ const PlayerPage = () => {
         {/* TRIBUS _______________________________________________________________________*/}
         <h2>Tribus desbloqueadas</h2>
         {unlockedTribus.length <= 0 ? (
-          <p style={{ textAlign: "center" }}>
+          <p className={styles.p}>
             Aún no has desbloqueado ninguna Tribu
           </p>
         ) : (
@@ -72,7 +71,6 @@ const PlayerPage = () => {
           </div>
         )}
       </section>
-    </div>
   );
 };
 

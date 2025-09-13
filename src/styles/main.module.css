@@ -1,9 +1,11 @@
 .main {
   flex: 1;
   padding: 2rem 0;
+  align-self: center;
 }
 .layout {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  
 }

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
 import { usePlayer } from "../context/PlayerContext";
 import { unlockedChallenge } from "../../utils/unlockedChallenge";
-import styles from "../styles/orderSecuence.module.css"
+import styles from "../styles/orderSecuence.module.css";
 
 export default function OrdenarSecuencia({ reto, id, next }) {
   const { dispatch } = usePlayer();
@@ -37,53 +37,53 @@ export default function OrdenarSecuencia({ reto, id, next }) {
       JSON.stringify(items) === JSON.stringify(pregunta.respuestaCorrecta);
     setResultado(correcto ? "✅ ¡Correcto!" : "❌ Intenta de nuevo");
     if (correcto) {
-unlockedChallenge(next, id, dispatch)
+      unlockedChallenge(next, id, dispatch);
     }
   }
 
   return (
     <section className={styles.section}>
-            <p className={styles.p}>{pregunta.enunciado}</p>
-   <div className={styles.container}>
-      <DragDropContext onDragEnd={handleOnDragEnd}>
-        <Droppable droppableId="opciones">
-          {(provided) => (
-            <ul
-              {...provided.droppableProps}
-              ref={provided.innerRef}
-            >
-              {items.map((opcion, index) => (
-                <Draggable key={opcion} draggableId={opcion} index={index}>
-                  {(provided) => (
-                    <li
-                    className={styles.li}
-                      ref={provided.innerRef}
-                      {...provided.draggableProps}
-                      {...provided.dragHandleProps}
-                      style={{
-                        background: "var(--color-bordes2-o)",
-                        padding: "10px",
-                        marginBottom: "8px",
-                        borderRadius: "4px",
-                        ...provided.draggableProps.style,
-                      }}
-                    >
-                      {opcion}
-                    </li>
-                  )}
-                </Draggable>
-              ))}
-              {provided.placeholder}
-            </ul>
-          )}
-        </Droppable>
-      </DragDropContext>
-      {resultado && <p>{resultado}</p>}
-    </div>
-          <button className="btn" onClick={comprobarRespuesta} style={{ marginTop: "10px" }}>
+      <p className={styles.p}>{pregunta.enunciado}</p>
+      <div className={styles.container}>
+        <DragDropContext onDragEnd={handleOnDragEnd}>
+          <Droppable droppableId="opciones">
+            {(provided) => (
+              <ul {...provided.droppableProps} ref={provided.innerRef}>
+                {items.map((opcion, index) => (
+                  <Draggable key={opcion} draggableId={opcion} index={index}>
+                    {(provided) => (
+                      <li
+                        className={styles.li}
+                        ref={provided.innerRef}
+                        {...provided.draggableProps}
+                        {...provided.dragHandleProps}
+                        style={{
+                          background: "var(--color-bordes2-o)",
+                          padding: "10px",
+                          marginBottom: "8px",
+                          borderRadius: "4px",
+                          ...provided.draggableProps.style,
+                        }}
+                      >
+                        {opcion}
+                      </li>
+                    )}
+                  </Draggable>
+                ))}
+                {provided.placeholder}
+              </ul>
+            )}
+          </Droppable>
+        </DragDropContext>
+        {resultado && <p>{resultado}</p>}
+      </div>
+      <button
+        className="btn"
+        onClick={comprobarRespuesta}
+        style={{ marginTop: "10px" }}
+      >
         Comprobar
       </button>
     </section>
- 
   );
 }

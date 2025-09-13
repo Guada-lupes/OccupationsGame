@@ -8,6 +8,7 @@ import PlayerPage from "./pages/PlayerPage";
 import Layout from "./pages/Layout";
 import ScrollToTop from "../utils/ScrollToTop";
 import GameCompletePage from "./pages/GameCompletePage";
+import AboutPage from "./pages/AboutPage";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/:id" element={<TribuCard />} />
             <Route path="/player" element={<PlayerPage />} />
             <Route path="/finished" element={<GameCompletePage/>}/>
+            <Route path="/about" element={<AboutPage/>}/>
           </Routes>
         </Layout>
       </PlayerProvider>

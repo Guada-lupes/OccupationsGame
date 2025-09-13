@@ -12,9 +12,7 @@
   scroll-snap-align: start; /* CLAVE: punto de snap al inicio de cada tarjeta */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin: 1rem;
+  margin: 2rem;
 }
 .options {
   width: clamp(7rem, 19vw, 15rem);
@@ -26,16 +24,17 @@
   height: 100%;
   transition: all 0.3s ease;
   cursor: pointer;
+  background-color: var(--color-bordes-o);
   &&:hover {
     transform: translateY(-0.5rem);
     
   }
   &&:focus {
-    background-color: var(--color-bordes-o);
+    background-color: var(--color-bordes-c);
   }
 }
 .select {
-  background-color: var(--color-bordes-o);
+  background-color: var(--color-bordes-c);
 }
 .unSelect {
   background-color: var(--color-bordes-o);

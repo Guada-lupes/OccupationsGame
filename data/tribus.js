@@ -17,9 +17,10 @@ export const tribus = [
   {
     id: "agricultura",
     nombre: "Agricultura",
+    contexto: "El empleo agrícola ha disminuido en los últimos años debido a la mecanización y al uso de tecnologías avanzadas para el control de cultivos. Aunque mejora la eficiencia, se reduce la necesidad de mano de obra tradicional y se demandan perfiles más cualificados. A diferencia de otras ramas del sector agrícola, la silvicultura y explotación forestal muestran una evolución positiva en empleo. Este subsegmento se beneficia de políticas medioambientales y de la creciente demanda de gestión sostenible de los recursos naturales.",
     tribu: "Mapuches Guardianes del Territorio",
     descripcion:
-      "“Hijos de la tierra fértil, los Mapuches han aprendido a escuchar el murmullo del suelo y el canto de las estaciones. Sus manos hacen brotar semillas que alimentan a todas las tribus. Visten colores verdes y ocres, símbolos de la vida y la cosecha. En las grandes celebraciones, comparten frutos y cereales con quienes los visitan, porque creen que el alimento debe ser siempre un bien común.”",
+      "“Hijos de la tierra fértil, los Mapuches han aprendido a escuchar el murmullo del suelo y el canto de las estaciones. Sus manos hacen brotar semillas que alimentan a todas las tribus.”",
     imagen: AgriculturaIcons,
     desbloqueada: true,
     reto: {
@@ -27,12 +28,12 @@ export const tribus = [
       preguntas: [
         {
           enunciado:
-            "El empleo agrícola ha disminuido en los últimos años debido a la mecanización y al uso de tecnologías avanzadas para el control de cultivos. Aunque mejora la eficiencia, se reduce la necesidad de mano de obra tradicional y se demandan perfiles más cualificados. Responde: 'El olivar y los frutales han aumentado su peso dentro de la agricultura española en las últimas décadas.'",
+            "Responde: 'El olivar y los frutales han aumentado su peso dentro de la agricultura española en las últimas décadas.'",
           respuestaCorrecta: "Verdadero",
         },
         {
           enunciado:
-            "A diferencia de otras ramas del sector agrícola, la silvicultura y explotación forestal muestran una evolución positiva en empleo. Este subsegmento se beneficia de políticas medioambientales y de la creciente demanda de gestión sostenible de los recursos naturales. Responde: 'Casi la mitad de la superficie agrícola utilizada en España corresponde a tierras arables, principalmente cereales y cultivos herbáceos.'",
+            "Responde: 'Casi la mitad de la superficie agrícola utilizada en España corresponde a tierras arables, principalmente cereales y cultivos herbáceos.'",
           respuestaCorrecta: "Verdadero",
         },
       ],
@@ -75,9 +76,10 @@ export const tribus = [
   {
     id: "industria",
     nombre: "Industria manufacturera y suministros",
+    contexto: "El sector industrial español sigue siendo clave en el empleo, destacando ramas como la alimentaria, metalúrgica, automotriz y química. En 2024, los proyectos estratégicos PERTE (Proyectos Estratégicos para la Recuperación y Transformación Económica) impulsan su modernización, con foco en sostenibilidad, digitalización e innovación tecnológica, especialmente en áreas como el vehículo eléctrico, energías renovables y semiconductores. ",
     tribu: "Sioux Forjadores de Acero",
     descripcion:
-      "“Los Sioux son maestros del metal y la transformación. De sus talleres salen herramientas, máquinas y objetos que sostienen la vida del planeta. Su cultura valora el trabajo colectivo: cada creación lleva la marca de todo el clan. En sus forjas, el fuego nunca se apaga, pues creen que mantenerlo vivo es mantener el progreso encendido.”",
+      "“Los Sioux son maestros del metal y la transformación. De sus talleres salen herramientas, máquinas y objetos que sostienen la vida del planeta.”",
     imagen: IndusIcons,
     desbloqueada: false,
     reto: {
@@ -85,7 +87,7 @@ export const tribus = [
       preguntas: [
         {
           enunciado:
-            "El sector industrial español sigue siendo clave en el empleo, destacando ramas como la alimentaria, metalúrgica, automotriz y química. En 2024, los proyectos estratégicos (PERTE) impulsan su modernización, con foco en sostenibilidad, digitalización e innovación tecnológica, especialmente en áreas como el vehículo eléctrico, energías renovables y semiconductores. Ordena las fases básicas en la producción de una prenda de ropa en la industria textil.",
+            "Ordena las fases básicas en la producción de una prenda de ropa en la industria textil.",
           opciones: [
             "Diseño",
             "Corte de tela",
@@ -141,15 +143,16 @@ export const tribus = [
   {
     id: "construccion",
     nombre: "Construcción",
+    contexto: "La alta demanda de vivienda y la rehabilitación de inmuebles impulsan el crecimiento del sector de la construcción en España. Sin embargo, la falta de profesionales cualificados y el envejecimiento de la plantilla dificultan cubrir las vacantes, especialmente en las actividades de edificación y construcción especializada, que lideran la recuperación del sector.",
     tribu: "Zapotecas Arquitectos del Horizonte",
     descripcion:
-      "“Constructores de ciudades, puentes y refugios, los Zapotecas miran siempre al horizonte: donde otros ven vacío, ellos ven estructuras posibles. Sus templos de piedra son espacios de encuentro entre tribus, porque creen que toda obra debe servir al bien común. Su cultura celebra la unión entre lo práctico y lo bello: para ellos, cada edificio es también una obra de arte.”",
+      "“Constructores de ciudades, puentes y refugios, los Zapotecas miran siempre al horizonte: donde otros ven vacío, ellos ven estructuras posibles.”",
     imagen: ConstruIcon,
     desbloqueada: false,
     reto: {
       tipo: "clasificar",
       instrucciones:
-        "La alta demanda de vivienda y la rehabilitación de inmuebles impulsan el crecimiento del sector de la construcción en España. Sin embargo, la falta de profesionales cualificados y el envejecimiento de la plantilla dificultan cubrir las vacantes, especialmente en las actividades de edificación y construcción especializada, que lideran la recuperación del sector. Clasifica cada elemento como 'Herramienta de construcción' o 'Material de construcción'.",
+        "Clasifica cada elemento como 'Herramienta de construcción' o 'Material de construcción'.",
       elementos: [
         "Cemento",
         "Taladro",
@@ -201,15 +204,16 @@ export const tribus = [
     id: "comercio",
     nombre:
       "Comercio al por mayor y al por menor, reparación de vehículos de motor y motocicletas",
+      contexto: "El comercio sigue siendo un pilar estratégico de la economía española por su peso en el empleo y su impacto en el PIB. En los últimos años, se ha transformado profundamente por la digitalización y la globalización, lo que ha impulsado el comercio electrónico, la logística inteligente y nuevas formas de consumo conectadas a plataformas digitales.",
     tribu: "Navajos Maestros del Trueque",
     descripcion:
-      "“Los Navajos son viajeros del mercado: conocen el valor de cada objeto y el poder de cada intercambio. Su habilidad para negociar los convierte en puentes entre tribus. Sus campamentos son coloridos, repletos de mercancías y voces que ofrecen, regatean y celebran el trueque. Además, son hábiles reparadores: nada que llega a sus manos se da por perdido.”",
+      "“Los Navajos son viajeros del mercado: conocen el valor de cada objeto y el poder de cada intercambio. Su habilidad para negociar los convierte en puentes entre tribus.”",
     imagen: ComerIcon,
     desbloqueada: false,
     reto: {
       tipo: "relacionar",
       instrucciones:
-        "El comercio sigue siendo un pilar estratégico de la economía española por su peso en el empleo y su impacto en el PIB. En los últimos años, se ha transformado profundamente por la digitalización y la globalización, lo que ha impulsado el comercio electrónico, la logística inteligente y nuevas formas de consumo conectadas a plataformas digitales. Relaciona cada formato de comercio con el ejemplo que mejor lo represente.",
+        "Relaciona cada formato de comercio con el ejemplo que mejor lo represente.",
       columnaA: [
         "Gran superficie",
         "Franquicia",
@@ -264,9 +268,10 @@ export const tribus = [
   {
     id: "transporte",
     nombre: "Transporte y almacenamiento",
+    contexto: "El sector de Logística se encuentra en plena transformación, impulsada por importantes tendencias globales. La reducción de la huella de carbono y la adaptación al cambio climático son los más significativos para el 66% y el 50% de las empresas,  respectivamente. En cuanto a las tecnologías clave que pueden redefinir el futuro del sector, destacan la inteligencia artificial, la robótica, la automatización y aquellas que impulsan la transición energética. Por ello, los perfiles profesionales más demandados estarán vinculados a dichas tecnologías.",
     tribu: "Apaches Rutas Sin Fin",
     descripcion:
-      "“Los Apaches nunca permanecen demasiado tiempo en un mismo lugar. Sus caravanas cruzan territorios, mares y cielos, asegurando que todo llegue a su destino. Su cultura se basa en el movimiento y la libertad: creen que cada camino abierto es un nuevo lazo entre tribus. Guardan mapas y relatos de todas las rutas, convirtiéndose en memoria viviente de los caminos del planeta.”",
+      "“Los Apaches nunca permanecen demasiado tiempo en un mismo lugar. Sus caravanas cruzan territorios, mares y cielos, asegurando que todo llegue a su destino.”",
     imagen: TransIcon,
     desbloqueada: false,
     reto: {
@@ -274,13 +279,13 @@ export const tribus = [
       preguntas: [
         {
           enunciado:
-            "El sector de Logística se encuentra en plena transformación, impulsada por importantes tendencias globales. La reducción de la huella de carbono y la adaptación al cambio climático son los más significativos para el 66% y el 50% de las empresas,  respectivamente. ¿Cuál de las siguientes no es una tecnología clave para el sector?",
+            "¿Cuál de las siguientes no es una tecnología clave para el sector?",
           opciones: ["El vapor", "Inteligencia artificial", "Robótica"],
           respuestaCorrecta: "El vapor",
         },
         {
           enunciado:
-            "En cuanto a las tecnologías clave que pueden redefinir el futuro del sector, destacan la inteligencia artificial, la robótica, la automatización y aquellas que impulsan la transición energética. Por ello, los perfiles profesionales más demandados estarán vinculados a dichas tecnologías. ¿Cuál de los siguientes perfiles no está relacionado con el sector?",
+            "¿Cuál de los siguientes perfiles no está relacionado con el sector?",
           opciones: [
             "Especialistas en vehículos autónomos",
             "Especialistas en vehículos eléctricos",
@@ -328,9 +333,10 @@ export const tribus = [
   {
     id: "hosteleria",
     nombre: "Hostelería",
+    contexto: "El sector de la Hostelería sigue situándose en un escenario favorable. La actividad turística alcanzó los 184.002 millones de euros en 2023, aproximadamente el 12,3% del PIB en España. El Gobierno de España está elaborando la Estrategia de Turismo Sostenible de España 2030, una agenda nacional de turismo para afrontar los retos del sector en el medio y largo plazo, impulsando los tres pilares de la sostenibilidad: socioeconómica, medioambiental y territorial.",
     tribu: "Mayas Anfitriones del Sol",
     descripcion:
-      "“Los Mayas dominan el arte de recibir. Sus aldeas son oasis de descanso, donde viajeros de todas las tribus encuentran calor, alimento y hospitalidad. Adornan sus hogares con símbolos solares, porque creen que cada huésped trae consigo un nuevo amanecer. Su cultura se basa en el servicio y el cuidado: para ellos, atender al visitante es honrar al planeta mismo.”",
+      "“Los Mayas dominan el arte de recibir. Sus aldeas son oasis de descanso, donde viajeros de todas las tribus encuentran calor, alimento y hospitalidad.”",
     imagen: HosteIcon,
     desbloqueada: false,
     reto: {
@@ -338,7 +344,7 @@ export const tribus = [
       preguntas: [
         {
           enunciado:
-            "El sector de la Hostelería sigue situándose en un escenario favorable. La actividad turística alcanzó los 184.002 millones de euros en 2023, aproximadamente el ______ % del PIB en España.",
+            "La actividad turística alcanzó los 184.002 millones de euros en 2023, aproximadamente el ______ % del PIB en España.",
           opciones: ["11%", "12,3%", "14%"],
           respuestaCorrecta: "12,3%",
         },
@@ -387,9 +393,10 @@ export const tribus = [
   {
     id: "informacion",
     nombre: "Información y comunicaciones",
+    contexto: "Dentro de esta sección destaca la actividad de Programación, consultoría y otras actividades informáticas que cuenta con 38.602 empresas activas en 2024, de las cuales más de la mitad son autónomos; también incluye grandes empresas, con más de  53 mil trabajadores. El empleo ha ido aumentando en sectores expuestos a la Inteligencia Artificial; entre las empresas que han adoptado IA predominan las más grandes y las más productivas. El desarrollo de la IA requerirá también la mejora continua de la ciberseguridad.",
     tribu: "Incas Mensajeros del Viento",
     descripcion:
-      "“Los Incas dominan el arte de enviar mensajes a través del aire, de la luz y de las señales invisibles. Son los portadores de noticias, ideas e historias. Su cultura se basa en la conexión: creen que unir mentes y corazones es tan vital como el alimento. En sus festivales, liberan cometas y globos que representan la comunicación entre los pueblos.”",
+      "“Los Incas dominan el arte de enviar mensajes a través del aire, de la luz y de las señales invisibles. Son los portadores de noticias, ideas e historias.”",
     imagen: InfoIcon,
     desbloqueada: false,
     reto: {
@@ -397,7 +404,7 @@ export const tribus = [
       preguntas: [
         {
           enunciado:
-            "Dentro de esta sección destaca la actividad de Programación, consultoría y otras actividades informáticas que cuenta con 38.602 empresas activas en 2024, de las cuales más de la mitad son autónomos; también incluye grandes empresas, con más de  53 mil trabajadores. Responde: 'Big Data se refiere al manejo y análisis de conjuntos de datos tan grandes y complejos que no pueden procesarse con herramientas tradicionales. Ayuda a detectar _______ ________'",
+            "Responde: 'Big Data se refiere al manejo y análisis de conjuntos de datos tan grandes y complejos que no pueden procesarse con herramientas tradicionales. Ayuda a detectar _______ ________'",
           opciones: [
             "Intrusos en la organización",
             "Patrones y tendencias",
@@ -407,7 +414,7 @@ export const tribus = [
         },
         {
           enunciado:
-            "El empleo ha ido aumentando en sectores expuestos a la Inteligencia Artificial; entre las empresas que han adoptado IA predominan las más grandes y las más productivas. El desarrollo de la IA requerirá también la mejora continua de la ciberseguridad. Responde: 'Una IA aprende a través de entrenamiento con grandes cantidades de datos. Reconoce patrones en esos datos y ajusta sus modelos internos para mejorar su precisión. La IA genera sus respuestas ______ _______' ",
+            "Responde: 'Una IA aprende a través de entrenamiento con grandes cantidades de datos. Reconoce patrones en esos datos y ajusta sus modelos internos para mejorar su precisión. La IA genera sus respuestas ______ _______' ",
           opciones: [
             "Desde cero",
             "Consultando a expertas",
@@ -454,15 +461,16 @@ export const tribus = [
   {
     id: "inmobiliarias",
     nombre: "Actividades inmobiliarias",
+    contexto: "El mercado inmobiliario español atraviesa una fase de crecimiento moderado, con precios al alza y escasez de oferta frente a una demanda robusta. Las políticas públicas buscan facilitar el acceso a la vivienda y fomentar la rehabilitación de edificios antiguos, en línea con una tendencia hacia la sostenibilidad y la eficiencia energética.",
     tribu: "Guaraníes Dueños de la Llave",
     descripcion:
-      "“Los Guaraníes son los guardianes de hogares, tierras y espacios de convivencia. Su símbolo es la llave, porque para ellos cada puerta abierta representa una oportunidad. Custodian las aldeas y aconsejan a las tribus sobre cómo aprovechar y cuidar el territorio. Su cultura valora la seguridad y la pertenencia: creen que un lugar propio es el inicio de toda historia.”",
+      "“Los Guaraníes son los guardianes de hogares, tierras y espacios de convivencia. Su símbolo es la llave, porque para ellos cada puerta abierta representa una oportunidad.”",
     imagen: InmoIcon,
     desbloqueada: false,
     reto: {
       tipo: "clasificar",
       instrucciones:
-        "El mercado inmobiliario español atraviesa una fase de crecimiento moderado, con precios al alza y escasez de oferta frente a una demanda robusta. Las políticas públicas buscan facilitar el acceso a la vivienda y fomentar la rehabilitación de edificios antiguos, en línea con una tendencia hacia la sostenibilidad y la eficiencia energética. Clasifica cada elemento como 'Problemas de vivienda' o 'Posibles soluciones a la vivienda'. A cada categoría le pertenecen 3 elementos.",
+        "Clasifica cada elemento como 'Problemas de vivienda' o 'Posibles soluciones a la vivienda'. A cada categoría le pertenecen 3 elementos.",
       elementos: [
         "Normativa para vivienda asequible",
         "Rehabilitación de edificios abandonados",
@@ -521,9 +529,10 @@ export const tribus = [
   {
     id: "ciencia",
     nombre: "Actividades profesionales, científicas y técnicas",
+    contexto: "El sector de actividades profesionales, científicas y técnicas está creciendo gracias a la digitalización y al uso de nuevas tecnologías. Profesiones como la consultoría, la investigación de mercados, la ingeniería y la arquitectura tienen cada vez más oportunidades de empleo, sobre todo porque las empresas necesitan servicios especializados para mejorar su competitividad. En el ámbito jurídico, la tecnología (Legal Tech) está cambiando la forma de trabajar. Ahora se usan contratos inteligentes, plataformas en línea para resolver conflictos y herramientas de inteligencia artificial. Esto ayuda a reducir costes y a que los servicios legales sean más accesibles.",
     tribu: "Quechuas Sabios de la Montaña",
     descripcion:
-      "“A los Quechuas se los reconoce por su sabiduría y su búsqueda incansable del conocimiento. Habitan en lo alto de las montañas, donde observan el cielo y estudian los misterios de la naturaleza. Su cultura rinde culto a la investigación y a la precisión: cada descubrimiento es compartido con las demás tribus, porque creen que la ciencia solo cobra sentido cuando ilumina a todos.”",
+      "“A los Quechuas se los reconoce por su sabiduría y su búsqueda incansable del conocimiento. Habitan en lo alto de las montañas, donde observan el cielo y estudian los misterios de la naturaleza.”",
     imagen: CienIcon,
     desbloqueada: false,
     reto: {
@@ -531,12 +540,12 @@ export const tribus = [
       preguntas: [
         {
           enunciado:
-            "El sector de actividades profesionales, científicas y técnicas está creciendo gracias a la digitalización y al uso de nuevas tecnologías. Profesiones como la consultoría, la investigación de mercados, la ingeniería y la arquitectura tienen cada vez más oportunidades de empleo, sobre todo porque las empresas necesitan servicios especializados para mejorar su competitividad. Responde: 'El sector profesional ofrece nuevas oportunidades de empleo gracias a la digitalización y los servicios especializados.'",
+            "Responde: 'El sector profesional ofrece nuevas oportunidades de empleo gracias a la digitalización y los servicios especializados.'",
           respuestaCorrecta: "Verdadero",
         },
         {
           enunciado:
-            "En el ámbito jurídico, la tecnología (Legal Tech) está cambiando la forma de trabajar. Ahora se usan contratos inteligentes, plataformas en línea para resolver conflictos y herramientas de inteligencia artificial. Esto ayuda a reducir costes y a que los servicios legales sean más accesibles. Responde: 'La tecnología en el sector jurídico ha dificultado el acceso a los servicios legales'",
+            "Responde: 'La tecnología en el sector jurídico ha dificultado el acceso a los servicios legales'",
           respuestaCorrecta: "Falso",
         },
       ],
@@ -573,9 +582,10 @@ export const tribus = [
   {
     id: "administracion",
     nombre: "Actividades administrativas y servicios auxiliares",
+    contexto: "En 2024, más de 198.000 empresas operan en actividades como oficinas, jardinería, alquiler, agencias de viajes, empleo y seguridad. Seis de cada diez tienen menos de siete años, lo que refleja un sector dinámico y en expansión, aunque con baja longevidad empresarial. Estas actividades han crecido por encima de la media nacional en creación de nuevas empresas.",
     tribu: "Tarahumaras Chamanes del Papeleo",
     descripcion:
-      "“Los Tarahumaras son guardianes del orden. Entre pergaminos, sellos y registros, organizan la vida del planeta. Aunque su trabajo parece invisible, todas las tribus dependen de ellos. Visten con túnicas llenas de símbolos y numerales, recordando que cada dato es sagrado. Su cultura venera la claridad y la transparencia: creen que el caos se combate con reglas claras y justas.”",
+      "“Los Tarahumaras son guardianes del orden. Entre pergaminos, sellos y registros, organizan la vida del planeta. Aunque su trabajo parece invisible, todas las tribus dependen de ellos.”",
     imagen: AdminIcon,
     desbloqueada: false,
     reto: {
@@ -583,7 +593,7 @@ export const tribus = [
       preguntas: [
         {
           enunciado:
-            "En 2024, más de 198.000 empresas operan en actividades como oficinas, jardinería, alquiler, agencias de viajes, empleo y seguridad. Seis de cada diez tienen menos de siete años, lo que refleja un sector dinámico y en expansión, aunque con baja longevidad empresarial. Estas actividades han crecido por encima de la media nacional en creación de nuevas empresas.. Ordena los pasos habituales para redactar y enviar un correo electrónico profesional en una oficina.",
+            "Ordena los pasos habituales para redactar y enviar un correo electrónico profesional en una oficina.",
           opciones: [
             "Escribir el cuerpo del mensaje",
             "Revisar ortografía y tono",
@@ -642,6 +652,7 @@ export const tribus = [
   {
     id: "educacion",
     nombre: "Educación",
+    contexto: "La educación en España se adapta a los cambios del mercado laboral, incorporando competencias técnicas y transversales como idiomas, TIC y habilidades blandas. Entre 2020 y 2024, el empleo ha crecido notablemente, con más afiliaciones y contrataciones, especialmente en el sector educativo, donde se reforzó la plantilla docente tras la pandemia.",
     tribu: "Hopi Maestros de la Palabra",
     descripcion:
       "Guardianes de la palabra y el conocimiento, los Guaraníes del Saber transmiten historias, técnicas y aprendizajes que fortalecen a su pueblo.",
@@ -650,7 +661,7 @@ export const tribus = [
     reto: {
       tipo: "relacionar",
       instrucciones:
-        "La educación en España se adapta a los cambios del mercado laboral, incorporando competencias técnicas y transversales como idiomas, TIC y habilidades blandas. Entre 2020 y 2024, el empleo ha crecido notablemente, con más afiliaciones y contrataciones, especialmente en el sector educativo, donde se reforzó la plantilla docente tras la pandemia. Relaciona cada herramienta educativa con su uso principal.",
+        "Relaciona cada herramienta educativa con su uso principal.",
       columnaA: [
         "Pizarra",
         "Libro de texto",
@@ -710,9 +721,10 @@ export const tribus = [
   {
     id: "sanidad",
     nombre: "Actividades sanitarias y de servicios sociales",
+    contexto: "El envejecimiento de la población en España está impulsando el crecimiento del sector de los cuidados y la atención sociosanitaria. Este sector demanda cada vez más personal cualificado, con mejores condiciones laborales y formación especializada. La sanidad y el sector geriátrico son un campo ideal para aplicar nuevas tecnologías como la telemedicina, la robótica, la realidad virtual o las aplicaciones móviles. Estas innovaciones permiten mejorar la calidad de vida de los pacientes y optimizar los servicios de salud.",
     tribu: "Chasca Sanadores de la Luz",
     descripcion:
-      "“Los Chasca caminan entre la vida y la fragilidad, curando heridas del cuerpo y del espíritu. Se reconocen por llevar lámparas que nunca se apagan, símbolo de la esperanza. Su cultura se basa en la compasión y el servicio: creen que cuidar a los vulnerables es la forma más alta de sabiduría. Allí donde hay dolor, los Chasca encienden la luz de la vida.”",
+      "“Los Chasca caminan entre la vida y la fragilidad, curando heridas del cuerpo y del espíritu. Se reconocen por llevar lámparas que nunca se apagan, símbolo de la esperanza.”",
     imagen: SaniIcon,
     desbloqueada: false,
     reto: {
@@ -720,7 +732,7 @@ export const tribus = [
       preguntas: [
         {
           enunciado:
-            "El envejecimiento de la población en España está impulsando el crecimiento del sector de los cuidados y la atención sociosanitaria. Este sector demanda cada vez más personal cualificado, con mejores condiciones laborales y formación especializada. ¿Cuál de los siguientes NO es un centro de atención sanitaria?",
+            "¿Cuál de los siguientes NO es un centro de atención sanitaria?",
           opciones: [
             "Hospital público",
             "Residencia geriátrica",
@@ -730,9 +742,9 @@ export const tribus = [
         },
         {
           enunciado:
-            "La sanidad y el sector geriátrico son un campo ideal para aplicar nuevas tecnologías como la telemedicina, la robótica, la realidad virtual o las aplicaciones móviles. Estas innovaciones permiten mejorar la calidad de vida de los pacientes y optimizar los servicios de salud. ¿Cuál de los siguientes NO es una innovación aplicada al sector sanitario?",
-          opciones: ["LAs vacuna", "Gatos robots", "Telemedicina"],
-          respuestaCorrecta: "Videojuegos",
+            "¿Cuál de los siguientes NO es una innovación aplicada al sector sanitario?",
+          opciones: ["Las vacunas", "Gatos robots", "Telemedicina"],
+          respuestaCorrecta: "Las vacunas",
         },
       ],
     },
@@ -773,9 +785,10 @@ export const tribus = [
   {
     id: "arte",
     nombre: "Actividades artísticas, recreativas y de entretenimiento",
+    contexto: "El sector de los videojuegos en España ha crecido exponencialmente, convirtiéndose en una de las principales industrias culturales. Su impacto va más allá del entretenimiento, generando empleo, exportaciones y formación especializada. En 2024, el sector de los videojuegos superó por primera vez los 2.408 millones de euros de facturación. Por otra parte, con 154 rodajes y más de 218 millones de euros generados en 2024, Canarias se ha convertido en un destino clave para producciones audiovisuales. Este auge ha impulsado el empleo local y dinamizado la economía insular. En sólo un año, este sector ha sido capaz de generar más de 14.000 empleos directos en las islas.",
     tribu: "Yaquis Creadores de Sueños",
     descripcion:
-      "“Los Yaquis pintan, cantan, bailan y narran mundos imposibles. Su misión es mantener vivo el espíritu del planeta a través del arte y la creatividad. Sus aldeas son un estallido de colores, música y representaciones. Creen que el entretenimiento no es un lujo, sino un alimento del alma. En sus festivales, todas las tribus se reúnen para celebrar la imaginación.”",
+      "“Los Yaquis pintan, cantan, bailan y narran mundos imposibles. Su misión es mantener vivo el espíritu del planeta a través del arte y la creatividad.”",
     imagen: ArtiIcon,
     desbloqueada: false,
     reto: {
@@ -783,13 +796,13 @@ export const tribus = [
       preguntas: [
         {
           enunciado:
-            "El sector de los videojuegos en España ha crecido exponencialmente, convirtiéndose en una de las principales industrias culturales. Su impacto va más allá del entretenimiento, generando empleo, exportaciones y formación especializada. Completa la frase: 'En 2024, el sector de los videojuegos superó por primera vez los _______ millones de euros de facturación'",
+            "Completa la frase: 'En 2024, el sector de los videojuegos superó por primera vez los _______ millones de euros de facturación'",
           opciones: ["5", "2.408", "1.430"],
           respuestaCorrecta: "2.408",
         },
         {
           enunciado:
-            "Con 154 rodajes y más de 218 millones de euros generados en 2024, Canarias se ha convertido en un destino clave para producciones audiovisuales. Este auge ha impulsado el empleo local y dinamizado la economía insular. Completa la frase: 'En sólo un año, este sector ha sido capaz de generar más de ________ empleos directos en las islas.'",
+            "Completa la frase: 'En sólo un año, este sector ha sido capaz de generar más de ________ empleos directos en las islas.'",
           opciones: ["14.000", "9.800", "25.000"],
           respuestaCorrecta: "14.000",
         },
@@ -832,9 +845,10 @@ export const tribus = [
   {
     id: "otros",
     nombre: "Otros",
+    contexto: "La digitalización también está transformando el sector funerario, y una gran parte de la sociedad, especialmente los más jóvenes, exige servicios modernos. Entre los más solicitados se encuentran los servicios funerales vía streaming y la gestión de la comunicación de despedidas a través de redes sociales. Más aún, el 70,3% considera importante el borrado de la huella digital. Por otra parte, el autocuidado se ha convertido en una prioridad para los consumidores. En 2022, el consumo per cápita en cosmética y perfumería alcanzó los 185€, superando cifras prepandemia. El sector ha crecido un 11,3% respecto a 2021, impulsado por la innovación y la diversificación de canales. España es un gran exportador de perfumes, ocupando el segundo puesto a nivel mundial.",
     tribu: "Totones Dueños de Todo un Poco",
     descripcion:
-      "“Los Totones se ocupan de los aspectos más diversos y delicados de la vida: desde la belleza del presente hasta el cuidado en la despedida final. Su cultura mezcla rituales de transformación con ceremonias de respeto a la muerte. Son versátiles y sabios, porque entienden que cada etapa de la vida merece atención y cuidado. Para ellos, no hay tarea pequeña si ayuda a preservar la dignidad.”",
+      "“Los Totones se ocupan de los aspectos más diversos y delicados de la vida: desde la belleza del presente hasta el cuidado en la despedida final.”",
     imagen: OtroIcon,
     desbloqueada: false,
     reto: {
@@ -842,7 +856,7 @@ export const tribus = [
       preguntas: [
         {
           enunciado:
-            "La digitalización también está transformando el sector funerario, y una gran parte de la sociedad, especialmente los más jóvenes, exige servicios modernos. Entre los más solicitados se encuentran los servicios funerales vía streaming y la gestión de la comunicación de despedidas a través de redes sociales. Más aún, el 70,3% considera importante:",
+            "Entre los servicios más valorados dentro del sector funerario se encuentran:",
           opciones: [
             "Catering vegano",
             "Borrado de huella digital",
@@ -852,7 +866,7 @@ export const tribus = [
         },
         {
           enunciado:
-            "El autocuidado se ha convertido en una prioridad para los consumidores. En 2022, el consumo per cápita en cosmética y perfumería alcanzó los 185€, superando cifras prepandemia. El sector ha crecido un 11,3% respecto a 2021, impulsado por la innovación y la diversificación de canales. España es un gran exportador de perfumes, ocupando el puesto número:",
+            "España es un gran exportador de perfumes, ocupando el puesto número:",
           opciones: ["Dos", "Diez", "Tercero"],
           respuestaCorrecta: "Dos",
         },

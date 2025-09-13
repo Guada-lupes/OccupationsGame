@@ -2,19 +2,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: clamp(18rem, 80vw, 63rem);
+  justify-self: ;
 }
 .challenge {
   border: solid 0.5px var(--color-extra-o);
   margin: 3rem clamp(0.5rem, 1vw, 3rem);
-  padding: clamp(1rem, 2vw, 2rem); 
+  padding: clamp(1rem, 2vw, 2rem);
 }
 .container {
   width: clamp(18rem, 80vw, 63rem);
 }
-.p{
+.p {
   text-align: center;
 }
-.h1{
+.h1 {
   text-align: center;
 }
 @media (width >= 780px) {

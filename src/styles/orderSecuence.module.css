@@ -1,18 +1,18 @@
-.li {
+li {
   font-size: var(--texto-md);
   font-weight: bold;
   text-align: center;
+  width: clamp(8rem, 20vw, 19rem);
 }
 .section {
   display: flex;
   flex-flow: column;
-  align-items: center;
 }
 .p{
-    text-align: center;
+    text-align: left;
 }
-.ul{
-    width: clamp(10rem, 60vw, 30rem);
+ul{
+    /* width: clamp(10rem, 80vw, 30rem); */
     list-style: none;
     padding: 0;
 }

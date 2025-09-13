@@ -8,8 +8,8 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
   width: 100%;
-  margin: 2rem 0;
-  gap: 1rem;
+  margin: 6rem 0 5rem;
+  gap: 5rem;
 }
 .p_description{
   text-align: center;

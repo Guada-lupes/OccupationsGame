@@ -22,23 +22,19 @@ const AllTribusPage = () => {
           </p>
           <p>
             Solo podrás visitar las tribus cuando estén desbloqueadas; lo sabrás
-            porque aparecerán en rojo. Haz clic en la tribu para entrar.
-          </p>
-          <p>
-            Dentro te espera un reto difícil: si lo superas, la tribu te
-            mostrará las ocupaciones con mayor demanda de empleo. Si seleccionas{" "}
+            porque aparecerán en rojo. Haz clic en la tribu para entrar. Dentro
+            te espera un reto difícil: si lo superas, la tribu te mostrará las
+            ocupaciones con mayor demanda de empleo. Si seleccionas{" "}
             <strong>“Saber más”</strong>, accederás a información adicional.
             También puedes <strong>“Guardar”</strong> la ocupación para
             revisarla más tarde.
           </p>
+          <p></p>
           <p>
             Cuando termines, regresa a la página principal y verás que has
-            desbloqueado una nueva tribu.
-          </p>
-          <p>
-            Al finalizar el juego, te pediremos que respondas unas breves
-            preguntas sobre tu experiencia para ayudarnos a mejorar la
-            aplicación.
+            desbloqueado una nueva tribu. Al finalizar el juego, te pediremos
+            que respondas unas breves preguntas sobre tu experiencia para
+            ayudarnos a mejorar la aplicación.
           </p>
           <p>¡Mucha suerte!</p>
         </div>

@@ -11,9 +11,8 @@ export const Header = () => {
     <div className={styles.container}>
       <ProgressBar/>
       <Link to={"/all_tribus"}>Inicio</Link>
-      {/* <Link>Como jugar</Link>
-            <Link>Sobre la aplicación</Link>
-             */}
+            <Link to={"/about"}>Sobre mi</Link>
+             
       <Link to={"/"} onClick={() => logOut(dispatch)}>
         Salir
       </Link>
