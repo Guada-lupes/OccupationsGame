@@ -6,7 +6,6 @@ import Clasification from "../challenges/Clasification";
 import Relation from "../challenges/Relation";
 import FindStrange from "../challenges/FindStrange";
 import CompleteWord from "../challenges/CompleteWord";
-import MultipleChoice from "../challenges/MultipleChoice";
 import { CoinComponent } from "./CoinComponent";
 import styles from "../styles/challenge.module.css";
 
@@ -42,7 +41,7 @@ const Challenge = ({ reto, id, next, profesiones, nombre, contexto }) => {
           <CompleteWord reto={reto} id={id} next={next} />
         )}
         {reto.tipo === "multiple-choice" && (
-          <MultipleChoice reto={reto} id={id} next={next} />
+          <CompleteWord reto={reto} id={id} next={next} />
         )}
       </div>
       <dialog id="reto_desbloqueado" className={styles.modal}>

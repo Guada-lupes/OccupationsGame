@@ -1,4 +1,4 @@
 .container {
 height: 4rem;
-border: solid 1px white;
+border-top: solid 1px var(--color-titulo-o);
 }

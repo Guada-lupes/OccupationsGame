@@ -9,6 +9,7 @@ const ProgressBar = () => {
 
   function incrementBar() {
     const currentCount = state.doneChallenge.length;
+    console.log(currentCount, progress, prevChallengeCount.current);
 
     if (currentCount > prevChallengeCount.current) {
       if (state.doneChallenge.length === 14) {
@@ -22,7 +23,7 @@ const ProgressBar = () => {
   }
   useEffect(() => {
     incrementBar();
-  }, [state.doneChallenge]);
+  }, [state.doneChallenge, progress]);
 
   return (
     <div className={styles.progress_bar}>

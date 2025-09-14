@@ -20,9 +20,9 @@ const GameCompletePage = () => {
           sobre titulaciones, competencias, funciones y contratación. Espero que
           haya sido de utilidad para ti. Para seguir mejorando la aplicación te
           voy a pedir que respondas unas pocas preguntas. Tu opinión es de gran
-          utilidad para mi. ¡Gracias de antemano!
+          utilidad para mi. 
         </p>
-        <p>Cuando finalices, recuerda "Salir" de la aplicación para borrar tu progreso.</p>
+        <p>¡Gracias de antemano!</p>
         <div>
           <iframe
             src="https://docs.google.com/forms/d/e/1FAIpQLScE0QAoDQMVNag7hdOmAnrA-L1TGfF9aL53RpwLjvW3pdXmSg/viewform?embedded=true"

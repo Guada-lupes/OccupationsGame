@@ -10,7 +10,6 @@ const AllTribusPage = () => {
   const challengeUnresolved = (id) => state.doneChallenge.includes(id);
   const theClass = (id) =>
     `icono-desbloqueado icono ${challengeUnresolved(id) ? "" : "unresolved"}`;
-  console.log(state);
 
   return (
     <section className={styles.section}>

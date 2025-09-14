@@ -5,16 +5,14 @@ import styles from "../styles/occupations.module.css";
 import { usePlayer } from "../context/PlayerContext";
 
 const OccupationsCard = ({ profesiones }) => {
-const {state} = usePlayer();
-const [finished, setFinished] = useState(false);
+  const { state } = usePlayer();
+  const [finished, setFinished] = useState(false);
 
-useEffect(()=>{
-  if(state.doneChallenge.length === 14){
-    console.log("terminado", state.doneChallenge.length);
-    
-    setFinished(true)
-  }
-}, [state.doneChallenge])
+  useEffect(() => {
+    if (state.doneChallenge.length === 14) {
+      setFinished(true);
+    }
+  }, [state.doneChallenge]);
 
   return (
     <div className={styles.container}>
@@ -28,12 +26,13 @@ useEffect(()=>{
       <div className={styles.grid}>
         {profesiones.map((p, i) => {
           // let isSaved = state.saved_occupation.includes(p.nombre)
-          return (
-            <OccupationSingleComponent i={i} p={p}/>
-          );
+          return <OccupationSingleComponent i={i} p={p} />;
         })}
       </div>
-      <Button texto={"Volver"} link={`${finished ? "/finished" : "/all_tribus"} `} />
+      <Button
+        texto={finished ? "Terminar" : "Volver"}
+        link={`${finished ? "/finished" : "/all_tribus"} `}
+      />
     </div>
   );
 };

@@ -28,13 +28,13 @@ export const tribus = [
       preguntas: [
         {
           enunciado:
-            "Responde: 'El olivar y los frutales han aumentado su peso dentro de la agricultura española en las últimas décadas.'",
+            "Responde: 'A diferencia de la agricultura, las profesiones relacionadas con el cuidado y gestión de los bosques o montes forestales muestran una evolución positiva en empleo.'",
           respuestaCorrecta: "Verdadero",
         },
         {
           enunciado:
-            "Responde: 'Casi la mitad de la superficie agrícola utilizada en España corresponde a tierras arables, principalmente cereales y cultivos herbáceos.'",
-          respuestaCorrecta: "Verdadero",
+            "Responde: 'El empleo agrícola a crecido de manera constante en los últimos años debido al aumento de la población.'",
+          respuestaCorrecta: "Falso",
         },
       ],
     },
@@ -671,7 +671,7 @@ export const tribus = [
       ],
       columnaB: [
         "Tomar apuntes",
-        "Proyectar una presentación",
+        "Proyectar una película",
         "Presentar lecciones en clase",
         "Acceso online a recursos y tareas",
         "Consultar información estructurada",
@@ -679,7 +679,7 @@ export const tribus = [
       respuestaCorrecta: {
         Pizarra: "Presentar lecciones en clase",
         "Libro de texto": "Consultar información estructurada",
-        Proyector: "Proyectar una presentación",
+        Proyector: "Proyectar una película",
         "Plataforma online": "Acceso online a recursos y tareas",
         Cuaderno: "Tomar apuntes",
       },

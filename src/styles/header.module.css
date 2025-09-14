@@ -5,7 +5,7 @@
   justify-content: end;
   padding: 1rem 2rem 0.5rem;
   gap: 4rem;
-  border: solid 1px white;
+  border-bottom: solid 1px var(--color-titulo-o);
 }
 .img {
   width: 4rem;
