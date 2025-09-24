@@ -1,12 +1,16 @@
-# React + Vite
+🚀 El Planeta de las Profesiones es una Single Page Application (SPA) educativa que ofrece una experiencia gamificada para explorar el mercado laboral.
+🔹 Funcionalidades principales:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Gestión de usuario: login/logout, progreso en el juego, desbloqueo de tribus y ocupaciones favoritas, implementado con useContext y useReducer.
 
-Currently, two official plugins are available:
+**Persistencia de datos: almacenamiento en localStorage para mantener la sesión y el avance del jugador.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Estructura de contenidos dinámica: un objeto-árbol con fases, retos y descripciones que se renderiza automáticamente según el progreso.
 
-## Expanding the ESLint configuration
+**Interacciones enriquecidas: integración de la librería hello pangea/dnd para el drag and drop en retos de clasificación y ordenamiento.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Datos reales: contenidos extraídos de informes del SEPE, con enlaces a fichas profesionales descargables.
+
+Stack tecnológico: React.js, css module, hello/pangea dnd y vite.
+
+Puedes visitarla: https://occupations-game.vercel.app/ 
