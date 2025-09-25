@@ -22,3 +22,8 @@
   text-align: left;
 }
 }
+@media (650px > width > 0) {
+  .grid{
+      grid-template-columns: repeat(auto-fill, minmax(4rem, 1fr));
+  }
+}

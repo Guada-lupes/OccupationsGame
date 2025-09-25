@@ -2,7 +2,7 @@
 }
 .modal:open {
   margin: auto;
-  width: clamp(14rem, 40%, 29rem);
+  width: clamp(19rem, 40%, 29rem);
   height: 50%;
   border-width: 0.1rem;
   border-radius: var(--texto-xxs);

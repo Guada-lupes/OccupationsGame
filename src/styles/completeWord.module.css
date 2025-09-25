@@ -69,3 +69,10 @@
 .no_select{
    background-color: var(--color-titulo-o);
 }
+@media(max-width: 650px) and (min-width: 0px){
+  .button_container {
+      flex-direction: column;
+  }
+  .options {
+  width: clamp(10rem, 19vw, 15rem)}
+}

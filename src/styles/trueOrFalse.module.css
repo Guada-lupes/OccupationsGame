@@ -43,6 +43,7 @@
   flex-direction: column;
   align-items: center;
 }
+
 .buttons {
   width: 4rem;
   position: absolute;
@@ -54,4 +55,12 @@
 .next {
   top: 40%;
   right: 0;
+}
+@media(max-width: 650px) and (min-width: 0px) {
+.card{
+  padding: 0;
+}
+.buttons{
+  width: 10vw;
+}
 }

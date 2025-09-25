@@ -7,7 +7,7 @@
 }
 .challenge {
   border: solid 0.5px var(--color-extra-o);
-  margin: 3rem clamp(0.5rem, 1vw, 3rem);
+  margin: 0 clamp(0.5rem, 1vw, 3rem) 3rem;
   padding: clamp(1rem, 2vw, 2rem);
 }
 .container {
