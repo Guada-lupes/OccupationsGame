@@ -73,7 +73,6 @@ export const WelcomePage = () => {
         </button>
         
       </form>
-
       <img
         className={`${styles.img} ${arrancar ? styles.img_arrancar : ""}`}
         src="/jeep.png"
