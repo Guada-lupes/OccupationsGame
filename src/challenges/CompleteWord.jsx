@@ -65,7 +65,7 @@ const [actual, setActual] = useState(0)
         </div>
         <div className={styles.dots_container}>
           {preguntas.map((p, ia) => (
-            <a key={ia} onClick={()=>modifyActual(ia, setActual)} className={`${styles.dot} ${actual === ia ? styles.select : styles.no_select}`} href={`#${ia}`}></a>
+            <a key={ia} onClick={()=>modifyActual(ia, setActual)} className={`${styles.dot} ${actual === ia ? styles.dot_select : styles.no_select}`} href={`#${ia}`}>{ia+1}</a>
           ))}
         </div>
       </div>

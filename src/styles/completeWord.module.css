@@ -52,8 +52,9 @@
   display: block;
   width: 1rem;
   height: 1rem;
+  font-size: 1.4vw;
   &&:hover {
-    background-color: var(--color-bordes-o);
+    color: var(--color-bordes-o);
   }
   /* &&:focus {
     background-color: var(--color-bordes-o);
@@ -67,7 +68,10 @@
   padding: 1rem;
 }
 .no_select{
-   background-color: var(--color-titulo-o);
+   color: var(--color-titulo-o);
+}
+.dot_select{
+     color: var(--color-bordes-c);
 }
 @media(max-width: 650px) and (min-width: 0px){
   .button_container {
