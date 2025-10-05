@@ -12,7 +12,7 @@
 }
 .progress_bar {
   height: 3vh;
-  width: 16vw;
+  width: clamp(10rem, 17vw, 17rem); 
   background-color: var(--color-texto-o);
   border-radius: 12px;
   overflow: hidden;

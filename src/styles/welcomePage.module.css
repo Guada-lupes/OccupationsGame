@@ -71,6 +71,6 @@ input::placeholder{
 }
 @media(max-width: 650px) and (min-width: 0px){
   .img{
-    bottom: 3rem;
+    bottom: 2rem;
   }
 }
