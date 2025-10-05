@@ -6,7 +6,7 @@
 
 ## 🧩 Tecnologías Utilizadas
 
-`JavaScript` | `HTML` | `CSS` | `React` | `Vite` | `React Router DOM` | `hello-pangea/dnd` | `CSS Modules` | `React.lazy`
+`JavaScript` | `HTML` | `CSS` | `React` | `Vite` | `React Router DOM` | `hello-pangea/dnd` | `CSS Modules` | `React.lazy` | `react-helmet`
 
 Puedes visitarla: https://occupations-game.vercel.app/ 
 ---
