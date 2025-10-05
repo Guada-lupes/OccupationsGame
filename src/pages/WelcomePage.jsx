@@ -77,8 +77,7 @@ export const WelcomePage = () => {
         className={`${styles.img} ${arrancar ? styles.img_arrancar : ""}`}
         src="/jeep.avif"
         alt="Un jeep que se vibra"
-        width="1024"
-        height="1024"      />
+        width="200"      />
     </section>
   );
 };

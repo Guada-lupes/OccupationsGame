@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../components/Button";
+import { Helmet } from "react-helmet";
 import { usePlayer } from "../context/PlayerContext";
 import styles from "../styles/landingPage.module.css";
 
@@ -8,13 +9,20 @@ const LandingPage = () => {
   const name = state.name.length > 1 ? ` ${state.name}` : "";
   return (
     <>
+      <Helmet>
+        <title>Inicio | Juego de Profesiones</title>
+        <meta
+          name="description"
+          content="Explora el juego educativo de profesiones y pon a prueba tus conocimientos."
+        />
+      </Helmet>
       <section className={styles.section}>
         <h1 className={styles.h1}>
           Te damos la bienvenida{name.toUpperCase()}
         </h1>
         <div className={styles.container}>
           <div className={styles.img}>
-            <img src="/mapa.avif" alt="Un mapa" width="1024" height="1024" />
+            <img src="/mapa.avif" alt="Un mapa" width="200" />
           </div>
           <div className={styles.texto_container}>
             <p className={styles.p}>

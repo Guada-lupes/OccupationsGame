@@ -17,15 +17,15 @@ export const CoinComponent = () => {
           className={`${styles.front} ${styles.coin}`}
           src="/cara_a.avif"
           alt="moneda cara a"
-          width="1024"
-          height="1024"
+          width="200"
+          
         />
         <img
           className={`${styles.back} ${styles.coin}`}
           src="/cara_b.avif"
           alt="moneda cara b"
-          width="1024"
-          height="1024"
+          width="200"
+          
         />
       </div>
     </div>
