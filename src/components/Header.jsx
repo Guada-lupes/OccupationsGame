@@ -26,7 +26,7 @@ export const Header = () => {
           <p>Salir</p>
         </Link>
         <Link to={"/player"}>
-          <img className={styles.img} src="/user.png" />
+          <img className={styles.img} src="/user.avif" />
         </Link>
       </div>{" "}
       <div className={styles.desplegable}>

@@ -75,9 +75,10 @@ export const WelcomePage = () => {
       </form>
       <img
         className={`${styles.img} ${arrancar ? styles.img_arrancar : ""}`}
-        src="/jeep.png"
+        src="/jeep.avif"
         alt="Un jeep que se vibra"
-      />
+        width="1024"
+        height="1024"      />
     </section>
   );
 };
