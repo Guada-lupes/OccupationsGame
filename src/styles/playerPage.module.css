@@ -26,6 +26,7 @@
   flex-direction: column;
   width: clamp(18rem, 80vw, 63rem);
   justify-self: center;
+  text-align: center;
 }
 .h1 {
   text-align: center;
