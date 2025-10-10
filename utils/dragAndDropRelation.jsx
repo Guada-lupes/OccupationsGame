@@ -59,7 +59,6 @@ export function changeCategorie(setInitialState, from, to, item, initialState) {
 export function changeBetweenCategories(setInitialState, from, to, item, initialState) {
   if (initialState.userResult[to] === "") return;
   const item2 = initialState.userResult[to];
-  console.log();
 
   setInitialState((prev) => ({
     ...prev,

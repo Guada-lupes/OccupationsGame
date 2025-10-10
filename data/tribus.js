@@ -87,20 +87,20 @@ export const tribus = [
       preguntas: [
         {
           enunciado:
-            "Ordena las fases básicas en la producción de una prenda de ropa en la industria textil.",
+            "Ordena las fases básicas en la producción de una tortilla de patatas.",
           opciones: [
-            "Diseño",
-            "Corte de tela",
-            "Confección",
-            "Control de calidad",
-            "Distribución",
+            "Se baten los huevos en un bol",
+            "Se fríen las patatas",
+            "Se pelan y cortan las patatas",
+            "Se mezcla todo y se cuaja en la sartén",
+            "Se da la vuelta y se sirve",
           ],
           respuestaCorrecta: [
-            "Diseño",
-            "Corte de tela",
-            "Confección",
-            "Control de calidad",
-            "Distribución",
+            "Se pelan y cortan las patatas",
+            "Se fríen las patatas",
+            "Se baten los huevos en un bol",
+            "Se mezcla todo y se cuaja en la sartén",
+            "Se da la vuelta y se sirve",
           ],
         },
       ],
@@ -461,7 +461,7 @@ export const tribus = [
   {
     id: "inmobiliarias",
     nombre: "Actividades inmobiliarias",
-    contexto: "El mercado inmobiliario español atraviesa una fase de crecimiento moderado, con precios al alza y escasez de oferta frente a una demanda robusta. Las políticas públicas buscan facilitar el acceso a la vivienda y fomentar la rehabilitación de edificios antiguos, en línea con una tendencia hacia la sostenibilidad y la eficiencia energética.",
+    contexto: "El mercado inmobiliario español atraviesa una fase de crecimiento moderado, con precios al alza y escasez de oferta frente a una demanda robusta. Las políticas públicas buscan facilitar el acceso a la vivienda a través de ayudas económicas para jóvenes, construcción de vivenda protegida y la rehabilitación de edificios antiguos, en línea con una tendencia hacia la sostenibilidad y la eficiencia energética.",
     tribu: "Guaraníes Dueños de la Llave",
     descripcion:
       "“Los Guaraníes son los guardianes de hogares, tierras y espacios de convivencia. Su símbolo es la llave, porque para ellos cada puerta abierta representa una oportunidad.”",
@@ -472,8 +472,8 @@ export const tribus = [
       instrucciones:
         "Clasifica cada elemento como 'Problemas de vivienda' o 'Posibles soluciones a la vivienda'. A cada categoría le pertenecen 3 elementos.",
       elementos: [
-        "Normativa para vivienda asequible",
-        "Rehabilitación de edificios abandonados",
+        "Ayudas para el alquiler",
+        "Rehabilitación de edificios antiguos",
         "Precios muy altos",
         "Alquileres vacacionales",
         "Creación de vivienda protegida",
@@ -607,7 +607,7 @@ export const tribus = [
             "Definir el asunto",
             "Escribir el cuerpo del mensaje",
             "Adjuntar documentos si es necesario",
-            "Revisar ortografía y tono",
+            "Revisar que todo esté correcto",
             "Pulsar 'Enviar'",
           ],
         },
