@@ -46,4 +46,51 @@ Puedes visitarla: https://occupations-game.vercel.app/
 
 ---
 
+# 🚀 The Planet of Professions
+
+**The Planet of Professions** is an educational **Single Page Application (SPA)** that offers a **gamified experience** to explore the job market in an interactive and engaging way.
+
+---
+
+## 🧩 Technologies Used
+
+`JavaScript` | `HTML` | `CSS` | `React` | `Vite` | `React Router DOM` | `hello-pangea/dnd` | `CSS Modules` | `React.lazy` | `react-helmet`
+
+You can visit it here: https://occupations-game.vercel.app/  
+---
+
+## 🔹 Main Features
+
+- **👤 User Management**  
+  Login/logout, game progress tracking, tribe unlocking, and favorite occupations selection.  
+  Implemented with `useContext` and `useReducer`.
+
+- **💾 Data Persistence**  
+  Local storage (`localStorage`) is used to keep the session active and save the player’s progress.
+
+- **🌳 Dynamic Content Structure**  
+  A data tree containing phases, challenges, and descriptions that renders automatically based on user progress.
+
+- **🧲 Enhanced Interactions**  
+  Integration of the `hello-pangea/dnd` library for **drag-and-drop** functionality in sorting and classification challenges.
+
+- **📊 Real and Relevant Data**  
+  Content extracted from **SEPE** (Spanish Public Employment Service) reports, including downloadable professional fact sheets.
+
+---
+
+## 💡 What I Learned While Developing This Application
+
+- Designing and structuring a **complete user experience**, ensuring consistency in navigation and challenges.  
+
+- Building a **centralized and scalable data model**, easy to maintain and expand without breaking existing logic.  
+
+- Applying a **modular and reusable architecture**, with shared components and functions to reduce code duplication.  
+
+- Deepening my understanding of **JavaScript object manipulation**, using methods such as:  
+  - `Object.assign`  
+  - `Object.fromEntries`  
+  - among others, for efficient data handling.  
+
+---
 
