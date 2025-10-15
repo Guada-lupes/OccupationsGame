@@ -487,8 +487,8 @@ export const tribus = [
         ],
         "Posibles soluciones": [
           "Creación de vivienda protegida",
-          "Rehabilitación de edificios abandonados",
-          "Normativa para vivienda asequible",
+          "Rehabilitación de edificios antiguos",
+          "Ayudas para el alquiler",
         ],
       },
     },

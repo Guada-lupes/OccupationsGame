@@ -16,6 +16,7 @@
 .img {
   display: flex;
   position: absolute;
+  z-index: -1;
   bottom: -1rem;
   width: clamp(14rem, 24vw, 19rem);
   animation: llegar 2s ease-in-out forwards,
