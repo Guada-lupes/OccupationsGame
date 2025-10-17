@@ -5,7 +5,7 @@ const AboutPage = () => {
     <section className={styles.section}>
       <h1>Sobre mi</h1>
 <p>
-  Soy Guadalupe, docente, orientadora laboral y desarrolladora web. {""}
+  ¡ Hola ! Soy Guadalupe, docente, orientadora laboral y desarrolladora web. {""}
   <strong>"El planeta de las profesiones"</strong> es un proyecto personal que nace de mi pasión por crear recursos educativos gamificados y por el desarrollo web.
 </p>
 <p>

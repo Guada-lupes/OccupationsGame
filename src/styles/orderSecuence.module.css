@@ -2,7 +2,7 @@ li {
   font-size: var(--texto-md);
   font-weight: bold;
   text-align: center;
-  width: clamp(8rem, 20vw, 19rem);
+  width: clamp(13rem, 20vw, 19rem);
 }
 .section {
   display: flex;

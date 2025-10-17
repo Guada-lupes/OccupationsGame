@@ -6,9 +6,10 @@ const ProgressBar = () => {
   const { state, dispatch } = usePlayer();
   const progress = state.progresBar;
   const prevChallengeCount = useRef(0);
+  let currentCount;
 
   function incrementBar() {
-    const currentCount = state.doneChallenge.length;
+     currentCount = state.doneChallenge.length;
     console.log(currentCount, progress, prevChallengeCount.current);
 
     if (currentCount > prevChallengeCount.current) {
@@ -23,6 +24,7 @@ const ProgressBar = () => {
   }
   useEffect(() => {
     incrementBar();
+        console.log(currentCount, progress, prevChallengeCount.current);
   }, [state.doneChallenge, progress]);
 
   return (
