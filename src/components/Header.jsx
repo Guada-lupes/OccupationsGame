@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { logOut } from "../../utils/login";
 import { usePlayer } from "../context/PlayerContext";
@@ -6,7 +6,16 @@ import ProgressBar from "./ProgressBar";
 import styles from "../styles/header.module.css";
 
 export const Header = () => {
-  const { dispatch } = usePlayer();
+  const { dispatch, state } = usePlayer();
+    const [finished, setFinished] = useState(false);
+  
+    useEffect(() => {
+      if (state.doneChallenge.length === 14) {
+        setFinished(true);
+      }
+      
+    }, [state.doneChallenge]);
+  
   const [menu, setMenu] = useState(false);
   function openMenu() {
     setMenu((prev) => !prev);
@@ -16,7 +25,7 @@ export const Header = () => {
     <>
       <div className={styles.container}>
         <ProgressBar />
-        <Link to={"/all_tribus"}>
+        <Link to={`${finished ? "/finished" : "/all_tribus"} `}>
           <p>Inicio</p>
         </Link>
         <Link to={"/about"}>
@@ -52,7 +61,7 @@ export const Header = () => {
             <Link to={"/player"}>
               <img className={styles.img} src="/user.png" />
             </Link>
-            <Link to={"/all_tribus"}>
+            <Link to={`${finished ? "/finished" : "/all_tribus"} `}>
               <p>Inicio</p>
             </Link>
             <Link to={"/about"}>
