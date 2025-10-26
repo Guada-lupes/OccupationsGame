@@ -114,7 +114,7 @@ const TrueOrFalse = ({ reto, id, next }) => {
               </label>
               <div className={styles.button_container}>
                 <button className="btn" onClick={() => verificarRespuesta(i)}>
-                  Probar
+                  Responder
                 </button>
               </div>
 

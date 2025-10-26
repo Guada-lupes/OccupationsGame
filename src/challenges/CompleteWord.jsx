@@ -58,7 +58,7 @@ const [actual, setActual] = useState(0)
               )}
               {/* Boton de comprobacion */}
               <button onClick={() => checkAnswer(ip, result, setResult)} className="btn">
-                Probar
+                Responder
               </button>
             </div>
           ))}

@@ -30,7 +30,7 @@ const OccupationsCard = ({ profesiones }) => {
         })}
       </div>
       <Button
-        texto={finished ? "Terminar" : "Volver"}
+        texto={finished ? "Finalizar" : "Continuar"}
         link={`${finished ? "/finished" : "/all_tribus"} `}
       />
     </div>
